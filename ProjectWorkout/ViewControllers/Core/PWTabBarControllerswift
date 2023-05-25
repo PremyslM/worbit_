@@ -14,10 +14,13 @@ final class PWTabBarController: UITabBarController {
         super.viewDidLoad()
         self.view.backgroundColor = .theme.primaryBackground // TODO: Just for testings
         
-        self.tabBar.tintColor = .theme.secondaryWhite
         
-        let menuVC = UINavigationController(rootViewController: PWMainPageViewController())
-                
+        let menuVC = UINavigationController(rootViewController: PWMainPageView())
+        
+        menuVC.tabBarItem = UITabBarItem(
+                            title: "Home",
+                            image: UIImage(systemName: "house"),
+                            tag: 1)
         
         self.viewControllers = [menuVC]
     }

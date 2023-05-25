@@ -11,11 +11,12 @@
 		78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B752A1E7633003102D3 /* SceneDelegate.swift */; };
 		78626B7D2A1E7634003102D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78626B7C2A1E7634003102D3 /* Assets.xcassets */; };
 		78626B802A1E7634003102D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78626B7E2A1E7634003102D3 /* LaunchScreen.storyboard */; };
-		78626B932A1E7A94003102D3 /* PWNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B922A1E7A94003102D3 /* PWNavigationController.swift */; };
 		78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B972A1E9447003102D3 /* UIView+addConstrainedSubViews.swift */; };
-		78626B9A2A1E95BC003102D3 /* PWMainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B992A1E95BC003102D3 /* PWMainPageView.swift */; };
+		78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B992A1E95BC003102D3 /* PWMainPageViewController.swift */; };
 		78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B9B2A1E95E8003102D3 /* PWProgrammaticUIView.swift */; };
 		78626BA02A1E9781003102D3 /* PWPrimaryContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B9F2A1E9781003102D3 /* PWPrimaryContainerView.swift */; };
+		78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BA52A1F32E9003102D3 /* UIColor+theme.swift */; };
+		78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BA72A1F37FC003102D3 /* PWTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +26,12 @@
 		78626B7C2A1E7634003102D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78626B7F2A1E7634003102D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78626B812A1E7634003102D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78626B922A1E7A94003102D3 /* PWNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWNavigationController.swift; sourceTree = "<group>"; };
 		78626B972A1E9447003102D3 /* UIView+addConstrainedSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addConstrainedSubViews.swift"; sourceTree = "<group>"; };
-		78626B992A1E95BC003102D3 /* PWMainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWMainPageView.swift; sourceTree = "<group>"; };
+		78626B992A1E95BC003102D3 /* PWMainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWMainPageViewController.swift; sourceTree = "<group>"; };
 		78626B9B2A1E95E8003102D3 /* PWProgrammaticUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgrammaticUIView.swift; sourceTree = "<group>"; };
 		78626B9F2A1E9781003102D3 /* PWPrimaryContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryContainerView.swift; sourceTree = "<group>"; };
+		78626BA52A1F32E9003102D3 /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
+		78626BA72A1F37FC003102D3 /* PWTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				78626B972A1E9447003102D3 /* UIView+addConstrainedSubViews.swift */,
 				78626B9B2A1E95E8003102D3 /* PWProgrammaticUIView.swift */,
+				78626BA52A1F32E9003102D3 /* UIColor+theme.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				78626BA12A1E98E5003102D3 /* Tabs */,
-				78626B922A1E7A94003102D3 /* PWNavigationController.swift */,
+				78626BA72A1F37FC003102D3 /* PWTabBarController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 		78626BA12A1E98E5003102D3 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				78626B992A1E95BC003102D3 /* PWMainPageViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -183,7 +187,6 @@
 		78626BA22A1E9AED003102D3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				78626B992A1E95BC003102D3 /* PWMainPageView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -267,11 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				78626BA02A1E9781003102D3 /* PWPrimaryContainerView.swift in Sources */,
+				78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */,
+				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */,
 				78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
-				78626B932A1E7A94003102D3 /* PWNavigationController.swift in Sources */,
-				78626B9A2A1E95BC003102D3 /* PWMainPageView.swift in Sources */,
+				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

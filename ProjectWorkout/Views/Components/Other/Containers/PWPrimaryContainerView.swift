@@ -13,7 +13,8 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     
     private lazy var mainStack: UIStackView = {
         let _mainStack = UIStackView()
-        _mainStack.translatesAutoresizingMaskIntoConstraints = false
+        _mainStack.layer.cornerRadius = 8
+        _mainStack.backgroundColor = UIColor.theme.primaryWhite
         return _mainStack
     }()
     
@@ -22,5 +23,5 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
         self.addConstrainedSubViews(mainStack)
     }
     
-    //override func setConstraints() {}
+    
 }
