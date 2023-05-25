@@ -20,6 +20,9 @@
 		78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BA92A1FC35C003102D3 /* PWActivityProgressBarView.swift */; };
 		78626BAC2A1FCAF0003102D3 /* PWActivityStatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAB2A1FCAF0003102D3 /* PWActivityStatItemView.swift */; };
 		78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAD2A1FCCEE003102D3 /* PWActivityStatsView.swift */; };
+		78626BB02A1FF166003102D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAF2A1FF166003102D3 /* Constants.swift */; };
+		78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */; };
+		78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		78626BA92A1FC35C003102D3 /* PWActivityProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityProgressBarView.swift; sourceTree = "<group>"; };
 		78626BAB2A1FCAF0003102D3 /* PWActivityStatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatItemView.swift; sourceTree = "<group>"; };
 		78626BAD2A1FCCEE003102D3 /* PWActivityStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatsView.swift; sourceTree = "<group>"; };
+		78626BAF2A1FF166003102D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivitiesListViewController.swift; sourceTree = "<group>"; };
+		78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 				78626B972A1E9447003102D3 /* UIView+addConstrainedSubViews.swift */,
 				78626B9B2A1E95E8003102D3 /* PWProgrammaticUIView.swift */,
 				78626BA52A1F32E9003102D3 /* UIColor+theme.swift */,
+				78626BAF2A1FF166003102D3 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -186,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				78626B992A1E95BC003102D3 /* PWMainPageViewController.swift */,
+				78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */,
+				78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -274,13 +283,16 @@
 				78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
+				78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */,
 				78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */,
 				78626BAC2A1FCAF0003102D3 /* PWActivityStatItemView.swift in Sources */,
 				78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
+				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
+				78626BB02A1FF166003102D3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

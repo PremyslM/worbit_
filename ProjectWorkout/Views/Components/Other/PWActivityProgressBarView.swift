@@ -25,6 +25,8 @@ class PWActivityProgressBar: PWProgrammaticUIView {
     }()
         
     
+    // MARK: - Configuring UI
+    
     override func setConfig() {
         self.addConstrainedSubViews(progressBarView, activityIconView)                
     }

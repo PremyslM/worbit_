@@ -10,14 +10,8 @@ import UIKit
 
 extension UIColor {
     
-    static let theme: PWTheme = PWTheme()
-    
-    struct PWTheme {
-        
-        let primaryBackground = UIColor(named: "primaryBackground")
-        let primaryWhite = UIColor(named: "primaryWhite")
-        let secondaryWhite = UIColor(named: "secondaryWhite")
-    }
+    static let theme = Constants.PWTheme()
+    static let activityTheme = Constants.PWTheme.ActivityTheme()
     
     
 }

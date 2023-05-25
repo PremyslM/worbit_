@@ -16,6 +16,9 @@ class PWActivityStatsView: PWProgrammaticUIView {
         
         return _statStackView
     }()
+    
+    
+    // MARK: - Configuring UI
         
     override func setConfig() {
         self.addConstrainedSubViews(statStackView)

@@ -39,12 +39,7 @@ final class PWMainPageViewController: UIViewController {
 private extension PWMainPageViewController {
     
     func setConfig() {
-        self.view.addConstrainedSubViews(infoContainer, activityStatsView)
-        
-        self.tabBarItem = UITabBarItem(
-            title: "Home",
-            image: UIImage(systemName: "house"),
-            tag: 1)
+        self.view.addConstrainedSubViews(infoContainer, activityStatsView)               
         
         self.title = "Home"
     }
@@ -57,7 +52,7 @@ private extension PWMainPageViewController {
             infoContainer.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.3),
             
             activityStatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            activityStatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),            
+            activityStatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             activityStatsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityStatsView.bottomAnchor.constraint(equalTo: infoContainer.topAnchor, constant: -100),
         ])
@@ -69,7 +64,7 @@ private extension PWMainPageViewController {
         
         for index in 0..<3 {
             let _activityProgressBar = PWActivityProgressBar()
-            _activityProgressBar.activityIconView.image = UIImage(systemName: "\(index + 1).circle")
+            _activityProgressBar.activityIconView.image = UIImage(systemName: Constants.activityStrings[index])
             
             self.view.addConstrainedSubViews(_activityProgressBar)
             
