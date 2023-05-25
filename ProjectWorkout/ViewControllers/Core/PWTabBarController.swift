@@ -12,15 +12,33 @@ final class PWTabBarController: UITabBarController {
             
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .theme.primaryBackground // TODO: Just for testings
         
-        self.tabBar.tintColor = .theme.secondaryWhite
+        setConfig()
+        setUpTabBar()
         
-        let menuVC = UINavigationController(rootViewController: PWMainPageViewController())
-                
-        
-        self.viewControllers = [menuVC]
     }
     
     
 }
+
+private extension PWTabBarController {
+    
+    func setConfig() {
+        self.view.backgroundColor = .theme.primaryBackground // TODO: Just for testings
+                            
+    }
+    
+    func setUpTabBar() {
+        self.tabBar.tintColor = .theme.secondaryWhite
+        let menuVC = UINavigationController(rootViewController: PWMainPageViewController())
+            
+        self.viewControllers = [menuVC]
+    }
+    
+    func setContraints() {
+        
+    }
+    
+    
+}
+

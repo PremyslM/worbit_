@@ -13,8 +13,7 @@ class PWProgrammaticUIView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        print("Called")
+                
         self.setConfig()
         self.setConstraints()
     }
