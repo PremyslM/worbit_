@@ -21,7 +21,7 @@ class PWActivityStatItemView: PWProgrammaticUIView {
     public lazy var statLabel: UILabel = {
         let _statLabel = UILabel()
         _statLabel.text = "Heard rate"
-        _statLabel.font = .systemFont(ofSize: 18)
+        _statLabel.font = .systemFont(ofSize: 18)        
         
         return _statLabel
     }()
@@ -41,12 +41,18 @@ class PWActivityStatItemView: PWProgrammaticUIView {
         self.addConstrainedSubViews(statStackView)
         self.statStackView.addArrangedSubview(statLabel)
         self.statStackView.addArrangedSubview(statValueLabel)
+        
+        self.backgroundColor = UIColor.theme.secondaryWhite?.withAlphaComponent(0.25)
+        self.layer.cornerRadius = 6
     }
     
     override func setConstraints() {
         NSLayoutConstraint.activate([
-            statStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            statStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),            
+            statStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            statStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
+            statStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
+            statStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
+            statStackView.widthAnchor.constraint(equalToConstant: 60),
         ])
     }
     

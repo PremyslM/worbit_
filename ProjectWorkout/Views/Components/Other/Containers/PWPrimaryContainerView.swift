@@ -11,11 +11,39 @@ import UIKit
 /// This PWProgrammaticUIView class represents UI Components that'll be located in many view, depents on his usage.
 class PWPrimaryContainerView: PWProgrammaticUIView {
     
+    private let vc = PWPrimaryContainerViewViewModel()
+    
     private lazy var mainStack: UIStackView = {
         let _mainStack = UIStackView()
-        _mainStack.layer.cornerRadius = 8
-        _mainStack.backgroundColor = UIColor.theme.primaryWhite
+        
+        _mainStack.layer.cornerRadius = 8        
+        _mainStack.axis = .vertical
+        _mainStack.spacing = 10
+        
         return _mainStack
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let _titleLabel = UILabel()
+        let activity = vc.activityManager.activities![0]
+        _titleLabel.text = activity.name
+        
+        _titleLabel.font = .systemFont(ofSize: 32, weight: .semibold)
+        _titleLabel.textColor = .theme.secondaryWhite
+        
+        return _titleLabel
+    }()
+    
+    private lazy var statLabel: UILabel = {
+        let _statLabel = UILabel()
+        let activity = vc.activityManager.activities![0] // TODO: Don't use this one... it's a harcore one, create something more generic in loop for ex.
+        _statLabel.text = "AVG Speed: \(activity.statistics.averageSpeed)\nkCal burned: \(activity.statistics.caloriesBurned)\nMax. Heart rate: \(activity.statistics.maxHeartRate)\nPerfomance: \(activity.statistics.performance)" // TODO: Don't user multyString as a display data solution
+        
+        _statLabel.numberOfLines = 0
+        _statLabel.textColor = .theme.secondaryWhite
+        _statLabel.font = .systemFont(ofSize: 20, weight: .medium)
+        
+        return _statLabel
     }()
     
     
@@ -23,6 +51,16 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     
     override func setConfig() {
         self.addConstrainedSubViews(mainStack)
+        mainStack.addArrangedSubview(titleLabel)
+        mainStack.addArrangedSubview(statLabel)
+    }
+    
+    override func setConstraints() {
+        NSLayoutConstraint.activate([
+            mainStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            mainStack.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+        ])
     }
     
     

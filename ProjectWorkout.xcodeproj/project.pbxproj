@@ -26,6 +26,9 @@
 		78626BB72A20827E003102D3 /* HarcoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB62A20827E003102D3 /* HarcoreData.swift */; };
 		78626BB92A2082A6003102D3 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB82A2082A6003102D3 /* Activity.swift */; };
 		78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBA2A2082F5003102D3 /* ActivityStats.swift */; };
+		78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBD2A20EB84003102D3 /* ActivityManager.swift */; };
+		78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */; };
+		78626BC22A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		78626BB62A20827E003102D3 /* HarcoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarcoreData.swift; sourceTree = "<group>"; };
 		78626BB82A2082A6003102D3 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		78626BBA2A2082F5003102D3 /* ActivityStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStats.swift; sourceTree = "<group>"; };
+		78626BBD2A20EB84003102D3 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatsViewViewModel.swift; sourceTree = "<group>"; };
+		78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryContainerViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 		78626B722A1E7633003102D3 /* ProjectWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				78626BBC2A20EB7A003102D3 /* Managers */,
 				78626B812A1E7634003102D3 /* Info.plist */,
 				78626B8E2A1E7A2C003102D3 /* Helpers */,
 				78626B8D2A1E7A26003102D3 /* Services */,
@@ -114,6 +121,8 @@
 		78626B8B2A1E7A14003102D3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */,
+				78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -218,6 +227,14 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		78626BBC2A20EB7A003102D3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				78626BBD2A20EB84003102D3 /* ActivityManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,9 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				78626BA02A1E9781003102D3 /* PWPrimaryContainerView.swift in Sources */,
+				78626BC22A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift in Sources */,
 				78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */,
+				78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
+				78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */,
 				78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */,
 				78626BB72A20827E003102D3 /* HarcoreData.swift in Sources */,
 				78626BB92A2082A6003102D3 /* Activity.swift in Sources */,
