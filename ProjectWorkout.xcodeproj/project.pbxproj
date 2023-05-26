@@ -23,6 +23,9 @@
 		78626BB02A1FF166003102D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAF2A1FF166003102D3 /* Constants.swift */; };
 		78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */; };
 		78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */; };
+		78626BB72A20827E003102D3 /* HarcoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB62A20827E003102D3 /* HarcoreData.swift */; };
+		78626BB92A2082A6003102D3 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB82A2082A6003102D3 /* Activity.swift */; };
+		78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBA2A2082F5003102D3 /* ActivityStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		78626BAF2A1FF166003102D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivitiesListViewController.swift; sourceTree = "<group>"; };
 		78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileViewController.swift; sourceTree = "<group>"; };
+		78626BB62A20827E003102D3 /* HarcoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarcoreData.swift; sourceTree = "<group>"; };
+		78626BB82A2082A6003102D3 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		78626BBA2A2082F5003102D3 /* ActivityStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 				78626B9B2A1E95E8003102D3 /* PWProgrammaticUIView.swift */,
 				78626BA52A1F32E9003102D3 /* UIColor+theme.swift */,
 				78626BAF2A1FF166003102D3 /* Constants.swift */,
+				78626BB62A20827E003102D3 /* HarcoreData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 		78626B8F2A1E7A35003102D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				78626BB82A2082A6003102D3 /* Activity.swift */,
+				78626BBA2A2082F5003102D3 /* ActivityStats.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,9 +293,12 @@
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
 				78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */,
+				78626BB72A20827E003102D3 /* HarcoreData.swift in Sources */,
+				78626BB92A2082A6003102D3 /* Activity.swift in Sources */,
 				78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */,
 				78626BAC2A1FCAF0003102D3 /* PWActivityStatItemView.swift in Sources */,
 				78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */,
+				78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,

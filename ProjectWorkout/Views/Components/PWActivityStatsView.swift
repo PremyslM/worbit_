@@ -23,8 +23,10 @@ class PWActivityStatsView: PWProgrammaticUIView {
     override func setConfig() {
         self.addConstrainedSubViews(statStackView)
         
-        for _ in 0..<3 {
+        for index in 0..<3 {
             let statItemView = PWActivityStatItemView()
+            statItemView.statLabel.text = String(HardcoreData.activities[index].name) // TODO: change it - not hardcore
+            statItemView.statValueLabel.text = "\(HardcoreData.activities[index].statistics.averageSpeed)%" // TODO: change it - not hardcore
             self.statStackView.addArrangedSubview(statItemView)
         }
         
@@ -37,6 +39,5 @@ class PWActivityStatsView: PWProgrammaticUIView {
             statStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
         ])
     }
-    
-    
+                
 }

@@ -18,16 +18,18 @@ class PWActivityStatItemView: PWProgrammaticUIView {
         return _statStackView
     }()
     
-    private lazy var statLabel: UILabel = {
+    public lazy var statLabel: UILabel = {
         let _statLabel = UILabel()
         _statLabel.text = "Heard rate"
+        _statLabel.font = .systemFont(ofSize: 18)
         
         return _statLabel
     }()
     
-    private lazy var statValueLabel: UILabel = {
+    public lazy var statValueLabel: UILabel = {
         let _valueLabel = UILabel()
         _valueLabel.text = "86%"
+        _valueLabel.font = .systemFont(ofSize: 28, weight: .semibold)
         
         return _valueLabel
     }()
