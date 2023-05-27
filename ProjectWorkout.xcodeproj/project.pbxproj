@@ -29,6 +29,9 @@
 		78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBD2A20EB84003102D3 /* ActivityManager.swift */; };
 		78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */; };
 		78626BC22A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */; };
+		78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */; };
+		78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC72A229607003102D3 /* TabView+addNewItem.swift */; };
+		78626BCA2A229A54003102D3 /* PWExcerciesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC92A229A54003102D3 /* PWExcerciesTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		78626BBD2A20EB84003102D3 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatsViewViewModel.swift; sourceTree = "<group>"; };
 		78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryContainerViewViewModel.swift; sourceTree = "<group>"; };
+		78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWExercisesViewController.swift; sourceTree = "<group>"; };
+		78626BC72A229607003102D3 /* TabView+addNewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView+addNewItem.swift"; sourceTree = "<group>"; };
+		78626BC92A229A54003102D3 /* PWExcerciesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWExcerciesTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +94,8 @@
 		78626B722A1E7633003102D3 /* ProjectWorkout */ = {
 			isa = PBXGroup;
 			children = (
-				78626BBC2A20EB7A003102D3 /* Managers */,
 				78626B812A1E7634003102D3 /* Info.plist */,
+				78626BBC2A20EB7A003102D3 /* Managers */,
 				78626B8E2A1E7A2C003102D3 /* Helpers */,
 				78626B8D2A1E7A26003102D3 /* Services */,
 				78626B8F2A1E7A35003102D3 /* Models */,
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				78626B9D2A1E9730003102D3 /* Components */,
+				78626BC92A229A54003102D3 /* PWExcerciesTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +159,7 @@
 				78626BA52A1F32E9003102D3 /* UIColor+theme.swift */,
 				78626BAF2A1FF166003102D3 /* Constants.swift */,
 				78626BB62A20827E003102D3 /* HarcoreData.swift */,
+				78626BC72A229607003102D3 /* TabView+addNewItem.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				78626B992A1E95BC003102D3 /* PWMainPageViewController.swift */,
 				78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */,
 				78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */,
+				78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -308,7 +317,9 @@
 				78626BA02A1E9781003102D3 /* PWPrimaryContainerView.swift in Sources */,
 				78626BC22A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift in Sources */,
 				78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */,
+				78626BCA2A229A54003102D3 /* PWExcerciesTableView.swift in Sources */,
 				78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */,
+				78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
 				78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */,
@@ -320,6 +331,7 @@
 				78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */,
 				78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
+				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,

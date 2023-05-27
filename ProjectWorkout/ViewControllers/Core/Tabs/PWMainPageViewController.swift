@@ -13,8 +13,8 @@ final class PWMainPageViewController: UIViewController {
     
     private lazy var infoContainer: PWPrimaryContainerView = {
         let _infoContainer = PWPrimaryContainerView()
-        _infoContainer.layer.cornerRadius = 6
-        _infoContainer.backgroundColor = .theme.primaryWhite?.withAlphaComponent(0.25)        
+        _infoContainer.layer.cornerRadius = 16
+        _infoContainer.backgroundColor = .theme.primaryWhite?.withAlphaComponent(0.25)
         return _infoContainer
     }()
     

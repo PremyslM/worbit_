@@ -26,43 +26,47 @@ final class PWTabBarController: UITabBarController {
 }
 
 
-private extension PWTabBarController {
+extension PWTabBarController {
     
-    func setConfig() {
+    private func setConfig() {
         self.view.backgroundColor = .theme.primaryBackground // TODO: Just for testings
                             
     }
     
-    func setUpTabBar() {
+    private func setUpTabBar() {
         self.tabBar.tintColor = .theme.secondaryWhite
         self.tabBar.barTintColor = .green
         
         let menuVC = UINavigationController(rootViewController: PWMainPageViewController())
         let userProfileVC = UINavigationController(rootViewController: PWUserProfileViewController())
         let activitiesVC = UINavigationController(rootViewController: PWActivitiesListViewController())
+        let exercisesVC = UINavigationController(rootViewController: PWExercisesViewController())
         
-        menuVC.tabBarItem = UITabBarItem(
-            title: "Home",
-            image: UIImage(systemName: "house"),
-            tag: 1)
+        self.tabBar.addNewItem(
+                    menuVC,
+                    title: "Home",
+                    image: UIImage(systemName: "house.fill")!,
+                    tag: 1)
         
-        userProfileVC.tabBarItem = UITabBarItem(
-            title: "Profile",
-            image: UIImage(systemName: "person"),
-            tag: 2)
+        self.tabBar.addNewItem(
+                    userProfileVC,
+                    title: "Profile",
+                    image: UIImage(systemName: "person.fill")!,
+                    tag: 2)
         
-        activitiesVC.tabBarItem = UITabBarItem(
-            title: "Activities",
-            image: UIImage(systemName: Constants.activityStrings[Int.random(in: 0..<Constants.activityStrings.count)]),
-            tag: 3)
-            
- 
+        self.tabBar.addNewItem(
+                    activitiesVC,
+                    title: "Activities",
+                    image: UIImage(systemName: Constants.activityStrings[Int.random(in: 0..<Constants.activityStrings.count)])!,
+                    tag: 3)
         
-        self.viewControllers = [menuVC, userProfileVC ,activitiesVC]
-    }
-    
-    func setContraints() {
-        
+        self.tabBar.addNewItem(
+                    exercisesVC,
+                    title: "Exercises",
+                    image: UIImage(systemName: "dumbbell.fill")!,
+                    tag: 4)
+                
+        self.viewControllers = [menuVC, activitiesVC, exercisesVC ,userProfileVC]
     }
     
     

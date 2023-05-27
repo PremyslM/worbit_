@@ -15,8 +15,7 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     
     private lazy var mainStack: UIStackView = {
         let _mainStack = UIStackView()
-        
-        _mainStack.layer.cornerRadius = 8        
+    
         _mainStack.axis = .vertical
         _mainStack.spacing = 10
         
