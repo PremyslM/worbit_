@@ -25,7 +25,7 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     
     private lazy var titleLabel: UILabel = {
         let _titleLabel = UILabel()
-        let activity = vc.activityManager.activities![0]
+        let activity = vc.activity
         _titleLabel.text = activity.name
         
         _titleLabel.font = .systemFont(ofSize: 32, weight: .semibold)
@@ -36,8 +36,8 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     
     private lazy var statLabel: UILabel = {
         let _statLabel = UILabel()
-        let activity = vc.activityManager.activities![0] // TODO: Don't use this one... it's a harcore one, create something more generic in loop for ex.
-        _statLabel.text = "AVG Speed: \(activity.statistics.averageSpeed)\nkCal burned: \(activity.statistics.caloriesBurned)\nMax. Heart rate: \(activity.statistics.maxHeartRate)\nPerfomance: \(activity.statistics.performance)" // TODO: Don't user multyString as a display data solution
+        print(vc.activity.name)
+        _statLabel.text = "AVG Speed: \(vc.activity.statistics.averageSpeed)\nkCal burned: \(vc.activity.statistics.caloriesBurned)\nMax. Heart rate: \(vc.activity.statistics.maxHeartRate)\nPerfomance: \(vc.activity.statistics.performance)" // TODO: Don't user multyString as a display data solution
         
         _statLabel.numberOfLines = 0
         _statLabel.textColor = .theme.secondaryWhite

@@ -23,5 +23,17 @@ final class ActivityManager {
         loadActivities()
     }
     
+    public func getRandomActivity() -> Activity {
+        
+        guard let activities = activities else {
+            fatalError("Failed to loac activites")
+        }
+        
+        let randomIndex = Int.random(in: 0..<activities.count)
+        let randomActivity = activities[randomIndex]
+        
+        return randomActivity
+    }
+    
     
 }
