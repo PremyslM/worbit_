@@ -10,6 +10,9 @@ import UIKit
 
 final class PWExercisesViewController: UIViewController {
     
+    private var vc = PWExerciseViewViewModel()
+    
+    
     private lazy var exerciseTableView: PWExercisesTabeView = {
         let _exerciseTableView = PWExercisesTabeView()
         _exerciseTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -39,15 +42,16 @@ final class PWExercisesViewController: UIViewController {
     
 }
 
+
 extension PWExercisesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return HardcoreData.activities.count
+        return vc.exercises!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Cell \(indexPath.row)"
+        cell.textLabel?.text = "\(vc.exercises![indexPath.row].name!)"
         
         return cell
     }
