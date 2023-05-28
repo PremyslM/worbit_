@@ -15,7 +15,7 @@ final class PWExercisesViewController: UIViewController {
     
     private lazy var exerciseTableView: PWExercisesTabeView = {
         let _exerciseTableView = PWExercisesTabeView()
-        _exerciseTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        _exerciseTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue)
         
         return _exerciseTableView
     }()
@@ -50,7 +50,7 @@ extension PWExercisesViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath)
         cell.textLabel?.text = "\(vc.exercises![indexPath.row].name!)"
         
         return cell

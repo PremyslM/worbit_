@@ -12,7 +12,7 @@ class PWActivitiesListViewController: UIViewController {
     
     private lazy var activitesTableView: PWActivitiesTableView = {
         let _activitesTableView = PWActivitiesTableView()
-        _activitesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "activityCell")
+        _activitesTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIndentifiers.activity.rawValue)
         return _activitesTableView
     }()
     
@@ -55,7 +55,7 @@ extension PWActivitiesListViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIndentifiers.activity.rawValue, for: indexPath)
         cell.textLabel?.text = "\(vc.userManger.user?.activities[indexPath.row].name)"
         
         return cell
