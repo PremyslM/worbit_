@@ -10,10 +10,13 @@ import UIKit
 
 final class PWUserProfileViewController: UIViewController {
     
+    private let vc = PWUserProfileViewViewModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Profile"
+        self.title = vc.userManager.user?.name
     }
     
     

@@ -12,16 +12,14 @@ final class ActivityManager {
     
     static let shared: ActivityManager = ActivityManager()
     
+    private let currentUser = UserProfileManager.shared
     
     public var activities: [Activity]?
-    
-    private func loadActivities() {
-        self.activities = HardcoreData.activities
-    }
     
     init() {
         loadActivities()
     }
+    
     
     public func getRandomActivity() -> Activity {
         
@@ -36,4 +34,11 @@ final class ActivityManager {
     }
     
     
+    // MARK: - Private
+    
+    private func loadActivities() {
+        self.activities = currentUser.user?.activities
+    }
+    
+     
 }
