@@ -24,5 +24,13 @@ struct Constants {
     
     public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
         
+    enum APIKeys: String {
+        case apiNinjas = "TgwU+c9ajNCNOn3fX6AqNw==pSiuFqEeVY4vMQ11"
+    }
+    
+    enum Endpoints: String {
+        case exercises = "https://api.api-ninjas.com/v1/exercises?muscle=lats"
+    }
+    
     
 }

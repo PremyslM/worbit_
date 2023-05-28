@@ -12,11 +12,10 @@ class NetworkService {
     func fetchData(completion: @escaping (_ succes: Bool, _ result: [Exercise]?) -> ()) {
 
         let headers = [
-            "X-Api-Key": "TgwU+c9ajNCNOn3fX6AqNw==pSiuFqEeVY4vMQ11",
-            "muscle": "chest",
+            "X-Api-Key": Constants.APIKeys.apiNinjas.rawValue,
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api.api-ninjas.com/v1/exercises?")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: Constants.Endpoints.exercises.rawValue)! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
@@ -37,7 +36,6 @@ class NetworkService {
                 completion(false, nil)
             }
         })
-
         dataTask.resume()
     }
     
