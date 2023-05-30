@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkService {
     
-    func fetchData(completion: @escaping (_ succes: Bool, _ result: [Exercise]?) -> ()) {
+    func fetchData(completion: @escaping (_ succes: Bool, _ result: [ExerciseItem]?) -> ()) {
 
         let headers = [
             "X-Api-Key": Constants.APIKeys.apiNinjas.rawValue,
@@ -30,7 +30,7 @@ class NetworkService {
             guard let data = data else { return }
             
             do {
-                let decodedData = try JSONDecoder().decode([Exercise].self, from: data)
+                let decodedData = try JSONDecoder().decode([ExerciseItem].self, from: data)
                 completion(true, decodedData)
             } catch {
                 completion(false, nil)

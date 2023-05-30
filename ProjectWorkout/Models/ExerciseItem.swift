@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Exercise: Codable {
+struct ExerciseItem: Codable {
     let name: String?
     let type: String?
     let muscle: String?
