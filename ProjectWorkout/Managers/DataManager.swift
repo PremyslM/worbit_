@@ -34,6 +34,6 @@ class DataManager {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }        
+    }                
     
 }

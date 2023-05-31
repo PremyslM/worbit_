@@ -21,23 +21,29 @@ final class ActivityManager {
     }
     
     
-    public func getRandomActivity() -> Activity {
+    public func getRandomActivity() -> Activity? {
         
         guard let activities = activities else {
             fatalError("Failed to loac activites")
         }
         
-        let randomIndex = Int.random(in: 0..<activities.count)
-        let randomActivity = activities[randomIndex]
+        if !activities.isEmpty {
+            let randomIndex = Int.random(in: 0..<activities.count)
+            return activities[randomIndex]
+        }
         
-        return randomActivity
+        let _testActivity = Activity(context: DataManager.shared.persistentContainer.viewContext)
+        _testActivity.name = "TesŤák"
+        
+        return _testActivity
     }
     
     
     // MARK: - Private
     
     private func loadActivities() {
-        self.activities = currentUser.user?.activities
+        self.activities = self.currentUser.user?.activityArray
+        print("count: ", (activities?.count)!)
     }
     
      

@@ -12,16 +12,14 @@ final class UserProfileManager {
     
     static let shared = UserProfileManager()
     
-    var user: UserProfile?
+    var user: User?
     
     init() {
         fetchData()
     }
     
     private func fetchData() {
-        self.user = UserProfile(
-            name: "John Doe",
-            activities: HardcoreData.activities)
+        self.user = HardcoreData.hardcoreUser
     }
     
     

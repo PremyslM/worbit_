@@ -34,9 +34,8 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     }()
     
     private lazy var statLabel: UILabel = {
-        let _statLabel = UILabel()
-        print(vc.activity.name)
-        _statLabel.text = "AVG Speed: \(vc.activity.statistics.averageSpeed)\nkCal burned: \(vc.activity.statistics.caloriesBurned)\nMax. Heart rate: \(vc.activity.statistics.maxHeartRate)\nPerfomance: \(vc.activity.statistics.performance)" // TODO: Don't user multyString as a display data solution
+        let _statLabel = UILabel()        
+        _statLabel.text = "Duration: \(vc.activity.duration)\nDistance: \(vc.activity.distance)\nPower: \(vc.activity.power)" // TODO: Don't user multyString as a display data solution
         
         _statLabel.numberOfLines = 0
         _statLabel.textColor = .theme.secondaryWhite

@@ -24,7 +24,6 @@
 		78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */; };
 		78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */; };
 		78626BB72A20827E003102D3 /* HarcoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB62A20827E003102D3 /* HarcoreData.swift */; };
-		78626BB92A2082A6003102D3 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB82A2082A6003102D3 /* Activity.swift */; };
 		78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBA2A2082F5003102D3 /* ActivityStats.swift */; };
 		78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBD2A20EB84003102D3 /* ActivityManager.swift */; };
 		78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */; };
@@ -42,11 +41,12 @@
 		78626BDA2A23B094003102D3 /* PWActivitiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BD92A23B094003102D3 /* PWActivitiesTableView.swift */; };
 		78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */; };
 		78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */; };
-		78FA1DBD2A261AF0008FCAF3 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DB92A261AF0008FCAF3 /* Exercise+CoreDataClass.swift */; };
-		78FA1DBE2A261AF0008FCAF3 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBA2A261AF0008FCAF3 /* Exercise+CoreDataProperties.swift */; };
 		78FA1DBF2A261AF0008FCAF3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */; };
 		78FA1DC02A261AF0008FCAF3 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBC2A261AF0008FCAF3 /* User+CoreDataProperties.swift */; };
 		78FA1DC22A261C15008FCAF3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC12A261C15008FCAF3 /* DataManager.swift */; };
+		78FA1DC52A275678008FCAF3 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */; };
+		78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */; };
+		78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC72A275E83008FCAF3 /* PWActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +69,6 @@
 		78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivitiesListViewController.swift; sourceTree = "<group>"; };
 		78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileViewController.swift; sourceTree = "<group>"; };
 		78626BB62A20827E003102D3 /* HarcoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarcoreData.swift; sourceTree = "<group>"; };
-		78626BB82A2082A6003102D3 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		78626BBA2A2082F5003102D3 /* ActivityStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStats.swift; sourceTree = "<group>"; };
 		78626BBD2A20EB84003102D3 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatsViewViewModel.swift; sourceTree = "<group>"; };
@@ -87,11 +86,12 @@
 		78626BD92A23B094003102D3 /* PWActivitiesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivitiesTableView.swift; sourceTree = "<group>"; };
 		78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityViewViewModel.swift; sourceTree = "<group>"; };
 		78FA1DAF2A261999008FCAF3 /* ProjectWorkrout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectWorkrout.xcdatamodel; sourceTree = "<group>"; };
-		78FA1DB92A261AF0008FCAF3 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
-		78FA1DBA2A261AF0008FCAF3 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78FA1DBC2A261AF0008FCAF3 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78FA1DC12A261C15008FCAF3 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		78FA1DC72A275E83008FCAF3 /* PWActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 		78626B672A1E7633003102D3 = {
 			isa = PBXGroup;
 			children = (
-				78FA1DB92A261AF0008FCAF3 /* Exercise+CoreDataClass.swift */,
-				78FA1DBA2A261AF0008FCAF3 /* Exercise+CoreDataProperties.swift */,
+				78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */,
+				78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */,
 				78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */,
 				78FA1DBC2A261AF0008FCAF3 /* User+CoreDataProperties.swift */,
 				78626B722A1E7633003102D3 /* ProjectWorkout */,
@@ -208,10 +208,10 @@
 		78626B8F2A1E7A35003102D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78626BB82A2082A6003102D3 /* Activity.swift */,
 				78626BBA2A2082F5003102D3 /* ActivityStats.swift */,
 				78626BCB2A229D1F003102D3 /* ExerciseItem.swift */,
 				78626BCD2A229D28003102D3 /* UserProfile.swift */,
+				78FA1DC72A275E83008FCAF3 /* PWActivity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,27 +374,27 @@
 				78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */,
 				78626BB72A20827E003102D3 /* HarcoreData.swift in Sources */,
 				78FA1DBF2A261AF0008FCAF3 /* User+CoreDataClass.swift in Sources */,
-				78626BB92A2082A6003102D3 /* Activity.swift in Sources */,
-				78FA1DBD2A261AF0008FCAF3 /* Exercise+CoreDataClass.swift in Sources */,
 				78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */,
 				78626BAC2A1FCAF0003102D3 /* PWActivityStatItemView.swift in Sources */,
+				78FA1DC52A275678008FCAF3 /* Activity+CoreDataClass.swift in Sources */,
 				78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */,
 				78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */,
 				78FA1DC02A261AF0008FCAF3 /* User+CoreDataProperties.swift in Sources */,
 				78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */,
 				78626BDA2A23B094003102D3 /* PWActivitiesTableView.swift in Sources */,
+				78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,
+				78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,
 				78626BCE2A229D28003102D3 /* UserProfile.swift in Sources */,
 				78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */,
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
 				78FA1DC22A261C15008FCAF3 /* DataManager.swift in Sources */,
 				78626BD02A23712B003102D3 /* NetworkService.swift in Sources */,
-				78FA1DBE2A261AF0008FCAF3 /* Exercise+CoreDataProperties.swift in Sources */,
 				78626BD42A239368003102D3 /* UserProfileManager.swift in Sources */,
 				78626BB02A1FF166003102D3 /* Constants.swift in Sources */,
 			);

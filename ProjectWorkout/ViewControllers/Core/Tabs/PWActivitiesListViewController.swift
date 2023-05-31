@@ -51,12 +51,12 @@ class PWActivitiesListViewController: UIViewController {
 extension PWActivitiesListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (vc.userManger.user?.activities.count)!
+        return (vc.userManger.user?.activityArray.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIndentifiers.activity.rawValue, for: indexPath)
-        cell.textLabel?.text = "\(vc.userManger.user?.activities[indexPath.row].name)"
+        cell.textLabel?.text = "\(vc.userManger.user?.activityArray[indexPath.row].name)"
         
         return cell
     }
