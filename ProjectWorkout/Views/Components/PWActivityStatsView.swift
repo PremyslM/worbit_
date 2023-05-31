@@ -28,8 +28,7 @@ class PWActivityStatsView: PWProgrammaticUIView {
         for activity in vc.activityManager.activities! {
             let statItemView = PWActivityStatItemView()
             
-            statItemView.statLabel.text = activity.name
-            //statItemView.statValueLabel.text = String(activity.statistics.averageSpeed)
+            statItemView.statLabel.text = activity.name            
             
             self.statStackView.addArrangedSubview(statItemView)
         }

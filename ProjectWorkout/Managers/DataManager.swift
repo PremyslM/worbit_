@@ -34,6 +34,40 @@ class DataManager {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }                
+    }
+    
+    
+    static let user: User = {
+        let _user = User(context: DataManager.shared.persistentContainer.viewContext)
+        _user.name = "Pepa"
+        
+        var fetche = [Activity]()
+        
+        for ac in getActivities {
+            let _ac = Activity(context: DataManager.shared.persistentContainer.viewContext)
+            _ac.name = ac.name
+            _ac.duration = ac.duration
+            
+            fetche.append(_ac)
+        }
+        let set = Set(fetche)
+        _user.exercise = set as NSSet
+        
+        return _user
+    }()
+    
+    // MARK: - Private
+    
+    private static let getActivities: [Activity] = {
+        var fetchedActivities = [Activity]()
+        for activity in Constants.activitiesArray {
+            let _activity = Activity(context: DataManager.shared.persistentContainer.viewContext)
+            _activity.name = activity.value.name
+            
+            fetchedActivities.append(_activity)
+        }
+        
+        return fetchedActivities
+    }()
     
 }

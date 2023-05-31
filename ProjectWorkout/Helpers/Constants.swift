@@ -23,6 +23,20 @@ struct Constants {
     }
     
     public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
+    
+    public static let activitiesArray: [Activities: PWActivity] = [
+        .running: PWActivity(name: "Běh", systemImage: "figure.run"),
+        .swiming: PWActivity(name: "Plavání", systemImage: "figure.pool.swim"),
+        .cycling: PWActivity(name: "Cyklistika", systemImage: "figure.outdoor.cycle"),
+        .golf: PWActivity(name: "Golf", systemImage: "figure.golf"),
+    ]
+    
+    enum Activities {
+        case running
+        case cycling
+        case swiming
+        case golf
+    }
         
     enum APIKeys: String {
         case apiNinjas = "TgwU+c9ajNCNOn3fX6AqNw==pSiuFqEeVY4vMQ11"

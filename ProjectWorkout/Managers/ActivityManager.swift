@@ -38,6 +38,10 @@ final class ActivityManager {
         return _testActivity
     }
     
+    public func getActivity(_ activity: Constants.Activities) -> PWActivity {
+        return Constants.activitiesArray[activity] ?? PWActivity(name: "Nothing", systemImage: "house")
+    }
+    
     
     // MARK: - Private
     

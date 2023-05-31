@@ -17,10 +17,12 @@ final class UserProfileManager {
     init() {
         fetchData()
     }
+     
+    
+    // MARK: - Private    
     
     private func fetchData() {
-        self.user = HardcoreData.hardcoreUser
+        self.user = DataManager.user
     }
-    
     
 }

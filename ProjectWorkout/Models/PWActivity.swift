@@ -9,10 +9,9 @@ import Foundation
 
 
 struct PWActivity: Codable {
-    let name: String
-    let duration: Float
-    let distance: Float
-    let date: Date
-    let activityType: String
-    let heartRate: Int
+    
+    let name: String    
+    let systemImage: String
+    
+    
 }

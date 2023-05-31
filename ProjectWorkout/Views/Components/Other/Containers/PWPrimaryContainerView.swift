@@ -34,7 +34,7 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     }()
     
     private lazy var statLabel: UILabel = {
-        let _statLabel = UILabel()        
+        let _statLabel = UILabel()
         _statLabel.text = "Duration: \(vc.activity.duration)\nDistance: \(vc.activity.distance)\nPower: \(vc.activity.power)" // TODO: Don't user multyString as a display data solution
         
         _statLabel.numberOfLines = 0
@@ -45,7 +45,7 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     }()
     
     
-    // MARK: Configuring UI
+    // MARK: - Configuring UI
     
     override func setConfig() {
         self.addConstrainedSubViews(mainStack)
