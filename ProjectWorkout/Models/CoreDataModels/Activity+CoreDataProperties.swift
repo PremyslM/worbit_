@@ -21,6 +21,10 @@ extension Activity {
     @NSManaged public var duration: Float
     @NSManaged public var distance: Float
     @NSManaged public var user: User?
+    
+    public var unwrappedName: String {
+        return name ?? "Unknown"
+    }
 
 }
 

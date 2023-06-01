@@ -19,6 +19,9 @@ extension User {
     @NSManaged public var name: String?
     @NSManaged public var exercise: NSSet?
 
+    public var unwrappedName: String {
+        return name ?? "Unknown"
+    }
     
     public var activityArray: [Activity] {
         let set = exercise as? Set<Activity> ?? []

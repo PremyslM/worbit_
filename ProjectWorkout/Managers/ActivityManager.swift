@@ -14,7 +14,11 @@ final class ActivityManager {
     
     private let currentUser = UserProfileManager.shared
     
-    public var activities: [Activity]?
+    private var activities: [Activity]?
+    
+    public var unwrappedActivities: [Activity] {
+        return activities ?? []
+    }
     
     init() {
         loadActivities()
@@ -47,7 +51,7 @@ final class ActivityManager {
     
     private func loadActivities() {
         self.activities = self.currentUser.user?.activityArray
-        print("count: ", (activities?.count)!)
+        print("count: ", (unwrappedActivities.count))
     }
     
      

@@ -11,7 +11,11 @@ class PWExerciseViewViewModel {
     
     private let networkService = NetworkService()
     
-    public var exercises: [ExerciseItem]?
+    private var exercises: [ExerciseItem]?
+    
+    public var unwrappedExercises: [ExerciseItem] {
+        return exercises ?? []
+    }
     
     init() {
         fetchData()

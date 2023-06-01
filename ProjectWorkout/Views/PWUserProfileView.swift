@@ -12,7 +12,6 @@ class PWUserProfileView: PWProgrammaticUIView {
     
     private let vc = PWUserProfileViewViewModel()
     
-
     private lazy var userNameTitle: UILabel = {
         let _userNameTitle = UILabel()
         _userNameTitle.font = .systemFont(ofSize: 24, weight: .semibold)

@@ -46,12 +46,12 @@ final class PWExercisesViewController: UIViewController {
 extension PWExercisesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vc.exercises!.count
+        return vc.unwrappedExercises.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath)
-        cell.textLabel?.text = "\(vc.exercises![indexPath.row].name!)"
+        cell.textLabel?.text = "\(vc.unwrappedExercises[indexPath.row].name!)"
         
         return cell
     }

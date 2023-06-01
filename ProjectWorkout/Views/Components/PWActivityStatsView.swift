@@ -25,7 +25,7 @@ class PWActivityStatsView: PWProgrammaticUIView {
     override func setConfig() {
         self.addConstrainedSubViews(statStackView)
         
-        for activity in vc.activityManager.activities! {
+        for activity in vc.activityManager.unwrappedActivities {
             let statItemView = PWActivityStatItemView()
             
             statItemView.statLabel.text = activity.name            
