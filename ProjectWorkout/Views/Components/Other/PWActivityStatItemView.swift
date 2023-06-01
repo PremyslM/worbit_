@@ -51,8 +51,7 @@ class PWActivityStatItemView: PWProgrammaticUIView {
             statStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             statStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8),
             statStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8),
-            statStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
-            statStackView.widthAnchor.constraint(equalToConstant: 60),
+            statStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),            
         ])
     }
     

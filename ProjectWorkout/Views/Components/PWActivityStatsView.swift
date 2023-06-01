@@ -25,10 +25,19 @@ class PWActivityStatsView: PWProgrammaticUIView {
     override func setConfig() {
         self.addConstrainedSubViews(statStackView)
         
-        for activity in vc.activityManager.unwrappedActivities {
+        let activites = vc.activityManager.unwrappedActivities
+        var statsNum: Int
+        
+        if activites.count >= 4 {
+            statsNum = 4
+        } else {
+            statsNum = activites.count
+        }
+        
+        for activityIndex in 0..<statsNum {
             let statItemView = PWActivityStatItemView()
             
-            statItemView.statLabel.text = activity.name            
+            statItemView.statLabel.text = activites[activityIndex].name
             
             self.statStackView.addArrangedSubview(statItemView)
         }
