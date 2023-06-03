@@ -22,7 +22,7 @@ class PWUserProfileView: PWProgrammaticUIView {
     
     private lazy var userDescription: UILabel = {
         let _userDescription = UILabel()
-        _userDescription.text = "Number of Activities: \(vc.userManager.user?.activityArray.count)"
+        _userDescription.text = "Number of Activities: \(vc.userManager.user?.activityArray.count ?? 0)"
         
         return _userDescription
     }()

@@ -28,7 +28,6 @@ class PWActivityStatItemView: PWProgrammaticUIView {
     
     public lazy var statValueLabel: UILabel = {
         let _valueLabel = UILabel()
-        _valueLabel.text = "86%"
         _valueLabel.font = .systemFont(ofSize: 28, weight: .semibold)
         
         return _valueLabel
@@ -43,7 +42,7 @@ class PWActivityStatItemView: PWProgrammaticUIView {
         self.statStackView.addArrangedSubview(statValueLabel)
         
         self.backgroundColor = UIColor.theme.secondaryWhite?.withAlphaComponent(0.25)
-        self.layer.cornerRadius = 16
+        self.layer.cornerRadius = 16                
     }
     
     override func setConstraints() {

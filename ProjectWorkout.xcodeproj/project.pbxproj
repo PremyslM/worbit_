@@ -46,6 +46,7 @@
 		78FA1DC52A275678008FCAF3 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */; };
 		78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */; };
 		78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC72A275E83008FCAF3 /* PWActivity.swift */; };
+		78FA1DCB2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78FA1DC72A275E83008FCAF3 /* PWActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivity.swift; sourceTree = "<group>"; };
+		78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatItemViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				78626BD12A23794A003102D3 /* PWExerciseViewViewModel.swift */,
 				78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */,
 				78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */,
+				78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
+				78FA1DCB2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift in Sources */,
 				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,
 				78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,

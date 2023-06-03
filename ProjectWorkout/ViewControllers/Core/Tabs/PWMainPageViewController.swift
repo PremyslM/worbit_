@@ -23,13 +23,17 @@ final class PWMainPageViewController: UIViewController {
         
         return _activityStatsView
     }()
+    
+    override func loadView() {
+        super.loadView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
                 
+        setupActivityPorgressBar()
         setConfig()
         setConstraints()
-        setupActivityPorgressBar()
     }
             
         
@@ -65,9 +69,11 @@ private extension PWMainPageViewController {
         for index in 0..<3 {
             let _activityProgressBar = PWActivityProgressBar()
             _activityProgressBar.activityIconView.image = UIImage(systemName: Constants.activityStrings[index])
+            _activityProgressBar.progressBarValue = 0.5
             
             self.view.addConstrainedSubViews(_activityProgressBar)
             
+            // Configuring constraints that every progress bar will be under the other one
             NSLayoutConstraint.activate([
                 _activityProgressBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: CGFloat(consTop)),
                 _activityProgressBar.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -79,6 +85,6 @@ private extension PWMainPageViewController {
         }
         
     }
-    
+            
     
 }

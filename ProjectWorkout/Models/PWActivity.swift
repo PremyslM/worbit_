@@ -12,6 +12,7 @@ struct PWActivity: Codable {
     
     let name: String    
     let systemImage: String
+    let accuracy: Float
     
     
 }

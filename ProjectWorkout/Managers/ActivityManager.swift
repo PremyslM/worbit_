@@ -43,7 +43,7 @@ final class ActivityManager {
     }
     
     public func getActivity(_ activity: Constants.Activities) -> PWActivity {
-        return Constants.activitiesArray[activity] ?? PWActivity(name: "Nothing", systemImage: "house")
+        return Constants.activitiesArray[activity] ?? PWActivity(name: "Nothing", systemImage: "house", accuracy: 50.0)
     }
     
     

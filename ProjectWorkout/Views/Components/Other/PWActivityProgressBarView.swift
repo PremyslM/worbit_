@@ -8,7 +8,26 @@
 import UIKit
 
 class PWActivityProgressBar: PWProgrammaticUIView {
-            
+    
+    // MARK: - Stored properties
+    public var progressBarValue: Float? {
+        didSet {
+            NSLayoutConstraint.activate([
+                progressBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: CGFloat(progressBarValue ?? 0))
+            ])
+        }
+    }
+    
+    
+    // MARK: - Stored UI properties
+    
+    public lazy var activityIconView: UIImageView = {
+        let _activityIcon = UIImageView()
+        _activityIcon.tintColor = .theme.secondaryWhite
+        
+        return _activityIcon
+    }()
+    
     private lazy var progressBarView: UIView = {
         let _progressBar = UIView()
         _progressBar.backgroundColor = .theme.secondaryWhite
@@ -17,29 +36,23 @@ class PWActivityProgressBar: PWProgrammaticUIView {
         return _progressBar
     }()
     
-    public lazy var activityIconView: UIImageView = {
-        let _activityIcon = UIImageView()
-        _activityIcon.tintColor = .theme.secondaryWhite
-        
-        return _activityIcon
-    }()
-        
     
     // MARK: - Configuring UI
     
     override func setConfig() {
-        self.addConstrainedSubViews(progressBarView, activityIconView)                
+        self.addConstrainedSubViews(progressBarView, activityIconView)
     }
     
     override func setConstraints() {
         NSLayoutConstraint.activate([
             activityIconView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             activityIconView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-                        
+            
             progressBarView.leadingAnchor.constraint(equalTo: self.activityIconView.trailingAnchor, constant: 10),
-            progressBarView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             progressBarView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             progressBarView.heightAnchor.constraint(equalToConstant: 10),
         ])
     }
+    
+    
 }

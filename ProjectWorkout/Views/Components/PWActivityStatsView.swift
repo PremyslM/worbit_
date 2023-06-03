@@ -36,8 +36,8 @@ class PWActivityStatsView: PWProgrammaticUIView {
         
         for activityIndex in 0..<statsNum {
             let statItemView = PWActivityStatItemView()
-            
-            statItemView.statLabel.text = activites[activityIndex].name
+            statItemView.statValueLabel.text = "\(activites[activityIndex].duration)"
+            statItemView.statLabel.text = activites[activityIndex].name            
             
             self.statStackView.addArrangedSubview(statItemView)
         }

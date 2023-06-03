@@ -56,13 +56,16 @@ class DataManager {
         return _user
     }()
     
+    
     // MARK: - Private
     
     private static let getActivities: [Activity] = {
+        
         var fetchedActivities = [Activity]()
         for activity in Constants.activitiesArray {
             let _activity = Activity(context: DataManager.shared.persistentContainer.viewContext)
             _activity.name = activity.value.name
+            _activity.duration = activity.value.accuracy
             
             fetchedActivities.append(_activity)
         }
