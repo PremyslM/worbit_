@@ -44,7 +44,7 @@ private extension PWMainPageViewController {
     
     func setConfig() {
         self.view.addConstrainedSubViews(infoContainer, activityStatsView)               
-        
+                
         self.title = "Home"
     }
     
@@ -68,8 +68,8 @@ private extension PWMainPageViewController {
         
         for index in 0..<3 {
             let _activityProgressBar = PWActivityProgressBar()
-            _activityProgressBar.activityIconView.image = UIImage(systemName: Constants.activityStrings[index])
-            _activityProgressBar.progressBarValue = 0.5
+            _activityProgressBar.activityIconView.image = UIImage(systemName: Constants.activityStrings[index])            
+            
             
             self.view.addConstrainedSubViews(_activityProgressBar)
             

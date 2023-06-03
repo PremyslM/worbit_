@@ -9,15 +9,11 @@ import UIKit
 
 class PWActivityProgressBar: PWProgrammaticUIView {
     
-    // MARK: - Stored properties
-    public var progressBarValue: Float? {
-        didSet {
-            NSLayoutConstraint.activate([
-                progressBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: CGFloat(progressBarValue ?? 0))
-            ])
-        }
-    }
+    private let vc = PWActivityProgressBarViewModel()
     
+    private var progressValue: Float {
+        return Float(vc.progressValue!)
+    }
     
     // MARK: - Stored UI properties
     
@@ -41,6 +37,8 @@ class PWActivityProgressBar: PWProgrammaticUIView {
     
     override func setConfig() {
         self.addConstrainedSubViews(progressBarView, activityIconView)
+        
+        vc.delegate = self
     }
     
     override func setConstraints() {
@@ -51,7 +49,17 @@ class PWActivityProgressBar: PWProgrammaticUIView {
             progressBarView.leadingAnchor.constraint(equalTo: self.activityIconView.trailingAnchor, constant: 10),
             progressBarView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             progressBarView.heightAnchor.constraint(equalToConstant: 10),
+            progressBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: CGFloat(progressValue))
         ])
+    }
+    
+    
+}
+
+
+extension PWActivityProgressBar: PWActivityProgressBarDataSource {
+    func setProgressValue() -> Float {
+        return 0.8 // TODO: Hard core value... don't use it.
     }
     
     

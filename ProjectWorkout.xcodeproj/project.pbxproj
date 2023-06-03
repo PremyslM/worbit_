@@ -47,6 +47,7 @@
 		78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */; };
 		78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC72A275E83008FCAF3 /* PWActivity.swift */; };
 		78FA1DCB2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */; };
+		78FA1DD52A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DD42A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78FA1DC72A275E83008FCAF3 /* PWActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivity.swift; sourceTree = "<group>"; };
 		78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatItemViewViewModel.swift; sourceTree = "<group>"; };
+		78FA1DD42A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityProgressBarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */,
 				78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */,
 				78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */,
+				78FA1DD42A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				78FA1DC02A261AF0008FCAF3 /* User+CoreDataProperties.swift in Sources */,
 				78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */,
 				78626BDA2A23B094003102D3 /* PWActivitiesTableView.swift in Sources */,
+				78FA1DD52A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift in Sources */,
 				78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */,
