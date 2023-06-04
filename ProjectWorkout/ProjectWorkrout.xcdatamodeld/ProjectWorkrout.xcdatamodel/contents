@@ -3,6 +3,7 @@
     <entity name="Activity" representedClassName="Activity" syncable="YES">
         <attribute name="distance" optional="YES" attributeType="Float" usesScalarValueType="YES"/>
         <attribute name="duration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="exercise" inverseEntity="User"/>

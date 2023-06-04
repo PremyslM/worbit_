@@ -6,20 +6,18 @@
 //
 
 import Foundation
-
-protocol PWActivityProgressBarDataSource {
-    func setProgressValue() -> Float
-}
-
+import UIKit
 
 class PWActivityProgressBarViewModel {
         
     var delegate: PWActivityProgressBarDataSource? {
         didSet {
-            progressValue = delegate!.setProgressValue()
+            self.progressValue = delegate!.setProgressValue()
+            self.imageIcon = delegate!.setImageIcon()
         }
     }        
     
-    var progressValue: Float? = nil
+    public var progressValue: Float? = nil
+    public var imageIcon: UIImage? = nil
     
 }

@@ -8,11 +8,9 @@
 import Foundation
 
 
-struct PWActivity: Codable {
+struct PWActivity {
     
     let name: String    
     let systemImage: String
-    let accuracy: Float
-    
-    
+    let accuracy: Float     
 }

@@ -10,6 +10,7 @@ import UIKit
 class PWActivityProgressBar: PWProgrammaticUIView {
     
     private let vc = PWActivityProgressBarViewModel()
+        
     
     private var progressValue: Float {
         return Float(vc.progressValue!)
@@ -19,6 +20,7 @@ class PWActivityProgressBar: PWProgrammaticUIView {
     
     public lazy var activityIconView: UIImageView = {
         let _activityIcon = UIImageView()
+        _activityIcon.image = vc.imageIcon
         _activityIcon.tintColor = .theme.secondaryWhite
         
         return _activityIcon
@@ -36,9 +38,8 @@ class PWActivityProgressBar: PWProgrammaticUIView {
     // MARK: - Configuring UI
     
     override func setConfig() {
-        self.addConstrainedSubViews(progressBarView, activityIconView)
-        
         vc.delegate = self
+        self.addConstrainedSubViews(progressBarView, activityIconView)
     }
     
     override func setConstraints() {
@@ -58,6 +59,11 @@ class PWActivityProgressBar: PWProgrammaticUIView {
 
 
 extension PWActivityProgressBar: PWActivityProgressBarDataSource {
+    
+    func setImageIcon() -> UIImage {
+        return UIImage(systemName: "pencil")! // TODO: Hard core value... don't use it.
+    }
+    
     func setProgressValue() -> Float {
         return 0.8 // TODO: Hard core value... don't use it.
     }

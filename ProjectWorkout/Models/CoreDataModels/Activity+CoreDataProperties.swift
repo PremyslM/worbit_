@@ -2,7 +2,7 @@
 //  Activity+CoreDataProperties.swift
 //  ProjectWorkout
 //
-//  Created by Přemysl Mikulenka on 31.05.2023.
+//  Created by Přemysl Mikulenka on 04.06.2023.
 //
 //
 
@@ -16,10 +16,11 @@ extension Activity {
         return NSFetchRequest<Activity>(entityName: "Activity")
     }
 
+    @NSManaged public var distance: Float
+    @NSManaged public var duration: Float
     @NSManaged public var name: String?
     @NSManaged public var power: Float
-    @NSManaged public var duration: Float
-    @NSManaged public var distance: Float
+    @NSManaged public var image: String?
     @NSManaged public var user: User?
     
     public var unwrappedName: String {

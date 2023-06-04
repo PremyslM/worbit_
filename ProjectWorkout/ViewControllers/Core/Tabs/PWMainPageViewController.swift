@@ -11,6 +11,8 @@ import UIKit
 /// This PWProgrammaticUIView class represents One of futere pages that will be loaded in ViewController to display them.
 final class PWMainPageViewController: UIViewController {
     
+    let vc = PWMainPageViewModel()
+    
     private lazy var infoContainer: PWPrimaryContainerView = {
         let _infoContainer = PWPrimaryContainerView()
         _infoContainer.layer.cornerRadius = 16
@@ -66,11 +68,9 @@ private extension PWMainPageViewController {
     func setupActivityPorgressBar() {
         var consTop = 50
         
-        for index in 0..<3 {
+        for activity in vc.actvities {
             let _activityProgressBar = PWActivityProgressBar()
-            _activityProgressBar.activityIconView.image = UIImage(systemName: Constants.activityStrings[index])            
-            
-            
+                        
             self.view.addConstrainedSubViews(_activityProgressBar)
             
             // Configuring constraints that every progress bar will be under the other one
