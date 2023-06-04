@@ -50,8 +50,7 @@ final class ActivityManager {
     // MARK: - Private
     
     private func loadActivities() {
-        self.activities = self.currentUser.user?.activityArray
-        print("count: ", (unwrappedActivities.count))
+        self.activities = self.currentUser.user?.activityArray        
     }
     
      

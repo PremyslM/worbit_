@@ -67,6 +67,7 @@ class DataManager {
             _activity.name = activity.value.name
             _activity.duration = activity.value.accuracy
             _activity.image = activity.value.systemImage
+            print(_activity.image)
             
             fetchedActivities.append(_activity)
         }

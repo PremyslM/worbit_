@@ -25,9 +25,8 @@ class PWExerciseViewViewModel {
         networkService.fetchData { [weak self] success, result in
             if success {
                 self?.exercises = result!
-                print("Success")
             } else {
-                print("Failururururururururu")
+                fatalError("Failed to fetch data from NetworkService")
             }
         }
     }
