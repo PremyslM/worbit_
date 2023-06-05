@@ -13,6 +13,6 @@ final class PWMainPageViewModel {
     private let activityManager = ActivityManager.shared
     
     public var actvities: [Activity] {
-        return activityManager.unwrappedActivities
+        return activityManager.activities ?? []
     }
 }

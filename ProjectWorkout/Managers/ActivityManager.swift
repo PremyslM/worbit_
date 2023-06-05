@@ -14,11 +14,7 @@ final class ActivityManager {
     
     private let currentUser = UserProfileManager.shared
     
-    private var activities: [Activity]?
-    
-    public var unwrappedActivities: [Activity] {
-        return activities ?? []
-    }
+    public var activities: [Activity]?
     
     init() {
         loadActivities()

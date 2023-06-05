@@ -47,6 +47,7 @@ class DataManager {
             let _ac = Activity(context: DataManager.shared.persistentContainer.viewContext)
             _ac.name = ac.name
             _ac.duration = ac.duration
+            _ac.image = ac.image
             
             fetche.append(_ac)
         }
@@ -67,7 +68,6 @@ class DataManager {
             _activity.name = activity.value.name
             _activity.duration = activity.value.accuracy
             _activity.image = activity.value.systemImage
-            print(_activity.image)
             
             fetchedActivities.append(_activity)
         }

@@ -25,7 +25,7 @@ class PWActivityStatsView: PWProgrammaticUIView {
     override func setConfig() {
         self.addConstrainedSubViews(statStackView)
         
-        let activites = vc.activityManager.unwrappedActivities
+        let activites = vc.activityManager.activities ?? []
         var statsNum: Int
         
         if activites.count >= 4 {
@@ -36,7 +36,8 @@ class PWActivityStatsView: PWProgrammaticUIView {
         
         for activityIndex in 0..<statsNum {
             let statItemView = PWActivityStatItemView()
-            statItemView.statValueLabel.text = "\(activites[activityIndex].duration)"
+            
+            statItemView.statValueLabel.text = activites[activityIndex].percentageDurationString
             statItemView.statLabel.text = activites[activityIndex].name            
             
             self.statStackView.addArrangedSubview(statItemView)

@@ -25,10 +25,10 @@ struct Constants {
     public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
     
     public static let activitiesArray: [Activities: PWActivity] = [
-        .running: PWActivity(name: "Běh", systemImage: "figure.run", accuracy: 89),
-        .swiming: PWActivity(name: "Plavání", systemImage: "figure.pool.swim", accuracy: 76),
-        .cycling: PWActivity(name: "Cyklistika", systemImage: "figure.outdoor.cycle", accuracy: 34),
-        .golf: PWActivity(name: "Golf", systemImage: "figure.golf", accuracy: 56),
+        .running: PWActivity(name: "Běh", systemImage: "figure.run", accuracy: 0.89),
+        .swiming: PWActivity(name: "Plavání", systemImage: "figure.pool.swim", accuracy: 0.76),
+        .cycling: PWActivity(name: "Cyklistika", systemImage: "figure.outdoor.cycle", accuracy: 0.34),
+        .golf: PWActivity(name: "Golf", systemImage: "figure.golf", accuracy: 0.56),
     ]
     
     enum Activities {

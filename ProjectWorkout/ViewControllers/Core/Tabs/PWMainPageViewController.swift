@@ -69,8 +69,7 @@ private extension PWMainPageViewController {
         var consTop = 50
         
         for activity in vc.actvities {
-            let _activityProgressBar = PWActivityProgressBar()
-            _activityProgressBar.activity = activity
+            let _activityProgressBar = PWActivityProgressBar(activity)
                         
             self.view.addConstrainedSubViews(_activityProgressBar)
             

@@ -26,6 +26,10 @@ extension Activity {
     public var unwrappedName: String {
         return name ?? "Unknown"
     }
+    
+    public var percentageDurationString: String {
+        return "\(Int(duration * 100))%"
+    }
 
 }
 
