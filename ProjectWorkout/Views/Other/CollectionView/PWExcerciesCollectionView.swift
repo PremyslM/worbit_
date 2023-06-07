@@ -8,18 +8,17 @@
 import UIKit
 
 
-class PWExercisesTabeView: UITableView {
+class PWExercisesCollectionView: UICollectionView {
     
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
+    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
         
         self.backgroundColor = .theme.primaryBackground
     }
     
     required init?(coder: NSCoder) {
-        fatalError("Unnavaible")
+        fatalError("Unavalible")
     }
+ 
     
 }
-
-
