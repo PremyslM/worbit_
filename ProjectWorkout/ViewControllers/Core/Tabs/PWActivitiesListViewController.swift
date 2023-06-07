@@ -10,9 +10,12 @@ import UIKit
 
 class PWActivitiesListViewController: UIViewController {
     
-    private lazy var activitesTableView: PWActivitiesTableView = {
-        let _activitesTableView = PWActivitiesTableView()
-        _activitesTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIndentifiers.activity.rawValue)
+    private lazy var activitesTableView: PWActivitiesCollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize()
+        
+        let _activitesTableView = PWActivitiesCollectionView(frame: .zero, collectionViewLayout: layout)
+        _activitesTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.activity.rawValue)
         return _activitesTableView
     }()
     
@@ -21,7 +24,7 @@ class PWActivitiesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                            
+        
         setConfig()
         setConstraints()
     }
@@ -30,7 +33,7 @@ class PWActivitiesListViewController: UIViewController {
     private func setConfig() {
         self.title = "Activities"
         self.view.addConstrainedSubViews(activitesTableView)
-
+        
         activitesTableView.dataSource = self
         activitesTableView.delegate = self
     }
@@ -48,18 +51,28 @@ class PWActivitiesListViewController: UIViewController {
 }
 
 
-extension PWActivitiesListViewController: UITableViewDelegate, UITableViewDataSource {
+extension PWActivitiesListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return vc.userManger.user?.activityArray.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIndentifiers.activity.rawValue, for: indexPath)
-        cell.textLabel?.text = "\(vc.userManger.user?.activityArray[indexPath.row].name ?? "Unknown")"
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.activity.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
+        cell.titleLabel.text = vc.userManger.user?.activityArray[indexPath.row].name
         return cell
     }
-            
+    
+    
+}
+
+
+extension PWActivitiesListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.size.width * 0.45
+        
+        return CGSize(width: width, height: 100)
+    }
     
 }

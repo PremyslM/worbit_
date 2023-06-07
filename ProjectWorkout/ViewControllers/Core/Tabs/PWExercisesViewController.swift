@@ -13,9 +13,13 @@ final class PWExercisesViewController: UIViewController {
     private var vc = PWExerciseViewViewModel()
     
     
-    private lazy var exerciseTableView: PWExercisesTabeView = {
-        let _exerciseTableView = PWExercisesTabeView()
-        _exerciseTableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue)
+    private lazy var exerciseTableView: PWExercisesCollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 50, height: 50)
+        
+        let _exerciseTableView = PWExercisesCollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        _exerciseTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue)
         
         return _exerciseTableView
     }()
@@ -43,18 +47,28 @@ final class PWExercisesViewController: UIViewController {
 }
 
 
-extension PWExercisesViewController: UITableViewDelegate, UITableViewDataSource {
+extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return vc.unwrappedExercises.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath)
-        cell.textLabel?.text = "\(vc.unwrappedExercises[indexPath.row].name!)"
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
+        cell.titleLabel.text = vc.unwrappedExercises[indexPath.row].name  
         return cell
     }
     
+    
+}
+
+
+extension PWExercisesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.size.width * 0.45
+        
+        return CGSize(width: width, height: 100)
+    }
     
 }
