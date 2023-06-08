@@ -10,11 +10,11 @@ import UIKit
 
 class PWActivitiesListViewController: UIViewController {
     
-    private lazy var activitesTableView: PWActivitiesCollectionView = {
+    private lazy var activitesTableView: PWPrimaryCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize()
         
-        let _activitesTableView = PWActivitiesCollectionView(frame: .zero, collectionViewLayout: layout)
+        let _activitesTableView = PWPrimaryCollectionView(frame: .zero, collectionViewLayout: layout)
         _activitesTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.activity.rawValue)
         return _activitesTableView
     }()

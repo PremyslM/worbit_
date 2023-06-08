@@ -13,11 +13,11 @@ final class PWExercisesViewController: UIViewController {
     private var vc = PWExerciseViewViewModel()
     
     
-    private lazy var exerciseTableView: PWExercisesCollectionView = {
+    private lazy var exerciseTableView: PWPrimaryCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 50, height: 50)
         
-        let _exerciseTableView = PWExercisesCollectionView(frame: .zero, collectionViewLayout: layout)
+        let _exerciseTableView = PWPrimaryCollectionView(frame: .zero, collectionViewLayout: layout)
         
         _exerciseTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue)
         
