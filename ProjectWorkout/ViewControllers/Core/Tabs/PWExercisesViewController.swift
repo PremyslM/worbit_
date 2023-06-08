@@ -55,7 +55,8 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
-        cell.titleLabel.text = vc.unwrappedExercises[indexPath.row].name  
+        cell.titleLabel.text = vc.unwrappedExercises[indexPath.row].name
+        cell.iconImage.image = UIImage(systemName: "xmark")
         return cell
     }
     
