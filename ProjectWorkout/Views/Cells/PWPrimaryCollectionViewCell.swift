@@ -9,9 +9,9 @@ import UIKit
 
 
 class PWPrimaryCollectionViewCell: UICollectionViewCell {
-    
-    private lazy var contentStackView: UIStackView = UIStackView()
+        
     public lazy var titleLabel: UILabel = UILabel()
+    public lazy var iconImage: UIImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,11 +30,8 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
 extension PWPrimaryCollectionViewCell {
     
     private func setupUI() {                
-        self.addConstrainedSubViews(contentStackView)
-        contentStackView.addArrangedSubview(titleLabel)
-        contentStackView.alignment = .top
-        
-        titleLabel.text = "asd"
+        self.addConstrainedSubViews(titleLabel, iconImage)
+                
         titleLabel.textColor = .black
         
         self.layer.cornerRadius = 8
@@ -43,10 +40,11 @@ extension PWPrimaryCollectionViewCell {
         
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: self.topAnchor),
-            contentStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            contentStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            contentStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            
+            iconImage.leadingAnchor.constraint(equalTo: self.titleLabel.trailingAnchor, constant: 10),
+            iconImage.topAnchor.constraint(equalTo: self.titleLabel.topAnchor),
         ])
     }
     

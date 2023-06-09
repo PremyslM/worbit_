@@ -10,11 +10,11 @@ import UIKit
 
 class PWActivitiesListViewController: UIViewController {
     
-    private lazy var activitesTableView: PWActivitiesCollectionView = {
+    private lazy var activitesTableView: PWPrimaryCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize()
         
-        let _activitesTableView = PWActivitiesCollectionView(frame: .zero, collectionViewLayout: layout)
+        let _activitesTableView = PWPrimaryCollectionView(frame: .zero, collectionViewLayout: layout)
         _activitesTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.activity.rawValue)
         return _activitesTableView
     }()
@@ -60,6 +60,7 @@ extension PWActivitiesListViewController: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.activity.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
         cell.titleLabel.text = vc.userManger.user?.activityArray[indexPath.row].name
+        cell.iconImage.image = UIImage(systemName: vc.userManger.user?.activityArray[indexPath.row].image ?? "xmark")
         return cell
     }
     

@@ -13,11 +13,11 @@ final class PWExercisesViewController: UIViewController {
     private var vc = PWExerciseViewViewModel()
     
     
-    private lazy var exerciseTableView: PWExercisesCollectionView = {
+    private lazy var exerciseTableView: PWPrimaryCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 50, height: 50)
         
-        let _exerciseTableView = PWExercisesCollectionView(frame: .zero, collectionViewLayout: layout)
+        let _exerciseTableView = PWPrimaryCollectionView(frame: .zero, collectionViewLayout: layout)
         
         _exerciseTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue)
         
@@ -55,7 +55,8 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
-        cell.titleLabel.text = vc.unwrappedExercises[indexPath.row].name  
+        cell.titleLabel.text = vc.unwrappedExercises[indexPath.row].name
+        cell.iconImage.image = UIImage(systemName: "xmark")
         return cell
     }
     
