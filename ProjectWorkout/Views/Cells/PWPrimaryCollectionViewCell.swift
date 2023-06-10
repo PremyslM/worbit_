@@ -35,6 +35,8 @@ extension PWPrimaryCollectionViewCell {
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
         
+        iconImage.tintColor = .theme.primaryBackground
+        
         self.layer.cornerRadius = 8
         self.backgroundColor = .theme.secondaryWhite                
     }
