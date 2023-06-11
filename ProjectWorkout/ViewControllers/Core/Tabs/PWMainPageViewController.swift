@@ -26,14 +26,16 @@ final class PWMainPageViewController: UIViewController {
         return _activityStatsView
     }()
     
+    private lazy var progressStackView: PWProgressBarStackView = PWProgressBarStackView()
+    
+    
     override func loadView() {
         super.loadView()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        setupActivityPorgressBar()
+                        
         setConfig()
         setConstraints()
     }
@@ -45,7 +47,7 @@ final class PWMainPageViewController: UIViewController {
 private extension PWMainPageViewController {
     
     func setConfig() {
-        self.view.addConstrainedSubViews(infoContainer, activityStatsView)               
+        self.view.addConstrainedSubViews(infoContainer, activityStatsView, progressStackView)
                 
         self.title = "Home"
     }
@@ -61,28 +63,12 @@ private extension PWMainPageViewController {
             activityStatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             activityStatsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityStatsView.bottomAnchor.constraint(equalTo: infoContainer.topAnchor, constant: -100),
+            
+            progressStackView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            progressStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
+            progressStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+            progressStackView.bottomAnchor.constraint(equalTo: self.activityStatsView.topAnchor, constant: -20)
         ])
-        
-    }
-    
-    func setupActivityPorgressBar() {
-        var consTop = 50
-        
-        for activity in vc.actvities {
-            let _activityProgressBar = PWActivityProgressBar(activity)
-                        
-            self.view.addConstrainedSubViews(_activityProgressBar)
-            
-            // Configuring constraints that every progress bar will be under the other one
-            NSLayoutConstraint.activate([
-                _activityProgressBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: CGFloat(consTop)),
-                _activityProgressBar.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-                _activityProgressBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-                _activityProgressBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            ])
-            
-            consTop += 30
-        }
         
     }
             
