@@ -33,6 +33,9 @@ extension PWPrimaryCollectionViewCell {
         self.addConstrainedSubViews(titleLabel, iconImage)
                 
         titleLabel.textColor = .black
+        titleLabel.numberOfLines = 0
+        
+        iconImage.tintColor = .theme.primaryBackground
         
         self.layer.cornerRadius = 8
         self.backgroundColor = .theme.secondaryWhite                
@@ -42,9 +45,10 @@ extension PWPrimaryCollectionViewCell {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            
-            iconImage.leadingAnchor.constraint(equalTo: self.titleLabel.trailingAnchor, constant: 10),
-            iconImage.topAnchor.constraint(equalTo: self.titleLabel.topAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: self.iconImage.leadingAnchor, constant: -10),
+                        
+            iconImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            iconImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
         ])
     }
     
