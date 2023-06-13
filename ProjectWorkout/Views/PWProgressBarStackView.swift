@@ -11,8 +11,7 @@ import UIKit
 class PWProgressBarStackView: PWProgrammaticUIView {
     
     private let vm: PWProgressBarStackViewModel = PWProgressBarStackViewModel()
-    
-    
+        
     private lazy var mainStack: UIStackView = {
         let _mainStack = UIStackView()
         _mainStack.axis = .vertical
@@ -20,6 +19,7 @@ class PWProgressBarStackView: PWProgrammaticUIView {
         
         return _mainStack
     }()
+    
     
     override func setConfig() {
         self.addConstrainedSubViews(mainStack)
@@ -35,23 +35,14 @@ class PWProgressBarStackView: PWProgrammaticUIView {
         ])
     }
     
-    
     func setupActivityPorgressBar() {
-        
         for activity in vm.activites {
             let _activityProgressBar = PWActivityProgressBar(activity)
                         
             mainStack.addArrangedSubview(_activityProgressBar)
-            
-            // Configuring constraints that every progress bar will be under the other one
-            NSLayoutConstraint.activate([
-                /*_activityProgressBar.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: CGFloat(consTop)),
-                _activityProgressBar.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-                _activityProgressBar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-                _activityProgressBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),*/
-            ])
         }
         
     }
+    
     
 }
