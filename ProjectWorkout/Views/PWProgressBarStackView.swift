@@ -31,15 +31,23 @@ class PWProgressBarStackView: PWProgrammaticUIView {
             mainStack.topAnchor.constraint(equalTo: self.topAnchor),
             mainStack.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            mainStack.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            mainStack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50),
         ])
     }
     
     func setupActivityPorgressBar() {
-        for activity in vm.activites {
-            let _activityProgressBar = PWActivityProgressBar(activity)
-                        
-            mainStack.addArrangedSubview(_activityProgressBar)
+        if vm.activites.count >= 3 {
+            for activityIndex in 0..<3 {
+                let _activityProgressBar = PWActivityProgressBar(vm.activites[activityIndex])
+                            
+                mainStack.addArrangedSubview(_activityProgressBar)
+            }
+        } else {
+            for activity in vm.activites {
+                let _activityProgressBar = PWActivityProgressBar(activity)
+                            
+                mainStack.addArrangedSubview(_activityProgressBar)
+            }
         }
         
     }
