@@ -30,6 +30,7 @@ struct Constants {
         .cycling: PWActivity(name: "Cyklistika", systemImage: "figure.outdoor.cycle", accuracy: 0.34),
         .golf: PWActivity(name: "Golf", systemImage: "figure.golf", accuracy: 0.56),
         .strenghtExercise: PWActivity(name: "Strenght Exercise", systemImage: "figure.strengthtraining.traditional", accuracy: 0.23),
+        .hiking: PWActivity(name: "Hiking", systemImage: "figure.hiking", accuracy: 0.23),
     ]
     
     enum Activities {
@@ -38,6 +39,7 @@ struct Constants {
         case swiming
         case golf
         case strenghtExercise
+        case hiking
     }
         
     enum APIKeys: String {
