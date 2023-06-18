@@ -29,8 +29,16 @@ struct Constants {
         .swiming: PWActivity(name: "Plavání", systemImage: "figure.pool.swim", accuracy: 0.76),
         .cycling: PWActivity(name: "Cyklistika", systemImage: "figure.outdoor.cycle", accuracy: 0.34),
         .golf: PWActivity(name: "Golf", systemImage: "figure.golf", accuracy: 0.56),
+<<<<<<< Updated upstream
         .strenghtExercise: PWActivity(name: "Strenght Exercise", systemImage: "figure.strengthtraining.traditional", accuracy: 0.23),
+<<<<<<< HEAD
+=======
+        .strenghtExercise: PWActivity(name: "Silové cvičení", systemImage: "figure.strengthtraining.traditional", accuracy: 0.23),
+        .hiking: PWActivity(name: "Turistika", systemImage: "figure.hiking", accuracy: 0.23),
+>>>>>>> Stashed changes
+=======
         .hiking: PWActivity(name: "Hiking", systemImage: "figure.hiking", accuracy: 0.23),
+>>>>>>> 078032a0df46246e2de53d331690a685b5c5e991
     ]
     
     enum Activities {
