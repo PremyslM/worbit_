@@ -13,6 +13,8 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
     public lazy var titleLabel: UILabel = UILabel()
     public lazy var iconImage: UIImageView = UIImageView()
     
+    var delegate: UIViewController?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -29,7 +31,11 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
 
 extension PWPrimaryCollectionViewCell {
     
-    private func setupUI() {                
+    private func setupUI() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(presentView))
+        
+        self.addGestureRecognizer(tap)
+        
         self.addConstrainedSubViews(titleLabel, iconImage)
                 
         titleLabel.textColor = .black
@@ -38,7 +44,7 @@ extension PWPrimaryCollectionViewCell {
         iconImage.tintColor = .theme.primaryBackground
         
         self.layer.cornerRadius = 8
-        self.backgroundColor = .theme.secondaryWhite                
+        self.backgroundColor = .theme.secondaryWhite
     }
         
     private func setupConstraints() {
@@ -52,5 +58,11 @@ extension PWPrimaryCollectionViewCell {
         ])
     }
     
+    
+    @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {
+        let detailVC = PWDetailViewController()
+        print("clicked")
+        delegate?.present(detailVC, animated: false)
+    }
     
 }
