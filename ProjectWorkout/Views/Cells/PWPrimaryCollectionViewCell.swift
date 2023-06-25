@@ -62,7 +62,7 @@ extension PWPrimaryCollectionViewCell {
     @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {
         let detailVC = PWDetailViewController()
         print("clicked")
-        delegate?.present(detailVC, animated: false)
+        delegate?.present(detailVC, animated: true, completion: nil)
     }
     
 }

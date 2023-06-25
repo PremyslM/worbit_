@@ -18,10 +18,11 @@ class PWDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addConstrainedSubViews(detailInfoView)
+        self.view.backgroundColor = .theme.primaryBackground
+        
         detailInfoView.delegate = self
-        
-        self.view.addSubview(detailInfoView)
-        
         setConstraints()
     }
     
