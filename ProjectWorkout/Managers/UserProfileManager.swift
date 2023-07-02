@@ -22,7 +22,7 @@ final class UserProfileManager {
     // MARK: - Private    
     
     private func fetchData() {
-        self.user = DataManager.user
+        self.user = DataManager.currentUser
     }
     
 }

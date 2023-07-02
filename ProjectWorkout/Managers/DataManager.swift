@@ -37,10 +37,16 @@ class DataManager {
     }
     
     
-    static let user: User = {
-        let _user = User(context: DataManager.shared.persistentContainer.viewContext)
-        _user.name = "Pepa"
+    static let currentUser: User = {
+        let _user = TestData.currentUser
         
+        return _user
+    }()
+    
+    
+    // MARK: - Private
+    
+    public static let activitiesSet: NSSet = {
         var fetche = [Activity]()
         
         for ac in getActivities {
@@ -51,14 +57,11 @@ class DataManager {
             
             fetche.append(_ac)
         }
-        let set = Set(fetche)
-        _user.exercise = set as NSSet
         
-        return _user
+        let set = Set(fetche)
+        
+        return set as NSSet
     }()
-    
-    
-    // MARK: - Private
     
     private static let getActivities: [Activity] = {
         
