@@ -12,6 +12,10 @@ final class PWMainPageViewModel {
     
     private let activityManager = ActivityManager.shared
     
+    public var activity: Activity {
+        activityManager.getRandomActivity()!
+    }
+    
     public var actvities: [Activity] {
         return activityManager.activities ?? []
     }

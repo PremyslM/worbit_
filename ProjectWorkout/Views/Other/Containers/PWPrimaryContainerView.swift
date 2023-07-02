@@ -11,7 +11,14 @@ import UIKit
 /// This PWProgrammaticUIView class represents UI Components that'll be located in many view, depents on his usage.
 class PWPrimaryContainerView: PWProgrammaticUIView {
     
-    private let vc = PWPrimaryContainerViewViewModel()
+    private var vc: PWPrimaryContainerViewViewModel?
+    
+    private var activity: Activity? {
+        didSet {
+            titleLabel.text = activity?.name
+            statLabel.text = "Duration: \(activity!.percentageDurationString)\nDistance: \(activity!.distance)\nPower: \(activity!.power)" // TODO: Don't user multyString as a display data solution
+        }
+    }
     
     private lazy var mainStack: UIStackView = {
         let _mainStack = UIStackView()
@@ -24,8 +31,6 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     
     private lazy var titleLabel: UILabel = {
         let _titleLabel = UILabel()
-        let activity = vc.activity
-        _titleLabel.text = activity.name
         
         _titleLabel.font = .systemFont(ofSize: 32, weight: .semibold)
         _titleLabel.textColor = .theme.secondaryWhite
@@ -36,14 +41,18 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
     private lazy var statLabel: UILabel = {
         let _statLabel = UILabel()
         
-        _statLabel.text = "Duration: \(vc.activity.percentageDurationString)\nDistance: \(vc.activity.distance)\nPower: \(vc.activity.power)" // TODO: Don't user multyString as a display data solution
-        
         _statLabel.numberOfLines = 0
         _statLabel.textColor = .theme.secondaryWhite
         _statLabel.font = .systemFont(ofSize: 20, weight: .medium)
         
         return _statLabel
     }()
+    
+    // MARK: - Public methods
+    
+    public func setActivity(activity: Activity) {
+        self.activity = activity
+    }
     
     
     // MARK: - Configuring UI
@@ -61,6 +70,5 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
             mainStack.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
         ])
     }
-    
     
 }

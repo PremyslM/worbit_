@@ -59,9 +59,11 @@ extension PWActivitiesListViewController: UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.activity.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
-        cell.titleLabel.text = vc.userManger.user?.activityArray[indexPath.row].name
-        cell.iconImage.image = UIImage(systemName: vc.userManger.user?.activityArray[indexPath.row].image ?? "xmark")
+        let activity = vc.userManger.user?.activityArray[indexPath.row]
+        cell.titleLabel.text = activity!.name
+        cell.iconImage.image = UIImage(systemName: activity!.image ?? "xmark")
         cell.delegate = self
+        cell.setActivity(activity: activity!)
         return cell
     }
     

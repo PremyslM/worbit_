@@ -15,8 +15,8 @@ final class PWPrimaryContainerViewViewModel {
     
     public var activity: Activity
     
-    init() {
-        self.activity = activityManager.getRandomActivity()!
+    init(activity: Activity) {
+        self.activity = activity
     }
     
     

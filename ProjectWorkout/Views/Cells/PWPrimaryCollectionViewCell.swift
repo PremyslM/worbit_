@@ -12,11 +12,19 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
         
     public lazy var titleLabel: UILabel = UILabel()
     public lazy var iconImage: UIImageView = UIImageView()
+    public lazy var detailVC: PWDetailViewController = PWDetailViewController()
     
     var delegate: UIViewController?
     
+    private var activity: Activity? {
+        didSet {
+            detailVC.setUI(activity: activity!)
+        }
+    }
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
+                
         
         setupUI()
         setupConstraints()
@@ -31,6 +39,10 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
 
 extension PWPrimaryCollectionViewCell {
     
+    public func setActivity(activity: Activity) {
+        self.activity = activity
+    }
+    
     private func setupUI() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(presentView))
         
@@ -40,6 +52,7 @@ extension PWPrimaryCollectionViewCell {
                 
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
+        titleLabel.text = activity?.name
         
         iconImage.tintColor = .theme.primaryBackground
         
@@ -59,9 +72,7 @@ extension PWPrimaryCollectionViewCell {
     }
     
     
-    @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {
-        let detailVC = PWDetailViewController()
-        print("clicked")
+    @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {                
         delegate?.present(detailVC, animated: true, completion: nil)
     }
     
