@@ -9,12 +9,13 @@ import UIKit
 
 
 class PWPrimaryCollectionViewCell: UICollectionViewCell {
-        
-    private lazy var titleLabel: UILabel = UILabel()
-    private lazy var iconImage: UIImageView = UIImageView()
+    
     public lazy var detailVC: PWDetailViewController = PWDetailViewController()
     
-    var delegate: UIViewController?
+    public var delegate: UIViewController?
+    
+    private lazy var titleLabel: UILabel = UILabel()
+    private lazy var iconImage: UIImageView = UIImageView()
     
     private var activity: Activity? {
         didSet {
@@ -24,6 +25,7 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
             iconImage.image = UIImage(systemName: activity?.image ?? "xmark")
         }
     }
+    
         
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,9 +44,14 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
 
 extension PWPrimaryCollectionViewCell {
     
+    // MARK: - Public
+    
     public func setActivity(activity: Activity) {
         self.activity = activity
     }
+    
+    
+    // MARK: - Private
     
     private func setupUI() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(presentView))
@@ -73,8 +80,7 @@ extension PWPrimaryCollectionViewCell {
             iconImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
         ])
     }
-    
-    
+        
     @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {                
         delegate?.present(detailVC, animated: true, completion: nil)
     }
