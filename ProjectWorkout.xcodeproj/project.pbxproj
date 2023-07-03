@@ -42,6 +42,7 @@
 		78A1BA852A35B0E800B29316 /* PWProgressBarStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */; };
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
 		78CE8B122A52074F00940328 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B112A52074F00940328 /* TestData.swift */; };
+		78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */; };
 		78E8F46B2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */; };
 		78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */; };
 		78FA1DBF2A261AF0008FCAF3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */; };
@@ -95,6 +96,7 @@
 		78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackViewModel.swift; sourceTree = "<group>"; };
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
 		78CE8B112A52074F00940328 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailDataSource.swift; sourceTree = "<group>"; };
 		78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		78FA1DAF2A261999008FCAF3 /* ProjectWorkrout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectWorkrout.xcdatamodel; sourceTree = "<group>"; };
 		78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -143,10 +145,9 @@
 				78626B812A1E7634003102D3 /* Info.plist */,
 				78626BBC2A20EB7A003102D3 /* Managers */,
 				78626B8B2A1E7A14003102D3 /* ViewModels */,
-				78626B8E2A1E7A2C003102D3 /* Helpers */,
+				78626B8E2A1E7A2C003102D3 /* Extensions */,
 				78626B8D2A1E7A26003102D3 /* Services */,
 				78626B8F2A1E7A35003102D3 /* Models */,
-				78626B892A1E7A08003102D3 /* ViewControllers */,
 				78626B872A1E79AF003102D3 /* Views */,
 				78626B8C2A1E7A20003102D3 /* Resources */,
 				78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */,
@@ -157,20 +158,10 @@
 		78626B872A1E79AF003102D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78626B902A1E7A42003102D3 /* Core */,
 				78626BA32A1E9AF6003102D3 /* Other */,
-				78E8F4692A2E499200FDE24A /* Cells */,
-				78626BD72A23A3D0003102D3 /* PWUserProfileView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		78626B892A1E7A08003102D3 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				78626B912A1E7A47003102D3 /* Other */,
-				78626B902A1E7A42003102D3 /* Core */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		78626B8B2A1E7A14003102D3 /* ViewModels */ = {
@@ -208,7 +199,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		78626B8E2A1E7A2C003102D3 /* Helpers */ = {
+		78626B8E2A1E7A2C003102D3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				78FA1DE82A2CB044008FCAF3 /* Protocols */,
@@ -219,7 +210,7 @@
 				78626BC72A229607003102D3 /* TabView+addNewItem.swift */,
 				78CE8B112A52074F00940328 /* TestData.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		78626B8F2A1E7A35003102D3 /* Models */ = {
@@ -238,17 +229,10 @@
 			isa = PBXGroup;
 			children = (
 				78626BA12A1E98E5003102D3 /* Tabs */,
+				78FCEFA62A4724DA00C1900C /* PWDetailViewController.swift */,
 				78626BA72A1F37FC003102D3 /* PWTabBarController.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		78626B912A1E7A47003102D3 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				78FCEFA62A4724DA00C1900C /* PWDetailViewController.swift */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		78626B942A1E7B27003102D3 /* Delegates */ = {
@@ -282,8 +266,10 @@
 		78626BA32A1E9AF6003102D3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				78E8F4692A2E499200FDE24A /* Cells */,
 				78E8F4682A2E48F900FDE24A /* CollectionView */,
 				78626B9E2A1E973D003102D3 /* Containers */,
+				78626BD72A23A3D0003102D3 /* PWUserProfileView.swift */,
 				78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */,
 				78626BAD2A1FCCEE003102D3 /* PWActivityStatsView.swift */,
 				78626BA92A1FC35C003102D3 /* PWActivityProgressBarView.swift */,
@@ -341,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				78FA1DEA2A2CB05F008FCAF3 /* PWActivityProgressBarDataSource.swift */,
+				78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -428,6 +415,7 @@
 				78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78FA1DE52A2CADB3008FCAF3 /* PWMainPageViewModel.swift in Sources */,
+				78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
 				78626BD22A23794A003102D3 /* PWExerciseViewViewModel.swift in Sources */,
 				78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */,

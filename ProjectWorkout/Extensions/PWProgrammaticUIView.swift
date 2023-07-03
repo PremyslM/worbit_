@@ -7,7 +7,8 @@
 
 import UIKit
 
-
+/// Easy progrommatic UI setup
+///
 /// This is used as a parent class as a helper for clean code arch. When it's called, constructors are called as well as two methods for basic view setup that they are called in super init from parent UIView class.
 class PWProgrammaticUIView: UIView {
     

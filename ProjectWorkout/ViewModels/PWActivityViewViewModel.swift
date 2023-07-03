@@ -10,6 +10,7 @@ import Foundation
 
 final class PWActivityViewViewModel {
     
+    /// Singleton instace of UserManager class
     public let userManger = UserProfileManager.shared
     
 }

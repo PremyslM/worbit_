@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol PWActivityDetailDataSource {
-    func getActvity() -> Activity
-}
-
 
 class PWActivityDetailViewModel {
     

@@ -10,6 +10,7 @@ import Foundation
 
 final class UserProfileManager {
     
+    /// Singletom instance
     static let shared = UserProfileManager()
     
     var user: User?
@@ -19,8 +20,9 @@ final class UserProfileManager {
     }
      
     
-    // MARK: - Private    
+    // MARK: - Private
     
+    /// Loading (fetching) our user data
     private func fetchData() {
         self.user = DataManager.currentUser
     }

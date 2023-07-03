@@ -10,11 +10,11 @@ import Foundation
 
 final class PWActivityStatItemViewViewModel {
     
+    /// Signleton instance of ActivityManager class
     let activityManager = ActivityManager.shared
     
     var activity: Activity?
-    
-    
+        
     public var value: String {
         return String(describing: activity?.duration)
     }
