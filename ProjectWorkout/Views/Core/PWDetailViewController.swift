@@ -29,8 +29,6 @@ class PWDetailViewController: UIViewController {
         self.view.addConstrainedSubViews(activityContainer)
         self.view.backgroundColor = .theme.primaryBackground
         
-        //activityContainer.setActivity(activity: activity!)
-        
         activityContainer.setActivity(activity: self.activity!)
         
         vm.dataSource = self
@@ -51,8 +49,9 @@ class PWDetailViewController: UIViewController {
 }
 
 extension PWDetailViewController {
+    // MARK: - Public
     
-    func setUI(activity: Activity) {
+    public func setUI(activity: Activity) {
         self.activity = activity
     }
     

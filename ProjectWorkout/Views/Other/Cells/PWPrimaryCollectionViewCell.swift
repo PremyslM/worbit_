@@ -10,8 +10,8 @@ import UIKit
 
 class PWPrimaryCollectionViewCell: UICollectionViewCell {
         
-    public lazy var titleLabel: UILabel = UILabel()
-    public lazy var iconImage: UIImageView = UIImageView()
+    private lazy var titleLabel: UILabel = UILabel()
+    private lazy var iconImage: UIImageView = UIImageView()
     public lazy var detailVC: PWDetailViewController = PWDetailViewController()
     
     var delegate: UIViewController?
@@ -19,6 +19,9 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
     private var activity: Activity? {
         didSet {
             detailVC.setUI(activity: activity!)
+            
+            titleLabel.text = activity?.name
+            iconImage.image = UIImage(systemName: activity?.image ?? "xmark")
         }
     }
         
