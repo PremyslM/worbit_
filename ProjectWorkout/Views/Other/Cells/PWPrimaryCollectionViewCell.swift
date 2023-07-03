@@ -20,9 +20,7 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
     private var activity: Activity? {
         didSet {
             detailVC.setUI(activity: activity!)
-            
-            titleLabel.text = activity?.name
-            iconImage.image = UIImage(systemName: activity?.image ?? "xmark")
+                        
         }
     }
     
@@ -48,6 +46,14 @@ extension PWPrimaryCollectionViewCell {
     
     public func setActivity(activity: Activity) {
         self.activity = activity
+        
+        titleLabel.text = activity.name
+        iconImage.image = UIImage(systemName: activity.image ?? "xmark")
+    }
+    
+    public func setExercise(title: String, image: String) {
+        self.titleLabel.text = title
+        self.iconImage.image = UIImage(systemName: image)
     }
     
     

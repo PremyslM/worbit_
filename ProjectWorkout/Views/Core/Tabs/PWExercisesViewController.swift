@@ -12,7 +12,6 @@ final class PWExercisesViewController: UIViewController {
     
     private var vc = PWExerciseViewViewModel()
     
-    
     private lazy var exerciseTableView: PWPrimaryCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 50, height: 50)
@@ -55,6 +54,8 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
+        let exercise = vc.unwrappedExercises[indexPath.row]
+        cell.setExercise(title: exercise.name ?? "Unknown", image: "xmark")
         return cell
     }
     
