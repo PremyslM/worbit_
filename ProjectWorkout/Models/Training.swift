@@ -22,6 +22,7 @@ struct Training {
 struct Exercise {
     var name: String
     var sets: Int
+    var description: String
     var repetitions: Int
     var restTime: Int // in `s`
     var averageTime: Int  // in `s`

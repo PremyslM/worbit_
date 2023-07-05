@@ -35,6 +35,44 @@ struct Constants {
         .hiking: PWActivity(name: "Turistika", systemImage: "figure.hiking", accuracy: 0.23),
     ]
     
+    public static let trainings: [Training] = [
+        Training(
+            name: "Tréninkový plán 1",
+            type: "Strength Training",
+            duration: 3600, // 1 hodina
+            difficulty: "Intermediate",
+            focusAreas: ["Lower Body", "Upper Body", "Core"],
+            description: "Tento tréninkový plán je zaměřen na posílení celého těla.",
+            exercises: [
+                Exercise(
+                    name: "Dřepy",
+                    sets: 3,
+                    description: "Cvik zaměřený na posílení nohou a svalů zadku. Stůjte s nohama ve šířce ramen a pomalu se svažte dolů tak, aby vaše kolena byla ohnutá pod úhlem 90 stupňů. Potom se vraťte zpět nahoru. Opakujte.",
+                    repetitions: 12,
+                    restTime: 60,
+                    averageTime: 45
+                ),
+                Exercise(
+                    name: "Kliky",
+                    sets: 4,
+                    description: "Cvik pro posílení horní části těla, zejména hrudníku, ramen a tricepsů. Lehněte si na zem s dlaněmi opřenými o podlahu ve šířce ramen. Pomalu se spusťte dolů, ohněte lokty, dokud nejsou v pravém úhlu, a potom se vraťte zpět nahoru. Opakujte.",
+                    repetitions: 10,
+                    restTime: 60,
+                    averageTime: 30
+                ),
+                Exercise(
+                    name: "Výpady",
+                    sets: 3,
+                    description: "Cvik pro posílení nohou a svalů hýždí. Postavte se rovně s nohama ve šířce ramen. Udeřte jednou nohou dopředu tak, aby byl vaši koleno ohnuté pod úhlem 90 stupňů, zatímco vaše druhá noha zůstává vzadu. Potom se vraťte zpět nahoru a opakujte s druhou nohou.",
+                    repetitions: 8,
+                    restTime: 90,
+                    averageTime: 60
+                ),
+            ],
+            restDays: 2
+        ),
+    ]
+    
     enum Activities {
         case running
         case cycling
