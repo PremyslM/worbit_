@@ -10,6 +10,9 @@ import UIKit
 
 class PWTrainingStackView: PWProgrammaticUIView {
     
+    private let vm = PWTrainingStackViewModel() // TODO: Create View Model for this (there you ll use TrainingManager)
+    
+    
     private lazy var daysStackView: UIStackView = {
         let _daysStackView: UIStackView = UIStackView()
         
@@ -40,11 +43,13 @@ class PWTrainingStackView: PWProgrammaticUIView {
      This method creates `PWTrainingViewCell` instances for each day of the week and sets their content. The training cells are added to the `daysStackView` as arranged subviews. The first cell has rounded corners on the top-right and top-left corners, while the last cell has rounded corners on the bottom-right and bottom-left corners. All other cells have square corners.
     */
     private func setTrainingCells() {
-        for day in Constants.daysInWeek {
+        let randomTraining = vm.randomTraining
+        
+        for day in vm.daysInWeek {
             let newDay = PWTrainingViewCell()
-            newDay.setContent(title: day, timeTitleLabel: "0 min 0 s")
+            newDay.setContent(title: day, timeTitleLabel: vm.avgTimeToCompleteString(randomTraining))
                         
-            if day == Constants.daysInWeek[0] {
+            if day == vm.daysInWeek[0] {
                 newDay.layer.cornerRadius = 8
                 newDay.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
                                                 
@@ -53,7 +58,7 @@ class PWTrainingStackView: PWProgrammaticUIView {
                 // NOTE: Just for testing
                 setInInfoCard(from: newDay)
             }
-            else if day == Constants.daysInWeek.last {
+            else if day == vm.daysInWeek.last {
                 newDay.layer.cornerRadius = 8
                 newDay.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Bottom right corner, Bottom left corner
                 daysStackView.addArrangedSubview(newDay)

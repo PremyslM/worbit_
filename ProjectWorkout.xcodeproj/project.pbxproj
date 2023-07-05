@@ -42,6 +42,8 @@
 		787F6B602A5575F900C75255 /* PWTrainingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B5F2A5575F900C75255 /* PWTrainingStackView.swift */; };
 		787F6B622A55B5B000C75255 /* PWTrainingInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B612A55B5B000C75255 /* PWTrainingInfoCardView.swift */; };
 		787F6B642A55D61400C75255 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B632A55D61400C75255 /* Training.swift */; };
+		787F6B662A55DF5900C75255 /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B652A55DF5900C75255 /* TrainingManager.swift */; };
+		787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */; };
 		78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */; };
 		78A1BA852A35B0E800B29316 /* PWProgressBarStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */; };
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
@@ -99,6 +101,8 @@
 		787F6B5F2A5575F900C75255 /* PWTrainingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingStackView.swift; sourceTree = "<group>"; };
 		787F6B612A55B5B000C75255 /* PWTrainingInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingInfoCardView.swift; sourceTree = "<group>"; };
 		787F6B632A55D61400C75255 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		787F6B652A55DF5900C75255 /* TrainingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingManager.swift; sourceTree = "<group>"; };
+		787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingStackViewModel.swift; sourceTree = "<group>"; };
 		78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackView.swift; sourceTree = "<group>"; };
 		78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackViewModel.swift; sourceTree = "<group>"; };
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				78FA1DE42A2CADB3008FCAF3 /* PWMainPageViewModel.swift */,
 				78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */,
 				78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */,
+				787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				78626BBD2A20EB84003102D3 /* ActivityManager.swift */,
 				78626BD32A239368003102D3 /* UserProfileManager.swift */,
 				78FA1DC12A261C15008FCAF3 /* DataManager.swift */,
+				787F6B652A55DF5900C75255 /* TrainingManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				78FCEFA72A4724DA00C1900C /* PWDetailViewController.swift in Sources */,
 				78626BA02A1E9781003102D3 /* PWPrimaryContainerView.swift in Sources */,
 				78626BD62A239546003102D3 /* PWUserProfileViewViewModel.swift in Sources */,
+				787F6B662A55DF5900C75255 /* TrainingManager.swift in Sources */,
 				78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */,
 				78626BD82A23A3D0003102D3 /* PWUserProfileView.swift in Sources */,
 				78626BCA2A229A54003102D3 /* PWExcerciesCollectionView.swift in Sources */,
@@ -444,6 +451,7 @@
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */,
 				78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */,
+				787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
