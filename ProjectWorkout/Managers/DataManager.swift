@@ -10,9 +10,13 @@ import CoreData
 
 class DataManager {
     
-    static let shared = DataManager()
+    // MARK: - Public
     
-    lazy var persistentContainer: NSPersistentContainer = {
+    /// Singleton instance
+    public static let shared = DataManager()
+    
+    /// Persistance container
+    public lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "ProjectWorkrout")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -22,8 +26,40 @@ class DataManager {
         return container
     }()
     
-    //Core Data Saving support
-    func save() {
+    /// Return current active user
+    public static let currentUser: User = {
+        let _user = TestData.currentUser
+        
+        return _user
+    }()
+    
+    /// Formated activites array
+    ///
+    /// Constant that returns refortoreated set of Activities of type NSSet.
+    public static let activitiesSet: NSSet = {
+        var fetche = [Activity]()
+        
+        for ac in getActivities {
+            let _ac = Activity(context: DataManager.shared.persistentContainer.viewContext)
+            _ac.name = ac.name
+            _ac.duration = ac.duration
+            _ac.image = ac.image
+            
+            fetche.append(_ac)
+        }
+        
+        let set = Set(fetche)
+        
+        return set as NSSet
+    }()
+    
+    
+    // MARK: - Private
+    
+    /// Core Data Saving support
+    ///
+    /// Saves data into CoreData persistance container
+    private func save() {
         let context = persistentContainer.viewContext
         
         if context.hasChanges {
@@ -37,29 +73,7 @@ class DataManager {
     }
     
     
-    static let user: User = {
-        let _user = User(context: DataManager.shared.persistentContainer.viewContext)
-        _user.name = "Pepa"
-        
-        var fetche = [Activity]()
-        
-        for ac in getActivities {
-            let _ac = Activity(context: DataManager.shared.persistentContainer.viewContext)
-            _ac.name = ac.name
-            _ac.duration = ac.duration
-            _ac.image = ac.image
-            
-            fetche.append(_ac)
-        }
-        let set = Set(fetche)
-        _user.exercise = set as NSSet
-        
-        return _user
-    }()
-    
-    
-    // MARK: - Private
-    
+    /// Constant return array of activities.
     private static let getActivities: [Activity] = {
         
         var fetchedActivities = [Activity]()
@@ -74,5 +88,6 @@ class DataManager {
         
         return fetchedActivities
     }()
+    
     
 }

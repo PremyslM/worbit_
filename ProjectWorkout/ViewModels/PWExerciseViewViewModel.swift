@@ -9,26 +9,36 @@ import Foundation
 
 class PWExerciseViewViewModel {
     
-    private let networkService = NetworkService()
+    // MARK: - Public
     
-    private var exercises: [ExerciseItem]?
-    
+    /// Return save / Unwrapped array of exercises
     public var unwrappedExercises: [ExerciseItem] {
         return exercises ?? []
     }
+    
+    
+    // MARK: - Private
+    
+    /// Instance of NetworkService
+    private let networkService = NetworkService()
+    
+    /// Array of all exercises
+    private var exercises: [ExerciseItem]?
     
     init() {
         fetchData()
     }
     
+    /// Loads all exercise data from our network service
     private func fetchData() {
         networkService.fetchData { [weak self] success, result in
             if success {
                 self?.exercises = result!
             } else {
-                //fatalError("Failed to fetch data from NetworkService")
                 print("Failed to fetch data from network service")
             }
         }
     }
+    
+    
 }
