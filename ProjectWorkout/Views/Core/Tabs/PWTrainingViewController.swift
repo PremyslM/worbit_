@@ -14,7 +14,9 @@ class PWTrainingViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-                        
+        
+        self.title = "Training"
+                                        
         setConfig()
         setConstraints()
     }
@@ -26,6 +28,7 @@ class PWTrainingViewController: UIViewController {
 private extension PWTrainingViewController {
         
     func setConfig() {
+        
         view.backgroundColor = .theme.primaryBackground
         view.addConstrainedSubViews(trainingScheduleView)
     }
