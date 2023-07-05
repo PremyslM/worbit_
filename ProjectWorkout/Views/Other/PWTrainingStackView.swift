@@ -49,6 +49,9 @@ class PWTrainingStackView: PWProgrammaticUIView {
                 newDay.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
                                                 
                 daysStackView.addArrangedSubview(newDay)
+                
+                // NOTE: Just for testing
+                setInInfoCard(from: newDay)
             }
             else if day == Constants.daysInWeek.last {
                 newDay.layer.cornerRadius = 8
@@ -72,8 +75,9 @@ class PWTrainingStackView: PWProgrammaticUIView {
      This method creates a new `UIView` instance and adds it to the `daysStackView` as an arranged subview. The info card view has a gray background color and is constrained to the parent view using Auto Layout constraints.
      **/
     private func setInInfoCard(from parent: UIView) {
-        let infoView = UIView()
+        let infoView = PWTrainingInfoCardView()
         infoView.backgroundColor = .gray
+        infoView.setContent(difficulty: 3)
         infoView.translatesAutoresizingMaskIntoConstraints = false
         
         daysStackView.addArrangedSubview(infoView)

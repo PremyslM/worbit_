@@ -74,7 +74,7 @@ class DataManager {
     
     
     /// Constant return array of activities.
-    private static let getActivities: [Activity] = {
+    public static let getActivities: [Activity] = {
         
         var fetchedActivities = [Activity]()
         for activity in Constants.activitiesArray {
