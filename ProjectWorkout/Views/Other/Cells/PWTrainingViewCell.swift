@@ -17,7 +17,7 @@ class PWTrainingViewCell: PWProgrammaticUIView {
     }
     
     override func setConfig() {
-        self.backgroundColor = .green // TODO: Just for testing
+        self.backgroundColor = .systemGreen // TODO: Just for testing
     }
     
     
