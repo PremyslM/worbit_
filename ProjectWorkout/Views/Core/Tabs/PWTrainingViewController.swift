@@ -10,9 +10,28 @@ import UIKit
 
 class PWTrainingViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+                        
+        setConfig()
+        setConstraints()
     }
+    
+    
+}
+
+
+private extension PWTrainingViewController {
+        
+    func setConfig() {
+        view.backgroundColor = .theme.primaryBackground
+    }
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            
+        ])
+    }
+            
     
 }
