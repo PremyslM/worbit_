@@ -43,9 +43,10 @@ class PWTrainingStackView: PWProgrammaticUIView {
      This method creates `PWTrainingViewCell` instances for each day of the week and sets their content. The training cells are added to the `daysStackView` as arranged subviews. The first cell has rounded corners on the top-right and top-left corners, while the last cell has rounded corners on the bottom-right and bottom-left corners. All other cells have square corners.
     */
     private func setTrainingCells() {
-        let randomTraining = vm.randomTraining
         
         for day in vm.daysInWeek {
+            let randomTraining = vm.randomTraining
+            
             let newDay = PWTrainingViewCell()
             newDay.setContent(title: day, timeTitleLabel: randomTraining.avgTimeToCompleteString)
                         
