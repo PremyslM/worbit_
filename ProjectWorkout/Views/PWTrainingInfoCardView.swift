@@ -10,7 +10,7 @@ import UIKit
 
 class PWTrainingInfoCardView: PWProgrammaticUIView {
     
-    let viewModel = PWTrainingInfoCardViewModel()
+    let vm = PWTrainingInfoCardViewModel()
         
     private lazy var exercisesListLabel: UILabel = UILabel()
     private lazy var difficultyValueLabel: UILabel = UILabel()
@@ -62,14 +62,14 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
     public func setContent(difficulty: Int) {
         var exerciseListString: String = ""
         
-        for exercise in viewModel.unwrappedTraining.exercises {
+        for exercise in vm.unwrappedTraining.exercises {
             exerciseListString += "\(exercise.name)\n"
         }
         
         exercisesListLabel.text = "\(exerciseListString)"
         exercisesListLabel.font = .systemFont(ofSize: 12)
         
-        difficultyValueLabel.text = "\(viewModel.unwrappedTraining.difficulty)"
+        difficultyValueLabel.text = "\(vm.unwrappedTraining.difficulty)"
         difficultyValueLabel.font = .systemFont(ofSize: 12)
     }
     
@@ -80,7 +80,7 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
 extension PWTrainingInfoCardView {
     
     func setTraining(_ training: Training) {
-        viewModel.setTraining(training)
+        vm.setTraining(training)
     }
     
     
