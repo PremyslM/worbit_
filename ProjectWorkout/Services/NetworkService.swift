@@ -51,7 +51,7 @@ class NetworkService {
        // Create a URLSession and initiate a data task
        let session = URLSession.shared
        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-           if let error = error {
+           if error != nil {
                // An error occurred during the fetch operation
                completion(false, nil)
                return
