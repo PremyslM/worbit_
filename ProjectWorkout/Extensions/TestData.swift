@@ -12,8 +12,9 @@ class TestData {
     
     /// Hardcore Test User
     ///
-    /// - This is our test user
-    /// - Just for testing purpuses !
+    /// Warning:
+    /// >   - This is our test user.
+    /// >   - Just for testing purpuses !
     static let currentUser: User = {
         let _user = User(context: DataManager.shared.persistentContainer.viewContext)
         _user.name = "Jon Doe"

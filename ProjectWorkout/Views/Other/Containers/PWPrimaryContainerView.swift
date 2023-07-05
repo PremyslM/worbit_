@@ -9,9 +9,7 @@ import UIKit
 
 
 /// This PWProgrammaticUIView class represents UI Components that'll be located in many view, depents on his usage.
-class PWPrimaryContainerView: PWProgrammaticUIView {
-    
-    private var vc: PWPrimaryContainerViewViewModel?
+class PWPrimaryContainerView: PWProgrammaticUIView {        
     
     private var activity: Activity? {
         didSet {
