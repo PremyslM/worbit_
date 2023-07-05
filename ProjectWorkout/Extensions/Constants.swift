@@ -22,6 +22,8 @@ struct Constants {
         }
     }
     
+    public static let daysInWeek: [String] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    
     public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
     
     public static let activitiesArray: [Activities: PWActivity] = [

@@ -10,14 +10,51 @@ import UIKit
 
 class PWTrainingViewCell: PWProgrammaticUIView {
     
+    private lazy var titleLabel: UILabel = {
+        let _titleLabel = UILabel()
+        
+        _titleLabel.font = .systemFont(ofSize: 18, weight: .semibold)
+        _titleLabel.textColor = .black
+        
+        return _titleLabel
+    }()
+    
+    private lazy var timeTitleLabel: UILabel = {
+        let _timeTitleLabel = UILabel()
+        
+        _timeTitleLabel.textColor = .systemGreen
+        _timeTitleLabel.font = .preferredFont(forTextStyle: .callout, compatibleWith: .current)
+        
+        return _timeTitleLabel
+    }()
+    
+    
+    override func setConfig() {
+        self.backgroundColor = .theme.secondaryWhite
+        
+        self.addConstrainedSubViews(titleLabel, timeTitleLabel)
+    }
+    
     override func setConstraints() {
         NSLayoutConstraint.activate([
-            // TODO: ...
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            titleLabel.widthAnchor.constraint(equalToConstant: 40),
+            
+            timeTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 20),
+            timeTitleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            timeTitleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            
+            self.heightAnchor.constraint(equalToConstant: 50),
+            self.widthAnchor.constraint(equalToConstant: 120),
         ])
     }
     
-    override func setConfig() {
-        self.backgroundColor = .systemGreen // TODO: Just for testing
+    
+    public func setContent(title: String, timeTitleLabel: String) {
+        self.titleLabel.text = title
+        self.timeTitleLabel.text = timeTitleLabel
     }
     
     
