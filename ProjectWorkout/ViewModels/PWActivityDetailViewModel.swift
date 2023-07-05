@@ -10,13 +10,11 @@ import Foundation
 
 class PWActivityDetailViewModel {
     
-    var dataSource: PWActivityDetailDataSource? {
-        didSet {                        
-            self.activity = dataSource?.getActvity()
-        }
-    }
+    public var activity: Activity?
     
-    var activity: Activity?
+    public func setUI(activity: Activity) {
+        self.activity = activity
+    }
     
     
 }

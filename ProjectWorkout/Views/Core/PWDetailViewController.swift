@@ -9,15 +9,13 @@ import UIKit
 
 
 class PWDetailViewController: UIViewController {
-    
-    var activity: Activity?    
-    
+            
     let vm: PWActivityDetailViewModel = PWActivityDetailViewModel()
     
     private lazy var activityContainer: PWPrimaryContainerView = {
         let _activityContainer = PWPrimaryContainerView()
         _activityContainer.layer.cornerRadius = 16
-        _activityContainer.setActivity(activity: activity!)
+        _activityContainer.setActivity(activity: vm.activity!)
         _activityContainer.backgroundColor = .theme.primaryBackground?.withAlphaComponent(0.5)
         
         return _activityContainer
@@ -29,9 +27,7 @@ class PWDetailViewController: UIViewController {
         self.view.addConstrainedSubViews(activityContainer)
         self.view.backgroundColor = .theme.primaryBackground
         
-        activityContainer.setActivity(activity: self.activity!)
-        
-        vm.dataSource = self
+        activityContainer.setActivity(activity: vm.activity!)
                 
         setConstraints()
     }
@@ -49,20 +45,11 @@ class PWDetailViewController: UIViewController {
 }
 
 extension PWDetailViewController {
+    
     // MARK: - Public
     
     public func setUI(activity: Activity) {
-        self.activity = activity
-    }
-    
-    
-}
-
-
-extension PWDetailViewController: PWActivityDetailDataSource {
-    
-    func getActvity() -> Activity {        
-        return (self.activity)!
+        vm.setUI(activity: activity)
     }
     
     

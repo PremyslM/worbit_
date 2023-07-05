@@ -9,20 +9,12 @@ import Foundation
 
 
 final class PWPrimaryContainerViewViewModel {
-        
-    // MARK: - Public
-    
-    public let activityManager = ActivityManager.shared
-    
-    public var activity: Activity
-    
     
     // MARK: - Private
-    private let networkService = NetworkService()
-        
-    init(activity: Activity) {
-        self.activity = activity
-    }
+    
+    //private var activity: Activity
+    
+    private let networkService = NetworkService()        
     
     
 }
