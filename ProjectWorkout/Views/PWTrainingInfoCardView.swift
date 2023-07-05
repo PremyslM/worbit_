@@ -10,9 +10,10 @@ import UIKit
 
 class PWTrainingInfoCardView: PWProgrammaticUIView {
     
-    let exercises = DataManager.getActivities //PWExerciseViewViewModel().unwrappedExercises
+    let viewModel = PWTrainingInfoCardViewModel()
         
     private lazy var exercisesListLabel: UILabel = UILabel()
+    private lazy var difficultyValueLabel: UILabel = UILabel()
         
     private lazy var difficultyLabel: UILabel = {
         let _difficultyLabel: UILabel = UILabel()
@@ -38,7 +39,7 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
         
         exercisesListLabel.numberOfLines = 3
         
-        self.addConstrainedSubViews(exercisesListLabel, difficultyLabel, exercisesLabel)
+        self.addConstrainedSubViews(exercisesListLabel, difficultyLabel, exercisesLabel, difficultyValueLabel)
     }
     
     override func setConstraints() {
@@ -49,6 +50,9 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
             exercisesListLabel.topAnchor.constraint(equalTo: exercisesLabel.bottomAnchor, constant: 3),
             exercisesListLabel.leadingAnchor.constraint(equalTo: exercisesLabel.leadingAnchor, constant: 10),
             
+            difficultyValueLabel.leadingAnchor.constraint(equalTo: difficultyLabel.trailingAnchor, constant: 10),
+            difficultyValueLabel.topAnchor.constraint(equalTo: difficultyLabel.topAnchor),
+            
             difficultyLabel.topAnchor.constraint(equalTo: exercisesListLabel.bottomAnchor, constant: 10),
             difficultyLabel.leadingAnchor.constraint(equalTo: exercisesLabel.leadingAnchor),
         ])
@@ -58,14 +62,25 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
     public func setContent(difficulty: Int) {
         var exerciseListString: String = ""
         
-        print(exercises.count)
-        
-        for exercise in exercises {
-            exerciseListString += "\(exercise.name ?? "[X]")\n"
+        for exercise in viewModel.unwrappedTraining.exercises {
+            exerciseListString += "\(exercise.name)\n"
         }
         
         exercisesListLabel.text = "\(exerciseListString)"
-        exercisesListLabel.font = .systemFont(ofSize: 15)
+        exercisesListLabel.font = .systemFont(ofSize: 12)
+        
+        difficultyValueLabel.text = "\(viewModel.unwrappedTraining.difficulty)"
+        difficultyValueLabel.font = .systemFont(ofSize: 12)
+    }
+    
+    
+}
+
+
+extension PWTrainingInfoCardView {
+    
+    func setTraining(_ training: Training) {
+        viewModel.setTraining(training)
     }
     
     

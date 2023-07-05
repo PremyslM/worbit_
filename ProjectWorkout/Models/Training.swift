@@ -17,6 +17,23 @@ struct Training {
     var description: String
     var exercises: [Exercise]  // Seznam cvičení
     var restDays: Int
+    
+    var avgTimeToCompleteString: String {
+        var sum: Int = 0 // in `s`
+        
+        for exercise in self.exercises {
+            sum += exercise.averageTime * exercise.repetitions
+        }
+                
+        let sumMinutes: Float = Float(sum) / 60
+        let minutes = Int(sumMinutes)
+        let seconds: Int = Int((sumMinutes - Float(minutes)) * 60)
+        
+        let result: String = "\(minutes)m \(seconds)s"
+        return result
+    }
+    
+    
 }
 
 struct Exercise {

@@ -44,6 +44,7 @@
 		787F6B642A55D61400C75255 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B632A55D61400C75255 /* Training.swift */; };
 		787F6B662A55DF5900C75255 /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B652A55DF5900C75255 /* TrainingManager.swift */; };
 		787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */; };
+		787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */; };
 		78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */; };
 		78A1BA852A35B0E800B29316 /* PWProgressBarStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */; };
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
@@ -103,6 +104,7 @@
 		787F6B632A55D61400C75255 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		787F6B652A55DF5900C75255 /* TrainingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingManager.swift; sourceTree = "<group>"; };
 		787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingStackViewModel.swift; sourceTree = "<group>"; };
+		787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingInfoCardViewModel.swift; sourceTree = "<group>"; };
 		78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackView.swift; sourceTree = "<group>"; };
 		78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackViewModel.swift; sourceTree = "<group>"; };
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */,
 				78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */,
 				787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */,
+				787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78FA1DE52A2CADB3008FCAF3 /* PWMainPageViewModel.swift in Sources */,
+				787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */,
 				78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
 				78626BD22A23794A003102D3 /* PWExerciseViewViewModel.swift in Sources */,
