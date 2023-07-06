@@ -75,7 +75,6 @@ class DataManager {
     
     /// Constant return array of activities.
     public static let getActivities: [Activity] = {
-        
         var fetchedActivities = [Activity]()
         for activity in Constants.activitiesArray {
             let _activity = Activity(context: DataManager.shared.persistentContainer.viewContext)
@@ -88,6 +87,6 @@ class DataManager {
         
         return fetchedActivities
     }()
-    
+            
     
 }
