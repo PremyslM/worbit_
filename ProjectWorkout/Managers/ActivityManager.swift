@@ -10,17 +10,25 @@ import Foundation
 
 final class ActivityManager {
     
+    /// Singleton instast of self
     static let shared: ActivityManager = ActivityManager()
     
+    /// Current active user
     private let currentUser = UserProfileManager.shared
     
+    /// array of all activities
     public var activities: [Activity]?
     
     init() {
-        loadActivities()
+        fetchActivities()
     }
     
-    
+    /// Returns random activity
+    ///
+    /// Warning note
+    /// ---
+    /// - This method is now created only for testinf purpuses. In the future this method will be deleted (probably...).
+    /// - Returns random activity from activity constants, and it's only use for test our view.
     public func getRandomActivity() -> Activity? {
         
         guard let activities = activities else {
@@ -38,6 +46,7 @@ final class ActivityManager {
         return _testActivity
     }
     
+    /// Returns PWActiviti from activity enum (constants.activities)
     public func getActivity(_ activity: Constants.Activities) -> PWActivity {
         return Constants.activitiesArray[activity] ?? PWActivity(name: "Nothing", systemImage: "house", accuracy: 50.0)
     }
@@ -45,7 +54,8 @@ final class ActivityManager {
     
     // MARK: - Private
     
-    private func loadActivities() {
+    /// Loading (fetching) our activity data
+    private func fetchActivities() {
         self.activities = self.currentUser.user?.activityArray        
     }
     

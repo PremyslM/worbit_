@@ -10,9 +10,11 @@ import Foundation
 
 class PWProgressBarStackViewModel {
     
+    /// Singleton instace of ActivityManager class (shared)
     private let activityManager = ActivityManager.shared
     
-    var activites: [Activity] {
+    /// Returns unwrapped array of activities
+    public var activites: [Activity] {
         return activityManager.activities ?? []
     }
     

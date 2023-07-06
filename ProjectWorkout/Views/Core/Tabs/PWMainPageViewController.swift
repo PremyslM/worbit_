@@ -38,6 +38,8 @@ final class PWMainPageViewController: UIViewController {
                         
         setConfig()
         setConstraints()
+        
+        infoContainer.setActivity(activity: vc.activity)
     }
             
         

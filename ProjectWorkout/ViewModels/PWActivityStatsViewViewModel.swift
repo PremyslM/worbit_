@@ -10,6 +10,7 @@ import Foundation
 
 final class PWActivityStatsViewViewModel {
     
+    /// Returns singleton instant of ActivityManager
     public let activityManager = ActivityManager.shared
         
 }

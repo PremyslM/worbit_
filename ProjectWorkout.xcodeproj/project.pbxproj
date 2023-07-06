@@ -26,7 +26,6 @@
 		78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBA2A2082F5003102D3 /* ActivityStats.swift */; };
 		78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBD2A20EB84003102D3 /* ActivityManager.swift */; };
 		78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */; };
-		78626BC22A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */; };
 		78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */; };
 		78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC72A229607003102D3 /* TabView+addNewItem.swift */; };
 		78626BCA2A229A54003102D3 /* PWExcerciesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC92A229A54003102D3 /* PWExcerciesCollectionView.swift */; };
@@ -38,8 +37,19 @@
 		78626BD62A239546003102D3 /* PWUserProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */; };
 		78626BD82A23A3D0003102D3 /* PWUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BD72A23A3D0003102D3 /* PWUserProfileView.swift */; };
 		78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */; };
+		787F6B5C2A556F8800C75255 /* PWTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B5B2A556F8800C75255 /* PWTrainingViewController.swift */; };
+		787F6B5E2A5573F000C75255 /* PWTrainingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B5D2A5573F000C75255 /* PWTrainingViewCell.swift */; };
+		787F6B602A5575F900C75255 /* PWTrainingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B5F2A5575F900C75255 /* PWTrainingStackView.swift */; };
+		787F6B622A55B5B000C75255 /* PWTrainingInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B612A55B5B000C75255 /* PWTrainingInfoCardView.swift */; };
+		787F6B642A55D61400C75255 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B632A55D61400C75255 /* Training.swift */; };
+		787F6B662A55DF5900C75255 /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B652A55DF5900C75255 /* TrainingManager.swift */; };
+		787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */; };
+		787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */; };
 		78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */; };
 		78A1BA852A35B0E800B29316 /* PWProgressBarStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */; };
+		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
+		78CE8B122A52074F00940328 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B112A52074F00940328 /* TestData.swift */; };
+		78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */; };
 		78E8F46B2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */; };
 		78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */; };
 		78FA1DBF2A261AF0008FCAF3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */; };
@@ -48,11 +58,9 @@
 		78FA1DC52A275678008FCAF3 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */; };
 		78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */; };
 		78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DC72A275E83008FCAF3 /* PWActivity.swift */; };
-		78FA1DCB2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */; };
 		78FA1DD52A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DD42A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift */; };
 		78FA1DE52A2CADB3008FCAF3 /* PWMainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DE42A2CADB3008FCAF3 /* PWMainPageViewModel.swift */; };
 		78FA1DEB2A2CB05F008FCAF3 /* PWActivityProgressBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DEA2A2CB05F008FCAF3 /* PWActivityProgressBarDataSource.swift */; };
-		78FCEFA52A4722B900C1900C /* PWActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FCEFA42A4722B900C1900C /* PWActivityDetailView.swift */; };
 		78FCEFA72A4724DA00C1900C /* PWDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FCEFA62A4724DA00C1900C /* PWDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +86,6 @@
 		78626BBA2A2082F5003102D3 /* ActivityStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStats.swift; sourceTree = "<group>"; };
 		78626BBD2A20EB84003102D3 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatsViewViewModel.swift; sourceTree = "<group>"; };
-		78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryContainerViewViewModel.swift; sourceTree = "<group>"; };
 		78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWExercisesViewController.swift; sourceTree = "<group>"; };
 		78626BC72A229607003102D3 /* TabView+addNewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabView+addNewItem.swift"; sourceTree = "<group>"; };
 		78626BC92A229A54003102D3 /* PWExcerciesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWExcerciesCollectionView.swift; sourceTree = "<group>"; };
@@ -90,8 +97,19 @@
 		78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileViewViewModel.swift; sourceTree = "<group>"; };
 		78626BD72A23A3D0003102D3 /* PWUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileView.swift; sourceTree = "<group>"; };
 		78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityViewViewModel.swift; sourceTree = "<group>"; };
+		787F6B5B2A556F8800C75255 /* PWTrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingViewController.swift; sourceTree = "<group>"; };
+		787F6B5D2A5573F000C75255 /* PWTrainingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingViewCell.swift; sourceTree = "<group>"; };
+		787F6B5F2A5575F900C75255 /* PWTrainingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingStackView.swift; sourceTree = "<group>"; };
+		787F6B612A55B5B000C75255 /* PWTrainingInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingInfoCardView.swift; sourceTree = "<group>"; };
+		787F6B632A55D61400C75255 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		787F6B652A55DF5900C75255 /* TrainingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingManager.swift; sourceTree = "<group>"; };
+		787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingStackViewModel.swift; sourceTree = "<group>"; };
+		787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingInfoCardViewModel.swift; sourceTree = "<group>"; };
 		78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackView.swift; sourceTree = "<group>"; };
 		78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackViewModel.swift; sourceTree = "<group>"; };
+		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
+		78CE8B112A52074F00940328 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailDataSource.swift; sourceTree = "<group>"; };
 		78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		78FA1DAF2A261999008FCAF3 /* ProjectWorkrout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectWorkrout.xcdatamodel; sourceTree = "<group>"; };
 		78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -100,11 +118,9 @@
 		78FA1DC32A275678008FCAF3 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78FA1DC42A275678008FCAF3 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78FA1DC72A275E83008FCAF3 /* PWActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivity.swift; sourceTree = "<group>"; };
-		78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatItemViewViewModel.swift; sourceTree = "<group>"; };
 		78FA1DD42A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityProgressBarViewModel.swift; sourceTree = "<group>"; };
 		78FA1DE42A2CADB3008FCAF3 /* PWMainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWMainPageViewModel.swift; sourceTree = "<group>"; };
 		78FA1DEA2A2CB05F008FCAF3 /* PWActivityProgressBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityProgressBarDataSource.swift; sourceTree = "<group>"; };
-		78FCEFA42A4722B900C1900C /* PWActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailView.swift; sourceTree = "<group>"; };
 		78FCEFA62A4724DA00C1900C /* PWDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,10 +157,9 @@
 				78626B812A1E7634003102D3 /* Info.plist */,
 				78626BBC2A20EB7A003102D3 /* Managers */,
 				78626B8B2A1E7A14003102D3 /* ViewModels */,
-				78626B8E2A1E7A2C003102D3 /* Helpers */,
+				78626B8E2A1E7A2C003102D3 /* Extensions */,
 				78626B8D2A1E7A26003102D3 /* Services */,
 				78626B8F2A1E7A35003102D3 /* Models */,
-				78626B892A1E7A08003102D3 /* ViewControllers */,
 				78626B872A1E79AF003102D3 /* Views */,
 				78626B8C2A1E7A20003102D3 /* Resources */,
 				78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */,
@@ -155,35 +170,26 @@
 		78626B872A1E79AF003102D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78626B902A1E7A42003102D3 /* Core */,
 				78626BA32A1E9AF6003102D3 /* Other */,
-				78E8F4692A2E499200FDE24A /* Cells */,
-				78626BD72A23A3D0003102D3 /* PWUserProfileView.swift */,
-				78FCEFA42A4722B900C1900C /* PWActivityDetailView.swift */,
+				787F6B612A55B5B000C75255 /* PWTrainingInfoCardView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		78626B892A1E7A08003102D3 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				78626B912A1E7A47003102D3 /* Other */,
-				78626B902A1E7A42003102D3 /* Core */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		78626B8B2A1E7A14003102D3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				78626BBF2A20ED43003102D3 /* PWActivityStatsViewViewModel.swift */,
-				78626BC12A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift */,
 				78626BD12A23794A003102D3 /* PWExerciseViewViewModel.swift */,
 				78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */,
 				78626BDB2A23B149003102D3 /* PWActivityViewViewModel.swift */,
-				78FA1DCA2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift */,
 				78FA1DD42A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift */,
 				78FA1DE42A2CADB3008FCAF3 /* PWMainPageViewModel.swift */,
 				78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */,
+				78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */,
+				787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */,
+				787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -206,7 +212,7 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		78626B8E2A1E7A2C003102D3 /* Helpers */ = {
+		78626B8E2A1E7A2C003102D3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				78FA1DE82A2CB044008FCAF3 /* Protocols */,
@@ -215,8 +221,9 @@
 				78626BA52A1F32E9003102D3 /* UIColor+theme.swift */,
 				78626BAF2A1FF166003102D3 /* Constants.swift */,
 				78626BC72A229607003102D3 /* TabView+addNewItem.swift */,
+				78CE8B112A52074F00940328 /* TestData.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		78626B8F2A1E7A35003102D3 /* Models */ = {
@@ -227,6 +234,7 @@
 				78626BCB2A229D1F003102D3 /* ExerciseItem.swift */,
 				78626BCD2A229D28003102D3 /* UserProfile.swift */,
 				78FA1DC72A275E83008FCAF3 /* PWActivity.swift */,
+				787F6B632A55D61400C75255 /* Training.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,17 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				78626BA12A1E98E5003102D3 /* Tabs */,
+				78FCEFA62A4724DA00C1900C /* PWDetailViewController.swift */,
 				78626BA72A1F37FC003102D3 /* PWTabBarController.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		78626B912A1E7A47003102D3 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				78FCEFA62A4724DA00C1900C /* PWDetailViewController.swift */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		78626B942A1E7B27003102D3 /* Delegates */ = {
@@ -272,6 +273,7 @@
 				78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */,
 				78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */,
 				78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */,
+				787F6B5B2A556F8800C75255 /* PWTrainingViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -279,12 +281,15 @@
 		78626BA32A1E9AF6003102D3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				78E8F4692A2E499200FDE24A /* Cells */,
 				78E8F4682A2E48F900FDE24A /* CollectionView */,
 				78626B9E2A1E973D003102D3 /* Containers */,
+				78626BD72A23A3D0003102D3 /* PWUserProfileView.swift */,
 				78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */,
 				78626BAD2A1FCCEE003102D3 /* PWActivityStatsView.swift */,
 				78626BA92A1FC35C003102D3 /* PWActivityProgressBarView.swift */,
 				78626BAB2A1FCAF0003102D3 /* PWActivityStatItemView.swift */,
+				787F6B5F2A5575F900C75255 /* PWTrainingStackView.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				78626BBD2A20EB84003102D3 /* ActivityManager.swift */,
 				78626BD32A239368003102D3 /* UserProfileManager.swift */,
 				78FA1DC12A261C15008FCAF3 /* DataManager.swift */,
+				787F6B652A55DF5900C75255 /* TrainingManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */,
+				787F6B5D2A5573F000C75255 /* PWTrainingViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -338,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				78FA1DEA2A2CB05F008FCAF3 /* PWActivityProgressBarDataSource.swift */,
+				78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -417,7 +425,7 @@
 				78FCEFA72A4724DA00C1900C /* PWDetailViewController.swift in Sources */,
 				78626BA02A1E9781003102D3 /* PWPrimaryContainerView.swift in Sources */,
 				78626BD62A239546003102D3 /* PWUserProfileViewViewModel.swift in Sources */,
-				78626BC22A20F133003102D3 /* PWPrimaryContainerViewViewModel.swift in Sources */,
+				787F6B662A55DF5900C75255 /* TrainingManager.swift in Sources */,
 				78626BA62A1F32E9003102D3 /* UIColor+theme.swift in Sources */,
 				78626BD82A23A3D0003102D3 /* PWUserProfileView.swift in Sources */,
 				78626BCA2A229A54003102D3 /* PWExcerciesCollectionView.swift in Sources */,
@@ -425,6 +433,8 @@
 				78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78FA1DE52A2CADB3008FCAF3 /* PWMainPageViewModel.swift in Sources */,
+				787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */,
+				78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */,
 				78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */,
 				78626BD22A23794A003102D3 /* PWExerciseViewViewModel.swift in Sources */,
 				78626BC02A20ED43003102D3 /* PWActivityStatsViewViewModel.swift in Sources */,
@@ -433,30 +443,36 @@
 				78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */,
 				78626BAC2A1FCAF0003102D3 /* PWActivityStatItemView.swift in Sources */,
 				78FA1DC52A275678008FCAF3 /* Activity+CoreDataClass.swift in Sources */,
+				787F6B5C2A556F8800C75255 /* PWTrainingViewController.swift in Sources */,
 				78626B9C2A1E95E8003102D3 /* PWProgrammaticUIView.swift in Sources */,
 				78E8F46B2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift in Sources */,
 				78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */,
 				78FA1DC02A261AF0008FCAF3 /* User+CoreDataProperties.swift in Sources */,
 				78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */,
 				78FA1DD52A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift in Sources */,
+				787F6B622A55B5B000C75255 /* PWTrainingInfoCardView.swift in Sources */,
 				78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */,
 				78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */,
-				78FCEFA52A4722B900C1900C /* PWActivityDetailView.swift in Sources */,
+				787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
-				78FA1DCB2A29BCFB008FCAF3 /* PWActivityStatItemViewViewModel.swift in Sources */,
+				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
+				78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */,
 				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,
 				78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,
+				787F6B5E2A5573F000C75255 /* PWTrainingViewCell.swift in Sources */,
 				78626BCE2A229D28003102D3 /* UserProfile.swift in Sources */,
 				78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */,
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
 				78FA1DC22A261C15008FCAF3 /* DataManager.swift in Sources */,
 				78626BD02A23712B003102D3 /* NetworkService.swift in Sources */,
+				787F6B602A5575F900C75255 /* PWTrainingStackView.swift in Sources */,
 				78626BD42A239368003102D3 /* UserProfileManager.swift in Sources */,
 				78626BB02A1FF166003102D3 /* Constants.swift in Sources */,
+				787F6B642A55D61400C75255 /* Training.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,12 +10,16 @@ import UIKit
 
 class PWActivityProgressBarViewModel {
         
-    var delegate: PWActivityProgressBarDataSource?       
+    /// Delegate (data-source) attribute
+    var delegate: PWActivityProgressBarDataSource?
     
+    /// Value of current probress
     public var progressValue: Float {
         return delegate!.setProgressValue()
     }
-    public var imageIcon: UIImage {    
+    
+    /// Image (system image) of current activity
+    public var imageIcon: UIImage {
         return delegate!.setImageIcon()
     }
     
