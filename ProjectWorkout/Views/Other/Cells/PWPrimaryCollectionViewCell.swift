@@ -16,18 +16,10 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
     
     private lazy var titleLabel: UILabel = UILabel()
     private lazy var iconImage: UIImageView = UIImageView()
-    
-    private var activity: Activity? {
-        didSet {
-            detailVC.setUI(activity: activity!)
-                        
-        }
-    }
-    
+    private lazy var descriptionLabel: UILabel = UILabel()
         
     override init(frame: CGRect) {
         super.init(frame: frame)
-                
         
         setupUI()
         setupConstraints()
@@ -44,16 +36,13 @@ extension PWPrimaryCollectionViewCell {
     
     // MARK: - Public
     
-    public func setActivity(activity: Activity) {
-        self.activity = activity
-        
-        titleLabel.text = activity.name
-        iconImage.image = UIImage(systemName: activity.image ?? "xmark")
-    }
-    
-    public func setExercise(title: String, image: String) {
+    public func setExercise(title: String, image: String, description: String) {
         self.titleLabel.text = title
-        self.iconImage.image = UIImage(systemName: image)
+        self.iconImage.image = UIImage(
+            systemName: image,
+            withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .default)
+        )
+        self.descriptionLabel.text = description
     }
     
     
@@ -64,13 +53,18 @@ extension PWPrimaryCollectionViewCell {
         
         self.addGestureRecognizer(tap)
         
-        self.addConstrainedSubViews(titleLabel, iconImage)
+        self.addConstrainedSubViews(titleLabel, iconImage, descriptionLabel)
                 
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
-        titleLabel.text = activity?.name
+        titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
         
         iconImage.tintColor = .theme.primaryBackground
+        
+        descriptionLabel.textColor = .black
+        descriptionLabel.font = .systemFont(ofSize: 12, weight: .light)
+        descriptionLabel.numberOfLines = 3
+        descriptionLabel.textAlignment = .left
         
         self.layer.cornerRadius = 8
         self.backgroundColor = .theme.secondaryWhite
@@ -82,8 +76,12 @@ extension PWPrimaryCollectionViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             titleLabel.trailingAnchor.constraint(equalTo: self.iconImage.leadingAnchor, constant: -10),
                         
-            iconImage.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            iconImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             iconImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            descriptionLabel.trailingAnchor.constraint(equalTo: iconImage.leadingAnchor, constant: -15),
         ])
     }
         

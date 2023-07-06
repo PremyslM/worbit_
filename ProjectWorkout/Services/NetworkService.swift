@@ -7,8 +7,7 @@
 
 import Foundation
 
-class NetworkService<T: Codable> {
-    
+class NetworkService<T: Codable> {    
     /**
      Fetches exercise data from the API.
 

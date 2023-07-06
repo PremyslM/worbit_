@@ -14,8 +14,6 @@ final class PWExercisesViewController: UIViewController {
     
     private lazy var exerciseTableView: PWPrimaryCollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 50, height: 50)
-        
         let _exerciseTableView = PWPrimaryCollectionView(frame: .zero, collectionViewLayout: layout)
         
         _exerciseTableView.register(PWPrimaryCollectionViewCell.self, forCellWithReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue)
@@ -35,10 +33,10 @@ final class PWExercisesViewController: UIViewController {
         self.view.addConstrainedSubViews(exerciseTableView)    
         
         NSLayoutConstraint.activate([
-            exerciseTableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            exerciseTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            exerciseTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            exerciseTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            exerciseTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            exerciseTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            exerciseTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 25),
+            exerciseTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -25),
         ])
     }
         
@@ -55,7 +53,13 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIndentifiers.exercise.rawValue, for: indexPath) as? PWPrimaryCollectionViewCell else { fatalError() }
         let exercise = vc.unwrappedExercises[indexPath.row]
-        cell.setExercise(title: exercise.name ?? "Unknown", image: "xmark")
+        
+        cell.setExercise(
+            title: exercise.name,
+            image: "smallcircle.filled.circle.fill",
+            description: exercise.description
+        )
+        
         return cell
     }
     
@@ -66,7 +70,7 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
 extension PWExercisesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.size.width * 0.45
+        let width = collectionView.frame.size.width
         
         return CGSize(width: width, height: 100)
     }
