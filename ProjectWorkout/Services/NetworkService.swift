@@ -14,8 +14,8 @@ class NetworkService<T: Codable> {
 
      - Parameters:
         - completion: A closure to be called when the fetch operation completes. It takes two parameters:
-            - success: A boolean value indicating whether the fetch operation was successful.
-            - result: An optional array of `ExerciseItem` objects containing the fetched exercise data. This parameter will be `nil` if the fetch operation fails.
+            - **success**: A boolean value indicating whether the fetch operation was successful.
+            - **result**: An optional array of `ExerciseItem` objects containing the fetched exercise data. This parameter will be `nil` if the fetch operation fails.
 
      - Note: The completion closure is called on the main thread.
 
