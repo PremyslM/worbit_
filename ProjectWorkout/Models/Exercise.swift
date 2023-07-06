@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Exercise {
+struct Exercise: Codable {
     
     var name: String
     var sets: Int

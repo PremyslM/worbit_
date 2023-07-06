@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NetworkService {
+class NetworkService<T: Codable> {
     
     /**
      Fetches exercise data from the API.
@@ -22,7 +22,7 @@ class NetworkService {
      - Important: This method requires a valid API key to be set in the `X-Api-Key` header field of the request.
 
      Example usage:
-     ``` swift
+     ``` swiftConstants.Endpoints.exercises.rawValue
      fetchData { success, result in
      if success {
         // Process the fetched exercise data
@@ -35,14 +35,11 @@ class NetworkService {
      }
      ```
      */
-    func fetchData(completion: @escaping (_ success: Bool, _ result: [ExerciseItem]?) -> ()) {
+    func fetchData(apiString: String, headers: [String: String],completion: @escaping (_ success: Bool, _ result: [T]?) -> ()) {
        // Set the X-Api-Key header
-       let headers = [
-           "X-Api-Key": Constants.APIKeys.apiNinjas.rawValue,
-       ]
 
        // Create a mutable URL request with the exercise API endpoint
-       let request = NSMutableURLRequest(url: NSURL(string: Constants.Endpoints.exercises.rawValue)! as URL,
+       let request = NSMutableURLRequest(url: NSURL(string: apiString)! as URL,
                                          cachePolicy: .useProtocolCachePolicy,
                                          timeoutInterval: 10.0)
        request.httpMethod = "GET"
@@ -62,7 +59,7 @@ class NetworkService {
 
            do {
                // Decode the received data into an array of `ExerciseItem` objects
-               let decodedData = try JSONDecoder().decode([ExerciseItem].self, from: data)
+               let decodedData = try JSONDecoder().decode([T].self, from: data)
                completion(true, decodedData)
            } catch {
                completion(false, nil)
