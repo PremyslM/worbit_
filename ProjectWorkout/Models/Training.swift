@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Training {
+struct Training: Codable {
     
     var name: String
     var type: String

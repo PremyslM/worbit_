@@ -57,6 +57,19 @@ class DataManager {
     }()
     
     
+    public static let exercises: [Exercise] = {
+        var result: [Exercise] = []
+        
+        for training in TrainingManager().trainingArray {
+            for exercise in training.exercises {
+                if !(result.contains(where: { exercise.name == $0.name })) {
+                    result.append(exercise)
+                }
+            }
+        }
+        return result
+    }()
+    
     // MARK: - Private
     
     /// Core Data Saving support

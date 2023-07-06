@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TrainingDay {
+struct TrainingDay: Codable {
     var date: Date
     var training: Training
     var completed: Bool
