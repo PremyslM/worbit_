@@ -16,10 +16,10 @@ class TrainingManager {
             result = data
         }
         return result
-    }
+    }        
     
     private func fetchData(completion: ([Training]) -> () ) {
-        let trainingResult = Constants.trainings
+        let trainingResult = TestData.trainings
         completion(trainingResult)
     }
     

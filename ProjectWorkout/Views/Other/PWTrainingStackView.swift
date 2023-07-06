@@ -43,7 +43,6 @@ class PWTrainingStackView: PWProgrammaticUIView {
      This method creates `PWTrainingViewCell` instances for each day of the week and sets their content. The training cells are added to the `daysStackView` as arranged subviews. The first cell has rounded corners on the top-right and top-left corners, while the last cell has rounded corners on the bottom-right and bottom-left corners. All other cells have square corners.
     */
     private func setTrainingCells() {
-        
         for day in vm.daysInWeek {
             let randomTraining = vm.randomTraining
             
@@ -55,9 +54,7 @@ class PWTrainingStackView: PWProgrammaticUIView {
                 newDay.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
                                                 
                 daysStackView.addArrangedSubview(newDay)
-                
-                // NOTE: Just for testing
-                setInInfoCard(from: newDay, training: randomTraining)
+                                
             }
             else if day == vm.daysInWeek.last {
                 newDay.layer.cornerRadius = 8
@@ -68,34 +65,13 @@ class PWTrainingStackView: PWProgrammaticUIView {
                 daysStackView.addArrangedSubview(newDay)
             }
             
+            if day == vm.currentDay {
+                newDay.setInInfoCard(stackView: daysStackView, training: randomTraining)
+            }
         }
-    }
-    
-    
-    /**
-     Sets up and adds an info card view below a parent view.
-
-     - Parameters:
-        - parent: The parent view below which the info card view will be added.
-
-     This method creates a new `UIView` instance and adds it to the `daysStackView` as an arranged subview. The info card view has a gray background color and is constrained to the parent view using Auto Layout constraints.
-     **/
-    private func setInInfoCard(from parent: UIView, training: Training) {
-        let infoView = PWTrainingInfoCardView()
-        infoView.setTraining(training)
-        infoView.backgroundColor = .gray
-        infoView.setContent(difficulty: 3)
-        infoView.translatesAutoresizingMaskIntoConstraints = false
         
-        daysStackView.addArrangedSubview(infoView)
-               
-        NSLayoutConstraint.activate([
-            infoView.topAnchor.constraint(equalTo: parent.bottomAnchor, constant: 10),
-            infoView.leadingAnchor.constraint(equalTo: parent.leadingAnchor),
-            infoView.trailingAnchor.constraint(equalTo: parent.trailingAnchor),
-            infoView.heightAnchor.constraint(equalToConstant: 120),
-        ])
     }
+            
     
     
 }

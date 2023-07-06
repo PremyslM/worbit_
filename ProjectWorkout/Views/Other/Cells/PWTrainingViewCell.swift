@@ -51,10 +51,40 @@ class PWTrainingViewCell: PWProgrammaticUIView {
         ])
     }
     
-    
     public func setContent(title: String, timeTitleLabel: String) {
         self.titleLabel.text = title
         self.timeTitleLabel.text = timeTitleLabel
+    }
+    
+    
+}
+
+
+extension PWTrainingViewCell {
+        
+    /**
+     Sets up and adds an info card view below a parent view.
+
+     - Parameters:
+        - parent: The parent view below which the info card view will be added.
+
+     This method creates a new `UIView` instance and adds it to the `daysStackView` as an arranged subview. The info card view has a gray background color and is constrained to the parent view using Auto Layout constraints.
+     **/
+    public func setInInfoCard(stackView: UIStackView, training: Training) {
+        let infoView = PWTrainingInfoCardView()
+        infoView.setTraining(training)
+        infoView.backgroundColor = .gray
+        infoView.setContent(difficulty: 3)
+        infoView.translatesAutoresizingMaskIntoConstraints = false
+        
+        stackView.addArrangedSubview(infoView)
+               
+        NSLayoutConstraint.activate([
+            infoView.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
+            infoView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            infoView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            infoView.heightAnchor.constraint(equalToConstant: 120),
+        ])
     }
     
     

@@ -23,7 +23,8 @@ class PWTrainingStackViewModel {
             return Training(name: "", type: "", duration: 0, difficulty: "", focusAreas: [], description: "", exercises: [], restDays: 0)
         }
         return result
-    }        
+    }
+    public var currentDay: String = TestData.currentDay
         
     // MARK: - Private
     
