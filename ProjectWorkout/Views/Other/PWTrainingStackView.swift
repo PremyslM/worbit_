@@ -46,7 +46,7 @@ class PWTrainingStackView: PWProgrammaticUIView {
         for trainingDay in vm.trainingDaysArray {
             
             let newDay = PWTrainingViewCell()
-            newDay.setContent(title: "\(vm.getDayNameFromString(trainingDay.formatedDate))", timeTitleLabel: trainingDay.training.name)
+            newDay.setContent(title: "\(vm.getDayNameFromString(trainingDay.formatedDate))", timeTitleLabel: trainingDay.training.avgTimeToCompleteString)
                         
             if trainingDay.date == vm.dateDaysArray[0] {
                 newDay.layer.cornerRadius = 8

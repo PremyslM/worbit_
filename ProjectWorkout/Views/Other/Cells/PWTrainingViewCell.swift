@@ -72,9 +72,12 @@ extension PWTrainingViewCell {
     public func setInInfoCard(stackView: UIStackView, training: Training) {
         let infoView = PWTrainingInfoCardView()
         infoView.setTraining(training)
-        infoView.backgroundColor = .gray
+        infoView.backgroundColor = .systemGray2
         infoView.setContent(difficulty: 3)
         infoView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.backgroundColor = .systemGray2.withAlphaComponent(0.7)
+        self.titleLabel.textColor = .white
         
         stackView.addArrangedSubview(infoView)
                
