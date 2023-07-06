@@ -45,6 +45,8 @@
 		787F6B662A55DF5900C75255 /* TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B652A55DF5900C75255 /* TrainingManager.swift */; };
 		787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */; };
 		787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */; };
+		78A021422A56DC7F0030A533 /* TrainingDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A021412A56DC7F0030A533 /* TrainingDay.swift */; };
+		78A021442A56DEB90030A533 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A021432A56DEB90030A533 /* Exercise.swift */; };
 		78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */; };
 		78A1BA852A35B0E800B29316 /* PWProgressBarStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */; };
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
@@ -105,6 +107,8 @@
 		787F6B652A55DF5900C75255 /* TrainingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingManager.swift; sourceTree = "<group>"; };
 		787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingStackViewModel.swift; sourceTree = "<group>"; };
 		787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTrainingInfoCardViewModel.swift; sourceTree = "<group>"; };
+		78A021412A56DC7F0030A533 /* TrainingDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDay.swift; sourceTree = "<group>"; };
+		78A021432A56DEB90030A533 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		78A1BA822A35B03500B29316 /* PWProgressBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackView.swift; sourceTree = "<group>"; };
 		78A1BA842A35B0E800B29316 /* PWProgressBarStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarStackViewModel.swift; sourceTree = "<group>"; };
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				78626BCD2A229D28003102D3 /* UserProfile.swift */,
 				78FA1DC72A275E83008FCAF3 /* PWActivity.swift */,
 				787F6B632A55D61400C75255 /* Training.swift */,
+				78A021412A56DC7F0030A533 /* TrainingDay.swift */,
+				78A021432A56DEB90030A533 /* Exercise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				78E8F46B2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift in Sources */,
 				78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */,
 				78FA1DC02A261AF0008FCAF3 /* User+CoreDataProperties.swift in Sources */,
+				78A021422A56DC7F0030A533 /* TrainingDay.swift in Sources */,
 				78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */,
 				78FA1DD52A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift in Sources */,
 				787F6B622A55B5B000C75255 /* PWTrainingInfoCardView.swift in Sources */,
@@ -469,6 +476,7 @@
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
 				78FA1DC22A261C15008FCAF3 /* DataManager.swift in Sources */,
 				78626BD02A23712B003102D3 /* NetworkService.swift in Sources */,
+				78A021442A56DEB90030A533 /* Exercise.swift in Sources */,
 				787F6B602A5575F900C75255 /* PWTrainingStackView.swift in Sources */,
 				78626BD42A239368003102D3 /* UserProfileManager.swift in Sources */,
 				78626BB02A1FF166003102D3 /* Constants.swift in Sources */,

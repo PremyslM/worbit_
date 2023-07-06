@@ -136,7 +136,6 @@ class TestData {
             ],
             restDays: 1
         )
-    ]
-    
+    ]    
     
 }
