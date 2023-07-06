@@ -10,6 +10,9 @@ import CoreData
 
 class DataManager {
     
+    private let dateManager = DateManager()
+    private let trainingManager = TrainingManager()
+    
     // MARK: - Public
     
     /// Singleton instance
@@ -54,6 +57,19 @@ class DataManager {
     }()
     
     
+    public static let exercises: [Exercise] = {
+        var result: [Exercise] = []
+        
+        for training in TrainingManager().trainingArray {
+            for exercise in training.exercises {
+                if !(result.contains(where: { exercise.name == $0.name })) {
+                    result.append(exercise)
+                }
+            }
+        }
+        return result
+    }()
+    
     // MARK: - Private
     
     /// Core Data Saving support
@@ -75,7 +91,6 @@ class DataManager {
     
     /// Constant return array of activities.
     public static let getActivities: [Activity] = {
-        
         var fetchedActivities = [Activity]()
         for activity in Constants.activitiesArray {
             let _activity = Activity(context: DataManager.shared.persistentContainer.viewContext)
@@ -88,6 +103,17 @@ class DataManager {
         
         return fetchedActivities
     }()
+    
+    public func getTrainingDayArray() -> [TrainingDay] {
+        var resultArray: [TrainingDay] = []
+        
+        for dayDate in dateManager.daysInWeek {
+            let newTrainingDay = TrainingDay(date: dayDate, training: trainingManager.randomTraining, completed: false)
+            resultArray.append(newTrainingDay)
+        }
+        
+        return resultArray
+    }
     
     
 }

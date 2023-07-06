@@ -33,7 +33,11 @@ struct Constants {
         .golf: PWActivity(name: "Golf", systemImage: "figure.golf", accuracy: 0.56),
         .strenghtExercise: PWActivity(name: "Silové cvičení", systemImage: "figure.strengthtraining.traditional", accuracy: 0.23),
         .hiking: PWActivity(name: "Turistika", systemImage: "figure.hiking", accuracy: 0.23),
-    ]    
+    ]
+    
+    public static let exerciseHeaders = [
+        "X-Api-Key": Constants.APIKeys.apiNinjas.rawValue,
+    ]
     
     enum Activities {
         case running

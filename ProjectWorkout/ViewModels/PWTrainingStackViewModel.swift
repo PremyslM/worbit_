@@ -15,8 +15,11 @@ class PWTrainingStackViewModel {
     public var trainingArray: [Training] {
         return trainingManager.trainingArray
     }
-    public var daysInWeek: [String] {
-        return Constants.daysInWeek
+    public var trainingDaysArray: [TrainingDay] {
+        return dataManager.getTrainingDayArray()
+    }
+    public var dateDaysArray: [Date] {
+        return dateManager.daysInWeek
     }
     public var randomTraining: Training {
         guard let result = trainingArray.randomElement() else {
@@ -24,11 +27,23 @@ class PWTrainingStackViewModel {
         }
         return result
     }
-    public var currentDay: String = TestData.currentDay
+    public var currentDay: Date {
+        return dateManager.currentDay
+    }
+    public var currentDayString: String {
+        let stringDate = dateManager.formatDateToString(date: currentDay)        
+        return dateManager.getDayNameFromString(dateString: stringDate)!        
+    }
+    
+    public func getDayNameFromString(_ dateString: String) -> String {
+        return dateManager.getDayNameFromString(dateString: dateString)!
+    }
         
     // MARK: - Private
     
     private let trainingManager = TrainingManager()
+    private let dataManager = DataManager()
+    private let dateManager = DateManager()
     
     
 }

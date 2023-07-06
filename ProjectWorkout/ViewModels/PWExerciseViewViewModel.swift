@@ -12,7 +12,7 @@ class PWExerciseViewViewModel {
     // MARK: - Public
     
     /// Return save / Unwrapped array of exercises
-    public var unwrappedExercises: [ExerciseItem] {
+    public var unwrappedExercises: [Exercise] {
         return exercises ?? []
     }
     
@@ -20,10 +20,10 @@ class PWExerciseViewViewModel {
     // MARK: - Private
     
     /// Instance of NetworkService
-    private let networkService = NetworkService()
+    private let networkService = NetworkService<Exercise>()
     
     /// Array of all exercises
-    private var exercises: [ExerciseItem]?
+    private var exercises: [Exercise]?
     
     init() {
         fetchData()
@@ -31,13 +31,7 @@ class PWExerciseViewViewModel {
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        networkService.fetchData { [weak self] success, result in
-            if success {
-                self?.exercises = result!
-            } else {
-                print("Failed to fetch data from network service")
-            }
-        }
+        self.exercises = DataManager.exercises
     }
     
     

@@ -8,7 +8,8 @@
 import Foundation
 
 
-struct Training {
+struct Training: Codable {
+    
     var name: String
     var type: String
     var duration: Int // in `s`
@@ -34,13 +35,4 @@ struct Training {
     }
     
     
-}
-
-struct Exercise {
-    var name: String
-    var sets: Int
-    var description: String
-    var repetitions: Int
-    var restTime: Int // in `s`
-    var averageTime: Int  // in `s`
 }
