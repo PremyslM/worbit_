@@ -40,7 +40,6 @@ class PWTrainingViewCell: PWProgrammaticUIView {
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            titleLabel.widthAnchor.constraint(equalToConstant: 40),
             
             timeTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 20),
             timeTitleLabel.topAnchor.constraint(equalTo: self.topAnchor),
@@ -73,9 +72,12 @@ extension PWTrainingViewCell {
     public func setInInfoCard(stackView: UIStackView, training: Training) {
         let infoView = PWTrainingInfoCardView()
         infoView.setTraining(training)
-        infoView.backgroundColor = .gray
+        infoView.backgroundColor = .systemGray2
         infoView.setContent(difficulty: 3)
         infoView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.backgroundColor = .systemGray2.withAlphaComponent(0.7)
+        self.titleLabel.textColor = .white
         
         stackView.addArrangedSubview(infoView)
                
