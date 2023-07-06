@@ -16,7 +16,11 @@ class TrainingManager {
             result = data
         }
         return result
-    }        
+    }
+    
+    public var randomTraining: Training {
+        return trainingArray.randomElement()!
+    }
     
     private func fetchData(completion: ([Training]) -> () ) {
         let trainingResult = TestData.trainings

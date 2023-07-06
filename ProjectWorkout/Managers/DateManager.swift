@@ -10,7 +10,7 @@ import Foundation
 
 class DateManager {
     
-    private let daysInWeek: [Date] = {
+    public let daysInWeek: [Date] = {
         let calendar = Calendar.current
         let today = Date()
         let weekday = calendar.component(.weekday, from: today)
@@ -27,14 +27,37 @@ class DateManager {
             if date > endDate {
                 stop = true
             } else {
-                datesInWeek.append(date)
+                let dateWithoutTime = calendar.startOfDay(for: date)
+                datesInWeek.append(dateWithoutTime)
             }
         }
         
         return datesInWeek
     }()
     
+    public let currentDay: Date = {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let dateComponents = calendar.dateComponents([.year, .month, .day], from: currentDate)
+        return calendar.date(from: dateComponents)!        
+    }()
     
+    public func formatDateToString(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
+    }
+    
+    public func getDayNameFromString(dateString: String) -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        if let date = dateFormatter.date(from: dateString) {
+            let dayFormatter = DateFormatter()
+            dayFormatter.dateFormat = "EEE"
+            return dayFormatter.string(from: date)
+        }
+        return nil
+    }
     
     
 }

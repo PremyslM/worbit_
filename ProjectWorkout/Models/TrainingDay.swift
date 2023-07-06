@@ -9,12 +9,13 @@ import Foundation
 
 
 struct TrainingDay {
-    
     var date: Date
     var training: Training
     var completed: Bool
     var summary: String?
     var preparation: String?
     
-    
+    public var formatedDate: String {
+        return DateManager().formatDateToString(date: date)
+    }
 }

@@ -43,20 +43,19 @@ class PWTrainingStackView: PWProgrammaticUIView {
      This method creates `PWTrainingViewCell` instances for each day of the week and sets their content. The training cells are added to the `daysStackView` as arranged subviews. The first cell has rounded corners on the top-right and top-left corners, while the last cell has rounded corners on the bottom-right and bottom-left corners. All other cells have square corners.
     */
     private func setTrainingCells() {
-        for day in vm.daysInWeek {
-            let randomTraining = vm.randomTraining
+        for trainingDay in vm.trainingDaysArray {
             
             let newDay = PWTrainingViewCell()
-            newDay.setContent(title: day, timeTitleLabel: randomTraining.avgTimeToCompleteString)
+            newDay.setContent(title: "\(vm.getDayNameFromString(trainingDay.formatedDate))", timeTitleLabel: trainingDay.training.name)
                         
-            if day == vm.daysInWeek[0] {
+            if trainingDay.date == vm.dateDaysArray[0] {
                 newDay.layer.cornerRadius = 8
                 newDay.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
                                                 
                 daysStackView.addArrangedSubview(newDay)
                                 
             }
-            else if day == vm.daysInWeek.last {
+            else if trainingDay.date == vm.dateDaysArray.last {
                 newDay.layer.cornerRadius = 8
                 newDay.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner] // Bottom right corner, Bottom left corner
                 daysStackView.addArrangedSubview(newDay)
@@ -64,10 +63,12 @@ class PWTrainingStackView: PWProgrammaticUIView {
             else {
                 daysStackView.addArrangedSubview(newDay)
             }
-            
-            if day == vm.currentDay {
-                newDay.setInInfoCard(stackView: daysStackView, training: randomTraining)
+                        
+            if trainingDay.date == vm.currentDay {
+                print("\(trainingDay.date) / \(vm.currentDay)")
+                newDay.setInInfoCard(stackView: daysStackView, training: trainingDay.training)
             }
+            
         }
         
     }

@@ -10,6 +10,9 @@ import CoreData
 
 class DataManager {
     
+    private let dateManager = DateManager()
+    private let trainingManager = TrainingManager()
+    
     // MARK: - Public
     
     /// Singleton instance
@@ -87,6 +90,17 @@ class DataManager {
         
         return fetchedActivities
     }()
-            
+    
+    public func getTrainingDayArray() -> [TrainingDay] {
+        var resultArray: [TrainingDay] = []
+        
+        for dayDate in dateManager.daysInWeek {
+            let newTrainingDay = TrainingDay(date: dayDate, training: trainingManager.randomTraining, completed: false)
+            resultArray.append(newTrainingDay)
+        }
+        
+        return resultArray
+    }
+    
     
 }

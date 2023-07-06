@@ -40,7 +40,6 @@ class PWTrainingViewCell: PWProgrammaticUIView {
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            titleLabel.widthAnchor.constraint(equalToConstant: 40),
             
             timeTitleLabel.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 20),
             timeTitleLabel.topAnchor.constraint(equalTo: self.topAnchor),
