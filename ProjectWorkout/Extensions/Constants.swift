@@ -9,7 +9,7 @@ import UIKit
 
 
 struct Constants {
-        
+    
     struct PWTheme {
         let primaryBackground = UIColor(named: "primaryBackground")
         let primaryWhite = UIColor(named: "primaryWhite")
@@ -22,6 +22,8 @@ struct Constants {
         }
     }
     
+    public static let daysInWeek: [String] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    
     public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
     
     public static let activitiesArray: [Activities: PWActivity] = [
@@ -31,7 +33,7 @@ struct Constants {
         .golf: PWActivity(name: "Golf", systemImage: "figure.golf", accuracy: 0.56),
         .strenghtExercise: PWActivity(name: "Silové cvičení", systemImage: "figure.strengthtraining.traditional", accuracy: 0.23),
         .hiking: PWActivity(name: "Turistika", systemImage: "figure.hiking", accuracy: 0.23),
-    ]
+    ]    
     
     enum Activities {
         case running
@@ -41,7 +43,7 @@ struct Constants {
         case strenghtExercise
         case hiking
     }
-        
+    
     enum APIKeys: String {
         case apiNinjas = "TgwU+c9ajNCNOn3fX6AqNw==pSiuFqEeVY4vMQ11"
     }
@@ -49,7 +51,7 @@ struct Constants {
     enum Endpoints: String {
         case exercises = "https://api.api-ninjas.com/v1/exercises?muscle=lats"
     }
-        
+    
     enum CellIndentifiers: String {
         case activity = "activityCell"
         case exercise = "exerciseCell"

@@ -41,6 +41,7 @@ extension PWTabBarController {
         let userProfileVC = UINavigationController(rootViewController: PWUserProfileViewController())
         let activitiesVC = UINavigationController(rootViewController: PWActivitiesListViewController())
         let exercisesVC = UINavigationController(rootViewController: PWExercisesViewController())
+        let trainingVC = UINavigationController(rootViewController: PWTrainingViewController())
         
         self.tabBar.addNewItem(
                     menuVC,
@@ -65,8 +66,15 @@ extension PWTabBarController {
                     title: "Exercises",
                     image: UIImage(systemName: "dumbbell.fill")!,
                     tag: 4)
+        
+        self.tabBar.addNewItem(
+            trainingVC,
+            title: "Training",
+            image: UIImage(systemName: "figure.run.square.stack.fill")!,
+            tag: 5
+        )
                 
-        self.viewControllers = [menuVC, activitiesVC, exercisesVC ,userProfileVC]
+        self.viewControllers = [menuVC, activitiesVC, trainingVC, exercisesVC ,userProfileVC]
     }
     
     
