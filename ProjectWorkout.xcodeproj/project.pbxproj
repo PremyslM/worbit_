@@ -21,7 +21,6 @@
 		78626BAC2A1FCAF0003102D3 /* PWActivityStatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAB2A1FCAF0003102D3 /* PWActivityStatItemView.swift */; };
 		78626BAE2A1FCCEE003102D3 /* PWActivityStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAD2A1FCCEE003102D3 /* PWActivityStatsView.swift */; };
 		78626BB02A1FF166003102D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BAF2A1FF166003102D3 /* Constants.swift */; };
-		78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */; };
 		78626BB42A1FF8C4003102D3 /* PWUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */; };
 		78626BBB2A2082F5003102D3 /* ActivityStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBA2A2082F5003102D3 /* ActivityStats.swift */; };
 		78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BBD2A20EB84003102D3 /* ActivityManager.swift */; };
@@ -84,7 +83,6 @@
 		78626BAB2A1FCAF0003102D3 /* PWActivityStatItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatItemView.swift; sourceTree = "<group>"; };
 		78626BAD2A1FCCEE003102D3 /* PWActivityStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityStatsView.swift; sourceTree = "<group>"; };
 		78626BAF2A1FF166003102D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivitiesListViewController.swift; sourceTree = "<group>"; };
 		78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileViewController.swift; sourceTree = "<group>"; };
 		78626BBA2A2082F5003102D3 /* ActivityStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStats.swift; sourceTree = "<group>"; };
 		78626BBD2A20EB84003102D3 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				78626B992A1E95BC003102D3 /* PWMainPageViewController.swift */,
-				78626BB12A1FF61B003102D3 /* PWActivitiesListViewController.swift */,
 				78626BB32A1FF8C4003102D3 /* PWUserProfileViewController.swift */,
 				78626BC52A2295A5003102D3 /* PWExercisesViewController.swift */,
 				787F6B5B2A556F8800C75255 /* PWTrainingViewController.swift */,
@@ -471,7 +468,6 @@
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
 				78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */,
-				78626BB22A1FF61B003102D3 /* PWActivitiesListViewController.swift in Sources */,
 				78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,
 				787F6B5E2A5573F000C75255 /* PWTrainingViewCell.swift in Sources */,

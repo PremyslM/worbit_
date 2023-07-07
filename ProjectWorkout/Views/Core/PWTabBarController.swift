@@ -15,7 +15,7 @@ final class PWTabBarController: UITabBarController {
         
         setUpTabBar()
     }
-            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +30,7 @@ extension PWTabBarController {
     
     private func setConfig() {
         self.view.backgroundColor = .theme.primaryBackground // TODO: Just for testings
-                            
+        
     }
     
     private func setUpTabBar() {
@@ -39,42 +39,34 @@ extension PWTabBarController {
         
         let menuVC = UINavigationController(rootViewController: PWMainPageViewController())
         let userProfileVC = UINavigationController(rootViewController: PWUserProfileViewController())
-        let activitiesVC = UINavigationController(rootViewController: PWActivitiesListViewController())
         let exercisesVC = UINavigationController(rootViewController: PWExercisesViewController())
         let trainingVC = UINavigationController(rootViewController: PWTrainingViewController())
         
         self.tabBar.addNewItem(
-                    menuVC,
-                    title: "Home",
-                    image: UIImage(systemName: "house.fill")!,
-                    tag: 1)
+            menuVC,
+            title: "Home",
+            image: UIImage(systemName: "house.fill")!,
+            tag: 1)
         
         self.tabBar.addNewItem(
-                    userProfileVC,
-                    title: "Profile",
-                    image: UIImage(systemName: "person.fill")!,
-                    tag: 2)
+            userProfileVC,
+            title: "Profile",
+            image: UIImage(systemName: "person.fill")!,
+            tag: 2)
         
         self.tabBar.addNewItem(
-                    activitiesVC,
-                    title: "Activities",
-                    image: UIImage(systemName: Constants.activityStrings[Int.random(in: 0..<Constants.activityStrings.count)])!,
-                    tag: 3)
-        
-        self.tabBar.addNewItem(
-                    exercisesVC,
-                    title: "Exercises",
-                    image: UIImage(systemName: "dumbbell.fill")!,
-                    tag: 4)
+            exercisesVC,
+            title: "Exercises",
+            image: UIImage(systemName: "dumbbell.fill")!,
+            tag: 3)
         
         self.tabBar.addNewItem(
             trainingVC,
             title: "Training",
             image: UIImage(systemName: "figure.run.square.stack.fill")!,
-            tag: 5
-        )
-                
-        self.viewControllers = [menuVC, activitiesVC, trainingVC, exercisesVC ,userProfileVC]
+            tag: 4)
+        
+        self.viewControllers = [menuVC, trainingVC, exercisesVC ,userProfileVC]
     }
     
     
