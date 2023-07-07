@@ -17,7 +17,7 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
     private lazy var titleLabel: UILabel = UILabel()
     private lazy var iconImage: UIImageView = UIImageView()
     private lazy var descriptionLabel: UILabel = UILabel()
-        
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -28,7 +28,7 @@ class PWPrimaryCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("Non-suported")
     }
-                
+    
 }
 
 
@@ -39,8 +39,7 @@ extension PWPrimaryCollectionViewCell {
     public func setExercise(title: String, image: String, description: String) {
         self.titleLabel.text = title
         self.iconImage.image = UIImage(
-            systemName: image,
-            withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .bold, scale: .default)
+            systemName: image
         )
         self.descriptionLabel.text = description
     }
@@ -54,7 +53,7 @@ extension PWPrimaryCollectionViewCell {
         self.addGestureRecognizer(tap)
         
         self.addConstrainedSubViews(titleLabel, iconImage, descriptionLabel)
-                
+        
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
         titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
@@ -69,23 +68,25 @@ extension PWPrimaryCollectionViewCell {
         self.layer.cornerRadius = 8
         self.backgroundColor = .theme.secondaryWhite
     }
-        
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
             titleLabel.trailingAnchor.constraint(equalTo: self.iconImage.leadingAnchor, constant: -10),
-                        
+            
             iconImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             iconImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            iconImage.widthAnchor.constraint(equalToConstant: 20),
+            iconImage.heightAnchor.constraint(equalToConstant: 20),
             
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: iconImage.leadingAnchor, constant: -15),
         ])
     }
-        
-    @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {                
+    
+    @objc private func presentView(_ sender: UITapGestureRecognizer? = nil) {
         delegate?.present(detailVC, animated: true, completion: nil)
     }
     
