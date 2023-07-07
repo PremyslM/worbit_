@@ -35,9 +35,9 @@ private extension PWTrainingViewController {
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            trainingScheduleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),        
-            trainingScheduleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            trainingScheduleView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            trainingScheduleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            trainingScheduleView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            trainingScheduleView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
     }
             
