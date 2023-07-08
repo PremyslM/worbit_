@@ -13,7 +13,9 @@ class PWPrimaryCollectionView: UICollectionView {
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
-        self.backgroundColor = .theme.primaryBackground        
+        self.backgroundColor = .theme.primaryBackground
+        self.showsVerticalScrollIndicator = false
+        
     }
     
     required init?(coder: NSCoder) {
