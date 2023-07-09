@@ -29,7 +29,7 @@ class PWExerciseViewViewModel {
     
     init() {
         fetchData()
-        print(exercises?.count)
+        print(exercises?.count as Any)
     }
     
     /// Loads all exercise data from our network service

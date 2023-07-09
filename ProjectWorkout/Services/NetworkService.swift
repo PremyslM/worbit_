@@ -57,6 +57,7 @@ class NetworkService<T: Codable> {
            // Check if data was received
            guard let data = data else { return }
 
+           /*
            do {
                // Decode the received data into an array of `ExerciseItem` objects
                let decodedData = try JSONDecoder().decode([T].self, from: data)
@@ -66,9 +67,37 @@ class NetworkService<T: Codable> {
                completion(false, nil)
                print("Failed to decode data")
            }
+            */
+           
+           do {
+               let decoder = JSONDecoder()
+               decoder.keyDecodingStrategy = .custom { keys -> CodingKey in
+                   let key = keys.last!.stringValue
+                   return AnyCodingKey(stringValue: key)
+               }               
+               let exercise = try decoder.decode([Exercise].self, from: data)
+               print(exercise)
+           } catch {
+               print("Error decoding JSON: \(error)")
+           }
+
        })
        dataTask.resume()
     }
     
     
+}
+
+
+struct AnyCodingKey: CodingKey {
+    var stringValue: String
+    var intValue: Int? { return nil }
+    
+    init(stringValue: String) {
+        self.stringValue = stringValue
+    }
+    
+    init?(intValue: Int) {
+        return nil
+    }
 }
