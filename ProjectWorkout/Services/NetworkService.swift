@@ -50,22 +50,55 @@ class NetworkService<T: Codable> {
            if error != nil {
                // An error occurred during the fetch operation
                completion(false, nil)
+               print("Failed to load api")
                return
            }
 
            // Check if data was received
            guard let data = data else { return }
 
+           /*
            do {
                // Decode the received data into an array of `ExerciseItem` objects
                let decodedData = try JSONDecoder().decode([T].self, from: data)
+               print("SUCCESS")
                completion(true, decodedData)
            } catch {
                completion(false, nil)
+               print("Failed to decode data")
            }
+            */
+           
+           do {
+               let decoder = JSONDecoder()
+               decoder.keyDecodingStrategy = .custom { keys -> CodingKey in
+                   let key = keys.last!.stringValue
+                   return AnyCodingKey(stringValue: key)
+               }               
+               let exercises = try decoder.decode([T].self, from: data)
+               completion(true, exercises)
+           } catch {
+               completion(false, nil)
+               print("Error decoding JSON: \(error)")
+           }
+
        })
        dataTask.resume()
     }
     
     
+}
+
+
+struct AnyCodingKey: CodingKey {
+    var stringValue: String
+    var intValue: Int? { return nil }
+    
+    init(stringValue: String) {
+        self.stringValue = stringValue
+    }
+    
+    init?(intValue: Int) {
+        return nil
+    }
 }

@@ -5,8 +5,8 @@
 //  Created by Přemysl Mikulenka on 27.05.2023.
 //
 
-import UIKit
 
+import UIKit
 
 final class PWExercisesViewController: UIViewController {
     
@@ -29,6 +29,8 @@ final class PWExercisesViewController: UIViewController {
         
         exerciseTableView.delegate = self
         exerciseTableView.dataSource = self
+        
+        vc.delegate = exerciseTableView
         
         self.view.addConstrainedSubViews(exerciseTableView)    
         
@@ -55,9 +57,9 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
         let exercise = vc.unwrappedExercises[indexPath.row]
         
         cell.setExercise(
-            title: exercise.name,
+            title: exercise.title,
             image: "smallcircle.filled.circle.fill",
-            description: exercise.description
+            description: exercise.desc
         )
         
         return cell

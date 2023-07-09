@@ -13,7 +13,7 @@ class PWTrainingStackViewModel {
     // MARK: - Public
     
     public var trainingArray: [Training] {
-        return trainingManager.trainingArray
+        return trainingManager.trainingArray ?? []
     }
     public var trainingDaysArray: [TrainingDay] {
         return dataManager.getTrainingDayArray()

@@ -23,7 +23,7 @@ struct Training: Codable {
         var sum: Int = 0 // in `s`
         
         for exercise in self.exercises {
-            sum += exercise.averageTime * exercise.repetitions
+            sum += 34 * 4 // 34 = hardocore avgTime // 4 = hardcore number of repetions
         }
                 
         let sumMinutes: Float = Float(sum) / 60

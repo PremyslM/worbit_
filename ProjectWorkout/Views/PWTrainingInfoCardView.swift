@@ -63,7 +63,7 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
         var exerciseListString: String = ""
         
         for exercise in vm.unwrappedTraining.exercises {
-            exerciseListString += "\(exercise.name)\n"
+            exerciseListString += "\(exercise.title)\n"
         }
         
         exercisesListLabel.text = "\(exerciseListString)"
