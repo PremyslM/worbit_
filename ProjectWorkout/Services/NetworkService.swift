@@ -75,9 +75,10 @@ class NetworkService<T: Codable> {
                    let key = keys.last!.stringValue
                    return AnyCodingKey(stringValue: key)
                }               
-               let exercise = try decoder.decode([Exercise].self, from: data)
-               print(exercise)
+               let exercises = try decoder.decode([T].self, from: data)
+               completion(true, exercises)
            } catch {
+               completion(false, nil)
                print("Error decoding JSON: \(error)")
            }
 

@@ -27,8 +27,9 @@ class ExerciseManager {
                 self.exerciseArray = []
                 print("Failed to load data from api")
             }
-            
         }
+        
     }
+    
     
 }

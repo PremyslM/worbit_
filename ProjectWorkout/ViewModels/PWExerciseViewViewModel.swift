@@ -5,9 +5,11 @@
 //  Created by Přemysl Mikulenka on 28.05.2023.
 //
 
-import Foundation
+import UIKit
 
 class PWExerciseViewViewModel {
+    
+    var delegate: UICollectionView?
     
     private let exerciseManager = ExerciseManager()
     
@@ -28,13 +30,15 @@ class PWExerciseViewViewModel {
     private var exercises: [Exercise]?
     
     init() {
-        fetchData()
-        print(exercises?.count as Any)
+        fetchData()        
     }
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        self.exercises = exerciseManager.exerciseArray
+        DispatchQueue.main.async { [weak self] in
+            self?.exercises = self?.exerciseManager.exerciseArray
+            self?.delegate?.reloadData()
+        }
     }
     
     

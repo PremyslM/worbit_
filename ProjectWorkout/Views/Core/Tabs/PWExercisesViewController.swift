@@ -30,6 +30,8 @@ final class PWExercisesViewController: UIViewController {
         exerciseTableView.delegate = self
         exerciseTableView.dataSource = self
         
+        vc.delegate = exerciseTableView
+        
         self.view.addConstrainedSubViews(exerciseTableView)    
         
         NSLayoutConstraint.activate([
@@ -57,7 +59,7 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
         cell.setExercise(
             title: exercise.title,
             image: "smallcircle.filled.circle.fill",
-            description: "none"//exercise.desc ?? ""
+            description: exercise.desc
         )
         
         return cell
