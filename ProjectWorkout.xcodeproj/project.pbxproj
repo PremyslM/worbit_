@@ -52,6 +52,7 @@
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
 		78CE8B122A52074F00940328 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B112A52074F00940328 /* TestData.swift */; };
 		78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */; };
+		78E3ACCE2A5AF989003445E7 /* ExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */; };
 		78E8F46B2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */; };
 		78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */; };
 		78FA1DBF2A261AF0008FCAF3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */; };
@@ -114,6 +115,7 @@
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
 		78CE8B112A52074F00940328 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailDataSource.swift; sourceTree = "<group>"; };
+		78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseManager.swift; sourceTree = "<group>"; };
 		78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		78FA1DAF2A261999008FCAF3 /* ProjectWorkrout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectWorkrout.xcdatamodel; sourceTree = "<group>"; };
 		78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				78FA1DC12A261C15008FCAF3 /* DataManager.swift */,
 				787F6B652A55DF5900C75255 /* TrainingManager.swift */,
 				78A021452A56DF6B0030A533 /* DateManager.swift */,
+				78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
 				78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */,
 				78FA1DC62A275678008FCAF3 /* Activity+CoreDataProperties.swift in Sources */,
+				78E3ACCE2A5AF989003445E7 /* ExerciseManager.swift in Sources */,
 				78626B9A2A1E95BC003102D3 /* PWMainPageViewController.swift in Sources */,
 				787F6B5E2A5573F000C75255 /* PWTrainingViewCell.swift in Sources */,
 				78626BCE2A229D28003102D3 /* UserProfile.swift in Sources */,

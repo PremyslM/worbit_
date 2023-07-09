@@ -3,4 +3,150 @@
    uuid = "9CA62260-FF8C-44D5-A129-F3758C75C9D3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDA5613E-9D7F-4D97-9A6C-1A04084B18CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectWorkout/Managers/ExerciseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBAFE303-4500-4872-B34A-E87CA5D6D5F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectWorkout/Managers/ExerciseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBF42DB6-7F35-4BBC-9255-5AB23A50D5F4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectWorkout/Managers/ExerciseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BBF42DB6-7F35-4BBC-9255-5AB23A50D5F4 - d896dae08363f6fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectWorkout.ExerciseManager.fetchData() -&gt; ()"
+                  moduleName = "ProjectWorkout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/premyslmikulenka/Documents/development/projects/none_company/app/ProjectWorkout/ProjectWorkout/Managers/ExerciseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "BBF42DB6-7F35-4BBC-9255-5AB23A50D5F4 - 1d233184017fc4ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;ProjectWorkout.Exercise&gt;&gt;) -&gt; () in ProjectWorkout.ExerciseManager.fetchData() -&gt; ()"
+                  moduleName = "ProjectWorkout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/premyslmikulenka/Documents/development/projects/none_company/app/ProjectWorkout/ProjectWorkout/Managers/ExerciseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBF9B19C-B782-4113-AE8D-C764FA596A4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectWorkout/Managers/ExerciseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FBF9B19C-B782-4113-AE8D-C764FA596A4C - d896dae08363f6fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProjectWorkout.ExerciseManager.fetchData() -&gt; ()"
+                  moduleName = "ProjectWorkout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/premyslmikulenka/Documents/development/projects/none_company/app/ProjectWorkout/ProjectWorkout/Managers/ExerciseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "FBF9B19C-B782-4113-AE8D-C764FA596A4C - 1d233184017fc4ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;ProjectWorkout.Exercise&gt;&gt;) -&gt; () in ProjectWorkout.ExerciseManager.fetchData() -&gt; ()"
+                  moduleName = "ProjectWorkout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/premyslmikulenka/Documents/development/projects/none_company/app/ProjectWorkout/ProjectWorkout/Managers/ExerciseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CAB5E73-51DE-4581-8C73-B4B0EDECD59E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProjectWorkout/Managers/ExerciseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

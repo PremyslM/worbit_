@@ -55,9 +55,9 @@ extension PWExercisesViewController: UICollectionViewDelegate, UICollectionViewD
         let exercise = vc.unwrappedExercises[indexPath.row]
         
         cell.setExercise(
-            title: exercise.name,
+            title: exercise.title,
             image: "smallcircle.filled.circle.fill",
-            description: exercise.description
+            description: "none"//exercise.desc ?? ""
         )
         
         return cell

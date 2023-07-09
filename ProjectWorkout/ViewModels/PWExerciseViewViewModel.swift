@@ -9,6 +9,8 @@ import Foundation
 
 class PWExerciseViewViewModel {
     
+    private let exerciseManager = ExerciseManager()
+    
     // MARK: - Public
     
     /// Return save / Unwrapped array of exercises
@@ -27,11 +29,12 @@ class PWExerciseViewViewModel {
     
     init() {
         fetchData()
+        print(exercises?.count)
     }
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        self.exercises = DataManager.exercises
+        self.exercises = exerciseManager.exerciseArray
     }
     
     

@@ -50,6 +50,7 @@ class NetworkService<T: Codable> {
            if error != nil {
                // An error occurred during the fetch operation
                completion(false, nil)
+               print("Failed to load api")
                return
            }
 
@@ -59,9 +60,11 @@ class NetworkService<T: Codable> {
            do {
                // Decode the received data into an array of `ExerciseItem` objects
                let decodedData = try JSONDecoder().decode([T].self, from: data)
+               print("SUCCESS")
                completion(true, decodedData)
            } catch {
                completion(false, nil)
+               print("Failed to decode data")
            }
        })
        dataTask.resume()

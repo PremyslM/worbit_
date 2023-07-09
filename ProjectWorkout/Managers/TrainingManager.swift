@@ -10,21 +10,18 @@ import Foundation
 
 class TrainingManager {        
     
-    public var trainingArray: [Training] {
-        var result: [Training] = []
-        fetchData { data in
-            result = data
-        }
-        return result
+    public var trainingArray: [Training]?
+    
+    init() {
+        fetchData()
     }
     
     public var randomTraining: Training {
-        return trainingArray.randomElement()!
+        return trainingArray!.randomElement()!
     }
     
-    private func fetchData(completion: ([Training]) -> () ) {
-        let trainingResult = TestData.trainings
-        completion(trainingResult)
+    private func fetchData() {
+        trainingArray = TestData.trainings
     }
     
     
