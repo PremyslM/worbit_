@@ -21,7 +21,7 @@ class NetworkService<T: Codable> {
      - Important: This method requires a valid API key to be set in the `X-Api-Key` header field of the request.
 
      Example usage:
-     ``` swiftConstants.Endpoints.exercises.rawValue
+     ``` swift
      fetchData { success, result in
      if success {
         // Process the fetched exercise data
@@ -56,18 +56,6 @@ class NetworkService<T: Codable> {
 
            // Check if data was received
            guard let data = data else { return }
-
-           /*
-           do {
-               // Decode the received data into an array of `ExerciseItem` objects
-               let decodedData = try JSONDecoder().decode([T].self, from: data)
-               print("SUCCESS")
-               completion(true, decodedData)
-           } catch {
-               completion(false, nil)
-               print("Failed to decode data")
-           }
-            */
            
            do {
                let decoder = JSONDecoder()

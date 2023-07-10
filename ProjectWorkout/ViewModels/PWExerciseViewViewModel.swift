@@ -27,7 +27,11 @@ class PWExerciseViewViewModel {
     private let networkService = NetworkService<Exercise>()
     
     /// Array of all exercises
-    private var exercises: [Exercise]?
+    private var exercises: [Exercise]? {
+        didSet {
+            self.delegate?.reloadData()
+        }
+    }
     
     init() {
         fetchData()        
@@ -35,9 +39,8 @@ class PWExerciseViewViewModel {
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        DispatchQueue.main.async { [weak self] in
-            self?.exercises = self?.exerciseManager.exerciseArray
-            self?.delegate?.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.exercises = self.exerciseManager.exerciseArray
         }
     }
     
