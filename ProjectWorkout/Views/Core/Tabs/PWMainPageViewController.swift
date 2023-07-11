@@ -26,6 +26,8 @@ final class PWMainPageViewController: UIViewController {
         return _activityStatsView
     }()
     
+    private lazy var dailyProgressBarView: PWProgressBarView = PWProgressBarView()
+    
     private lazy var progressStackView: PWProgressBarStackView = PWProgressBarStackView()
     
     
@@ -49,9 +51,9 @@ final class PWMainPageViewController: UIViewController {
 private extension PWMainPageViewController {
     
     func setConfig() {
-        self.view.addConstrainedSubViews(infoContainer, activityStatsView, progressStackView)
-                
-        self.title = "Home"
+        self.view.addConstrainedSubViews(infoContainer, activityStatsView, dailyProgressBarView)
+        
+        
     }
     
     func setConstraints() {
@@ -66,10 +68,10 @@ private extension PWMainPageViewController {
             activityStatsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityStatsView.bottomAnchor.constraint(equalTo: infoContainer.topAnchor, constant: -100),
             
-            progressStackView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            progressStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
-            progressStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-            progressStackView.bottomAnchor.constraint(equalTo: self.activityStatsView.topAnchor, constant: -20)
+            dailyProgressBarView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            dailyProgressBarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            dailyProgressBarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            dailyProgressBarView.bottomAnchor.constraint(equalTo: self.activityStatsView.topAnchor, constant: -20)
         ])
         
     }
