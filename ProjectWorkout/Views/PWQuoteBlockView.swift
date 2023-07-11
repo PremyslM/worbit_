@@ -17,13 +17,15 @@ class PWQuoteBlockView: PWProgrammaticUIView {
         let _quoteTextLabel = UILabel()
         
         _quoteTextLabel.textColor = .black
+        _quoteTextLabel.text = "Today, we will focus on strengthening the upper body with exercises such as push-ups, climbing, and abdominal including planks and various stretches."
+        _quoteTextLabel.numberOfLines = 0
         
         return _quoteTextLabel
     }()
     
     
     override func setConfig() {
-        self.addConstrainedSubViews(topLineView, bottomLineView, quoteTextLabel)
+        self.addConstrainedSubViews(topLineView, bottomLineView, quoteTextLabel)        
     }
     
     override func setConstraints() {
@@ -36,8 +38,8 @@ class PWQuoteBlockView: PWProgrammaticUIView {
             bottomLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             bottomLineView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 2/3),
             
-            quoteTextLabel.topAnchor.constraint(equalTo: topLineView.bottomAnchor, constant: 20),
-            quoteTextLabel.bottomAnchor.constraint(equalTo: bottomLineView.topAnchor, constant: -20),
+            quoteTextLabel.topAnchor.constraint(equalTo: topLineView.bottomAnchor, constant: 10),
+            quoteTextLabel.bottomAnchor.constraint(equalTo: bottomLineView.topAnchor, constant: -10),
             quoteTextLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             quoteTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
         ])

@@ -16,7 +16,7 @@ class PWLineView: PWProgrammaticUIView {
     
     override func setConstraints() {
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: 10),            
+            self.heightAnchor.constraint(equalToConstant: 2),            
         ])
     }
     

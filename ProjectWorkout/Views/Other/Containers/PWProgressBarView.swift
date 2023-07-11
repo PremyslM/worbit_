@@ -44,12 +44,12 @@ class PWProgressBarView: PWProgrammaticUIView {
         NSLayoutConstraint.activate([
             progressBackgroundLayerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             progressBackgroundLayerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            progressBackgroundLayerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
-            progressTitleLabel.leadingAnchor.constraint(equalTo: progressBackgroundLayerView.leadingAnchor),
-            progressTitleLabel.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor),
-            progressBackgroundLayerView.bottomAnchor.constraint(equalTo: progressBackgroundLayerView.topAnchor, constant: -20),
+            progressBackgroundLayerView.topAnchor.constraint(equalTo: progressTitleLabel.bottomAnchor),
             progressBackgroundLayerView.heightAnchor.constraint(equalToConstant: 100),
+            
+            progressTitleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            progressTitleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            progressTitleLabel.topAnchor.constraint(equalTo: self.topAnchor),
         ])
     }
     
