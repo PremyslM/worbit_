@@ -28,7 +28,7 @@ final class PWMainPageViewController: UIViewController {
     
     private lazy var dailyProgressBarView: PWProgressBarView = PWProgressBarView()
     
-    private lazy var progressStackView: PWProgressBarStackView = PWProgressBarStackView()
+    private lazy var progressStackView: PWProgressBarStackView = PWProgressBarStackView()    
     
     
     override func loadView() {
