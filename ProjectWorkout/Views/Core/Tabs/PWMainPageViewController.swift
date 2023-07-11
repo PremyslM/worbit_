@@ -53,7 +53,7 @@ private extension PWMainPageViewController {
     func setConfig() {
         self.view.addConstrainedSubViews(infoContainer, activityStatsView, dailyProgressBarView)
         
-        
+        dailyProgressBarView.setContent(Constants.Title.dailyProgress)
     }
     
     func setConstraints() {

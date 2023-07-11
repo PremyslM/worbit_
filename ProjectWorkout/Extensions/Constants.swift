@@ -10,6 +10,10 @@ import UIKit
 
 struct Constants {
     
+    struct Title {
+        static let dailyProgress = "DAILY\nPROGRESS"
+    }
+    
     struct PWTheme {
         let background = UIColor(named: "primaryBackground")
         let lightGray = UIColor(named: "lightGray")

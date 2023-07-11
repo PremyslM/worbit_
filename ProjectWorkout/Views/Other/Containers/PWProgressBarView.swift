@@ -18,8 +18,7 @@ class PWProgressBarView: PWProgrammaticUIView {
     
     private lazy var progressTitleLabel: UILabel = {
         let _progressTitleLabel: UILabel = UILabel()
-        
-        _progressTitleLabel.text = "DAILY\nPROGRESS"
+                
         _progressTitleLabel.numberOfLines = 2
         _progressTitleLabel.textColor = .black
         _progressTitleLabel.font = .systemFont(ofSize: 25, weight: .semibold)
@@ -37,7 +36,7 @@ class PWProgressBarView: PWProgrammaticUIView {
     }()
     
     
-    override func setConfig() {
+    override func setConfig() {        
         self.addConstrainedSubViews(progressTitleLabel, progressBackgroundLayerView)
     }
     
@@ -61,7 +60,7 @@ class PWProgressBarView: PWProgrammaticUIView {
 extension PWProgressBarView {
     
     public func setContent(_ title: String) {
-    
+        progressTitleLabel.text = title
     }
     
     
