@@ -25,14 +25,14 @@ class PWActivityProgressBar: PWProgrammaticUIView {
     
     private lazy var activityIconView: UIImageView = {
         let _activityIcon = UIImageView()
-        _activityIcon.tintColor = .theme.secondaryWhite
+        _activityIcon.tintColor = .theme.gray
         
         return _activityIcon
     }()
     
     private lazy var progressBarIndicatorView: UIView = {
         let _progressBar = UIView()
-        _progressBar.backgroundColor = .theme.secondaryWhite
+        _progressBar.backgroundColor = .theme.gray
         _progressBar.layer.cornerRadius = 6
         
         return _progressBar
@@ -40,7 +40,7 @@ class PWActivityProgressBar: PWProgrammaticUIView {
     
     private lazy var progressBarBackgroundView: UIView = {
         let _progressBarBackgroundView = UIView()
-        _progressBarBackgroundView.backgroundColor = .theme.secondaryWhite?.withAlphaComponent(0.3)
+        _progressBarBackgroundView.backgroundColor = .theme.gray?.withAlphaComponent(0.3)
         _progressBarBackgroundView.layer.cornerRadius = 6
         
         return _progressBarBackgroundView

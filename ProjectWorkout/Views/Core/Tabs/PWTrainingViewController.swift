@@ -29,7 +29,7 @@ private extension PWTrainingViewController {
         
     func setConfig() {
         
-        view.backgroundColor = .theme.primaryBackground
+        view.backgroundColor = .theme.background
         view.addConstrainedSubViews(trainingScheduleView)
     }
     

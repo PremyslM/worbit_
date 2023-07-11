@@ -11,9 +11,11 @@ import UIKit
 struct Constants {
     
     struct PWTheme {
-        let primaryBackground = UIColor(named: "primaryBackground")
-        let primaryWhite = UIColor(named: "primaryWhite")
-        let secondaryWhite = UIColor(named: "secondaryWhite")
+        let background = UIColor(named: "primaryBackground")
+        let lightGray = UIColor(named: "lightGray")
+        let gray = UIColor(named: "gray")
+        let darkGray = UIColor(named: "darkGray")
+        let accent = UIColor(named: "accent")
         
         struct ActivityTheme {
             let acYellow = UIColor.systemYellow

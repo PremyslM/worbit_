@@ -27,29 +27,30 @@ class PWProgressBarView: PWProgrammaticUIView {
         return _progressTitleLabel
     }()
         
-    private lazy var progressBarView: UIView = {
+    private lazy var progressBackgroundLayerView: UIView = {
         let _progressBarView: UIView = UIView()
         
-        _progressBarView.backgroundColor = .blue
+        _progressBarView.backgroundColor = .theme.lightGray
+        _progressBarView.layer.cornerRadius = 8
         
         return _progressBarView
     }()
     
     
     override func setConfig() {
-        self.addConstrainedSubViews(progressTitleLabel, progressBarView)
+        self.addConstrainedSubViews(progressTitleLabel, progressBackgroundLayerView)
     }
     
     override func setConstraints() {
         NSLayoutConstraint.activate([
-            progressBarView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            progressBarView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            progressBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            progressBackgroundLayerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            progressBackgroundLayerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            progressBackgroundLayerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-            progressTitleLabel.leadingAnchor.constraint(equalTo: progressBarView.leadingAnchor),
-            progressTitleLabel.trailingAnchor.constraint(equalTo: progressBarView.trailingAnchor),
-            progressBarView.bottomAnchor.constraint(equalTo: progressBarView.topAnchor, constant: -20),
-            progressBarView.heightAnchor.constraint(equalToConstant: 100),
+            progressTitleLabel.leadingAnchor.constraint(equalTo: progressBackgroundLayerView.leadingAnchor),
+            progressTitleLabel.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor),
+            progressBackgroundLayerView.bottomAnchor.constraint(equalTo: progressBackgroundLayerView.topAnchor, constant: -20),
+            progressBackgroundLayerView.heightAnchor.constraint(equalToConstant: 100),
         ])
     }
     

@@ -41,7 +41,7 @@ class PWActivityStatItemView: PWProgrammaticUIView {
         self.statStackView.addArrangedSubview(statLabel)
         self.statStackView.addArrangedSubview(statValueLabel)
         
-        self.backgroundColor = UIColor.theme.secondaryWhite?.withAlphaComponent(0.25)
+        self.backgroundColor = UIColor.theme.gray?.withAlphaComponent(0.25)
         self.layer.cornerRadius = 16                
     }
     
