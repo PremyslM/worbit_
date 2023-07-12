@@ -32,6 +32,7 @@ final class PWMainPageViewController: UIViewController {
     // REdesign views
     private lazy var dailyProgressBarView: PWProgressBarView = PWProgressBarView()
     private lazy var quoteBlockView: PWQuoteBlockView = PWQuoteBlockView()
+    private lazy var timelineView: WOTimelineView = WOTimelineView()
     
     
     override func loadView() {
@@ -56,7 +57,7 @@ private extension PWMainPageViewController {
     func setConfig() {
         dailyProgressBarView.setContent(Constants.Title.dailyProgress)
         
-        self.view.addConstrainedSubViews(dailyProgressBarView, quoteBlockView)
+        self.view.addConstrainedSubViews(dailyProgressBarView, quoteBlockView, timelineView)
     }
     
     func setConstraints() {
@@ -68,6 +69,11 @@ private extension PWMainPageViewController {
             quoteBlockView.topAnchor.constraint(equalTo: dailyProgressBarView.bottomAnchor, constant: 200), // TODO: Issue #45
             quoteBlockView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             quoteBlockView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            
+            timelineView.topAnchor.constraint(equalTo: quoteBlockView.bottomAnchor, constant: 20),
+            timelineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            timelineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            //timelineView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }
