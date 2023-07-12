@@ -17,8 +17,7 @@ class WOTimelineView: PWProgrammaticUIView {
     private lazy var vLineView: UIView = {
         let _vLineView = UIView()
                 
-        _vLineView.backgroundColor = .red
-
+        _vLineView.backgroundColor = .theme.darkGray
         
         return _vLineView
     }()
@@ -42,26 +41,32 @@ class WOTimelineView: PWProgrammaticUIView {
             vLineView.topAnchor.constraint(equalTo: self.topAnchor),
             vLineView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             vLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
-            vLineView.widthAnchor.constraint(equalToConstant: 5),
-            vLineView.heightAnchor.constraint(equalToConstant: 250),
+            vLineView.widthAnchor.constraint(equalToConstant: 2),
+            vLineView.heightAnchor.constraint(equalToConstant: 275),
         ])
         
         
         for itemIndex in 0..<5 {
             let trainingLabel: UILabel = UILabel()
             let hLineView: UIView = UIView()
-            hLineView.backgroundColor = .green
+            hLineView.backgroundColor = .theme.gray
             trainingLabel.text = "Test Label \(itemIndex)"
+            trainingLabel.textColor = .theme.accent
+            
+            if itemIndex != 0 {
+                trainingLabel.alpha = 0.35
+                hLineView.alpha = 0.35
+            }
             
             self.addConstrainedSubViews(trainingLabel, hLineView)
             
             NSLayoutConstraint.activate([
-                hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat((itemIndex * 50) + 25)),
+                hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat(Double((itemIndex * 55)) + 27.5)),
                 hLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                hLineView.widthAnchor.constraint(equalToConstant: 200),
-                hLineView.heightAnchor.constraint(equalToConstant: 5),
+                hLineView.widthAnchor.constraint(equalToConstant: 300),
+                hLineView.heightAnchor.constraint(equalToConstant: 1.5),
                 
-                trainingLabel.bottomAnchor.constraint(equalTo: hLineView.topAnchor, constant: -3),
+                trainingLabel.bottomAnchor.constraint(equalTo: hLineView.topAnchor),
                 trainingLabel.leadingAnchor.constraint(equalTo: vLineView.trailingAnchor, constant: 10),
             ])
         }
