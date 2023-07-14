@@ -66,17 +66,29 @@ class WOTimelineView: PWProgrammaticUIView {
                 hLineView.alpha = 0.35
             }
             
-            self.addConstrainedSubViews(trainingLabel, hLineView)
-            
-            NSLayoutConstraint.activate([
-                hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat(Double((index * 55)) + 27.5)),
-                hLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-                hLineView.widthAnchor.constraint(equalToConstant: 300),
-                hLineView.heightAnchor.constraint(equalToConstant: 1.5),
+            if index < 3 {
+                self.addConstrainedSubViews(trainingLabel, hLineView)
                 
-                trainingLabel.bottomAnchor.constraint(equalTo: hLineView.topAnchor),
-                trainingLabel.leadingAnchor.constraint(equalTo: vLineView.trailingAnchor, constant: 10),
-            ])
+                NSLayoutConstraint.activate([
+                    hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat(Double((index * 55)) + 27.5)),
+                    hLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+                    hLineView.widthAnchor.constraint(equalToConstant: 300),
+                    hLineView.heightAnchor.constraint(equalToConstant: 1.5),
+                    
+                    trainingLabel.bottomAnchor.constraint(equalTo: hLineView.topAnchor),
+                    trainingLabel.leadingAnchor.constraint(equalTo: vLineView.trailingAnchor, constant: 10),
+                ])
+            } else {
+                trainingLabel.text = "..."
+                
+                self.addConstrainedSubViews(trainingLabel)
+                
+                NSLayoutConstraint.activate([
+                    trainingLabel.leadingAnchor.constraint(equalTo: self.vLineView.trailingAnchor, constant: 20),
+                    trainingLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -40),
+                ])
+            }
+            
         }
     }
     
