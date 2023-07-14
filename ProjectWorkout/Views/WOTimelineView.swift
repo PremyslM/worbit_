@@ -9,6 +9,8 @@ import UIKit
 
 
 class WOTimelineView: PWProgrammaticUIView {
+        
+    private let viewModel: WOTimelineViewModel = WOTimelineViewModel()
     
     // MARK: - Views
     
@@ -46,7 +48,7 @@ class WOTimelineView: PWProgrammaticUIView {
         ])
         
         
-        for itemIndex in 0..<5 {
+        for itemIndex in 0..<3 { //TODO: Hard core data
             let trainingLabel: UILabel = UILabel()
             let hLineView: UIView = UIView()
             hLineView.backgroundColor = .theme.gray

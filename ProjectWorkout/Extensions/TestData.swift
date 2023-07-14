@@ -69,4 +69,7 @@ class TestData {
         )
     ]
     
+    public static let trainingDay: TrainingDay = (DataManager().getTrainingDayArray().randomElement())!
+    
+    
 }
