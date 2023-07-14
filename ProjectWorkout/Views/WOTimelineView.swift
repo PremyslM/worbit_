@@ -47,15 +47,21 @@ class WOTimelineView: PWProgrammaticUIView {
             vLineView.heightAnchor.constraint(equalToConstant: 275),
         ])
         
-        
-        for itemIndex in 0..<3 { //TODO: Hard core data
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.setTimeLine()
+        }
+                        
+    }
+    
+    private func setTimeLine() {
+        viewModel.unwrappedExercises.enumerated().forEach { index, exercise in
             let trainingLabel: UILabel = UILabel()
             let hLineView: UIView = UIView()
             hLineView.backgroundColor = .theme.gray
-            trainingLabel.text = "Test Label \(itemIndex)"
+            trainingLabel.text = exercise.title
             trainingLabel.textColor = .theme.accent
             
-            if itemIndex != 0 {
+            if index != 0 {
                 trainingLabel.alpha = 0.35
                 hLineView.alpha = 0.35
             }
@@ -63,7 +69,7 @@ class WOTimelineView: PWProgrammaticUIView {
             self.addConstrainedSubViews(trainingLabel, hLineView)
             
             NSLayoutConstraint.activate([
-                hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat(Double((itemIndex * 55)) + 27.5)),
+                hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat(Double((index * 55)) + 27.5)),
                 hLineView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
                 hLineView.widthAnchor.constraint(equalToConstant: 300),
                 hLineView.heightAnchor.constraint(equalToConstant: 1.5),
@@ -73,6 +79,5 @@ class WOTimelineView: PWProgrammaticUIView {
             ])
         }
     }
-    
     
 }
