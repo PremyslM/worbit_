@@ -31,7 +31,7 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
         let _titleLabel = UILabel()
         
         _titleLabel.font = .systemFont(ofSize: 32, weight: .semibold)
-        _titleLabel.textColor = .theme.secondaryWhite
+        _titleLabel.textColor = .theme.gray
         
         return _titleLabel
     }()
@@ -40,7 +40,7 @@ class PWPrimaryContainerView: PWProgrammaticUIView {
         let _statLabel = UILabel()
         
         _statLabel.numberOfLines = 0
-        _statLabel.textColor = .theme.secondaryWhite
+        _statLabel.textColor = .theme.gray
         _statLabel.font = .systemFont(ofSize: 20, weight: .medium)
         
         return _statLabel

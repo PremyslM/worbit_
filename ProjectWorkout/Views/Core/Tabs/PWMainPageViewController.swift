@@ -16,7 +16,7 @@ final class PWMainPageViewController: UIViewController {
     private lazy var infoContainer: PWPrimaryContainerView = {
         let _infoContainer = PWPrimaryContainerView()
         _infoContainer.layer.cornerRadius = 16
-        _infoContainer.backgroundColor = .theme.primaryWhite?.withAlphaComponent(0.25)
+        _infoContainer.backgroundColor = .theme.lightGray?.withAlphaComponent(0.25)
         return _infoContainer
     }()
     
@@ -26,7 +26,13 @@ final class PWMainPageViewController: UIViewController {
         return _activityStatsView
     }()
     
-    private lazy var progressStackView: PWProgressBarStackView = PWProgressBarStackView()
+    private lazy var progressStackView: PWProgressBarStackView = PWProgressBarStackView()    
+    
+    
+    // REdesign views
+    private lazy var dailyProgressBarView: PWProgressBarView = PWProgressBarView()
+    private lazy var quoteBlockView: PWQuoteBlockView = PWQuoteBlockView()
+    private lazy var timelineView: WOTimelineView = WOTimelineView()
     
     
     override func loadView() {
@@ -49,27 +55,25 @@ final class PWMainPageViewController: UIViewController {
 private extension PWMainPageViewController {
     
     func setConfig() {
-        self.view.addConstrainedSubViews(infoContainer, activityStatsView, progressStackView)
-                
-        self.title = "Home"
+        dailyProgressBarView.setContent(Constants.Title.dailyProgress)
+        
+        self.view.addConstrainedSubViews(dailyProgressBarView, quoteBlockView, timelineView)
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            infoContainer.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            infoContainer.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 100),
-            infoContainer.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.9),
-            infoContainer.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.3),
+            dailyProgressBarView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            dailyProgressBarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            dailyProgressBarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
             
-            activityStatsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            activityStatsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            activityStatsView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityStatsView.bottomAnchor.constraint(equalTo: infoContainer.topAnchor, constant: -100),
+            quoteBlockView.topAnchor.constraint(equalTo: dailyProgressBarView.bottomAnchor, constant: 200), // TODO: Issue #45
+            quoteBlockView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            quoteBlockView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
             
-            progressStackView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            progressStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
-            progressStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-            progressStackView.bottomAnchor.constraint(equalTo: self.activityStatsView.topAnchor, constant: -20)
+            timelineView.topAnchor.constraint(equalTo: quoteBlockView.bottomAnchor, constant: 20),
+            timelineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            timelineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            //timelineView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }

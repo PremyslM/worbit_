@@ -29,12 +29,12 @@ final class PWTabBarController: UITabBarController {
 extension PWTabBarController {
     
     private func setConfig() {
-        self.view.backgroundColor = .theme.primaryBackground // TODO: Just for testings
+        self.view.backgroundColor = .theme.background // TODO: Just for testings
         
     }
     
     private func setUpTabBar() {
-        self.tabBar.tintColor = .theme.secondaryWhite    
+        self.tabBar.tintColor = .theme.gray    
         
         let menuVC = UINavigationController(rootViewController: PWMainPageViewController())
         let userProfileVC = UINavigationController(rootViewController: PWUserProfileViewController())

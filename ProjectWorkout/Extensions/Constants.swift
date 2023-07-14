@@ -10,10 +10,16 @@ import UIKit
 
 struct Constants {
     
+    struct Title {
+        static let dailyProgress = "DAILY\nPROGRESS"
+    }
+    
     struct PWTheme {
-        let primaryBackground = UIColor(named: "primaryBackground")
-        let primaryWhite = UIColor(named: "primaryWhite")
-        let secondaryWhite = UIColor(named: "secondaryWhite")
+        let background = UIColor(named: "primaryBackground")
+        let lightGray = UIColor(named: "lightGray")
+        let gray = UIColor(named: "gray")
+        let darkGray = UIColor(named: "darkGray")
+        let accent = UIColor(named: "accent")
         
         struct ActivityTheme {
             let acYellow = UIColor.systemYellow
@@ -53,7 +59,7 @@ struct Constants {
     }
     
     enum Endpoints: String {
-        case exercises = "https://api.api-ninjas.com/v1/exercises?muscle=lats"
+        case exercises = "http://10.0.0.22:5000"
     }
     
     enum CellIndentifiers: String {
