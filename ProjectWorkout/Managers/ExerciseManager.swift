@@ -42,7 +42,7 @@ class ExerciseManager {
     private func fetchData() {
         let networkService = NetworkService<Exercise>()
         
-        networkService.fetchData(apiString: "http://172.20.10.2:5000", headers: [:]) { success, result in
+        networkService.fetchData(apiString: Constants.Endpoints.exercises.rawValue, headers: [:]) { success, result in
             print("NUM: \(result?.count ?? 0)")
             if success {
                 self.exerciseArray = result!

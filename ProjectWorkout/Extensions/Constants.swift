@@ -59,7 +59,7 @@ struct Constants {
     }
     
     enum Endpoints: String {
-        case exercises = "https://api.api-ninjas.com/v1/exercises?muscle=lats"
+        case exercises = "http://10.0.0.22:5000"
     }
     
     enum CellIndentifiers: String {
