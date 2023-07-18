@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785E4A662A6655FB00B2148B /* PWProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785E4A652A6655FB00B2148B /* PWProgressBarViewModel.swift */; };
 		78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B732A1E7633003102D3 /* AppDelegate.swift */; };
 		78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B752A1E7633003102D3 /* SceneDelegate.swift */; };
 		78626B7D2A1E7634003102D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78626B7C2A1E7634003102D3 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		785E4A652A6655FB00B2148B /* PWProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarViewModel.swift; sourceTree = "<group>"; };
 		78626B702A1E7633003102D3 /* ProjectWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78626B732A1E7633003102D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78626B752A1E7633003102D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */,
 				787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */,
 				78E3ACDD2A612B79003445E7 /* WOTimelineViewModel.swift */,
+				785E4A652A6655FB00B2148B /* PWProgressBarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				78E3ACD42A5D4CEF003445E7 /* PWQuoteBlockView.swift in Sources */,
 				787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
+				785E4A662A6655FB00B2148B /* PWProgressBarViewModel.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
 				78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */,

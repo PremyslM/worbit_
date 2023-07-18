@@ -73,10 +73,10 @@ private extension PWMainPageViewController {
             timelineView.topAnchor.constraint(equalTo: quoteBlockView.bottomAnchor, constant: 20),
             timelineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             timelineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            //timelineView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }
             
     
 }
+

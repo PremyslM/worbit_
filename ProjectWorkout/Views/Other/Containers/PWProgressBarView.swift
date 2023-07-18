@@ -16,6 +16,9 @@ class PWProgressBarView: PWProgrammaticUIView {
     
     var delegate: PWProgressBarViewDataSource?
     
+    private var viewModel: PWProgressBarViewModel?
+    
+    
     private lazy var progressTitleLabel: UILabel = {
         let _progressTitleLabel: UILabel = UILabel()
                 
@@ -35,9 +38,37 @@ class PWProgressBarView: PWProgrammaticUIView {
         return _progressBarView
     }()
     
+    private lazy var progressForegroundLayerView: UIView = {
+        let _progressForegroundLayerView: UIView = UIView()
+        
+        _progressForegroundLayerView.backgroundColor = .theme.accent
+        _progressForegroundLayerView.layer.cornerRadius = 8
+        
+        return _progressForegroundLayerView
+    }()
     
-    override func setConfig() {        
-        self.addConstrainedSubViews(progressTitleLabel, progressBackgroundLayerView)
+    private lazy var progressValueLabel: UILabel = {
+        let _progressValueLabel = UILabel()
+        
+        _progressValueLabel.textColor = .theme.lightGray
+        _progressValueLabel.font = .systemFont(ofSize: 20)
+        _progressValueLabel.text = viewModel?.trainingDay.formatedProgressString
+        
+        return _progressValueLabel
+    }()
+    
+    private lazy var heartIconImage: UIImageView = {
+        let _heartIconImage = UIImageView()
+        
+        _heartIconImage.image = UIImage(systemName: "arrow.up.heart.fill")
+        
+        return _heartIconImage
+    }()
+    
+    
+    override func setConfig() {
+        self.viewModel = PWProgressBarViewModel()
+        self.addConstrainedSubViews(progressTitleLabel, progressBackgroundLayerView, heartIconImage, progressForegroundLayerView, progressValueLabel)
     }
     
     override func setConstraints() {
@@ -47,10 +78,25 @@ class PWProgressBarView: PWProgrammaticUIView {
             progressBackgroundLayerView.topAnchor.constraint(equalTo: progressTitleLabel.bottomAnchor),
             progressBackgroundLayerView.heightAnchor.constraint(equalToConstant: 100),
             
+            progressForegroundLayerView.leadingAnchor.constraint(equalTo: progressBackgroundLayerView.leadingAnchor),
+            progressForegroundLayerView.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor),
+            progressForegroundLayerView.topAnchor.constraint(equalTo: progressBackgroundLayerView.topAnchor),
+            progressForegroundLayerView.bottomAnchor.constraint(equalTo: progressBackgroundLayerView.bottomAnchor),
+            progressForegroundLayerView.widthAnchor.constraint(equalTo: progressBackgroundLayerView.widthAnchor, multiplier: CGFloat((viewModel?.trainingDay.progress)!)),
+            
             progressTitleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             progressTitleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             progressTitleLabel.topAnchor.constraint(equalTo: self.topAnchor),
+            
+            progressValueLabel.topAnchor.constraint(equalTo: progressForegroundLayerView.topAnchor),
+            progressValueLabel.bottomAnchor.constraint(equalTo: progressForegroundLayerView.bottomAnchor),
+            progressValueLabel.centerXAnchor.constraint(equalTo: progressForegroundLayerView.centerXAnchor),
+            
+            heartIconImage.topAnchor.constraint(equalTo: progressBackgroundLayerView.topAnchor),
+            heartIconImage.bottomAnchor.constraint(equalTo: progressBackgroundLayerView.bottomAnchor),
+            heartIconImage.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor,  constant: -20),
         ])
+        
     }
     
     
