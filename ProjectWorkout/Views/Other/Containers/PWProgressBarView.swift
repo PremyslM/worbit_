@@ -50,10 +50,11 @@ class PWProgressBarView: PWProgrammaticUIView {
     
     override func setConfig() {        
         self.addConstrainedSubViews(progressTitleLabel, progressBackgroundLayerView, progressForegroundLayerView)
+        self.viewModel = PWProgressBarViewModel()
     }
     
     override func setConstraints() {
-        self.viewModel = PWProgressBarViewModel(progressValue: delegate?.setProgressValue() ?? 0)
+        
         NSLayoutConstraint.activate([
             progressBackgroundLayerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             progressBackgroundLayerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
@@ -64,6 +65,7 @@ class PWProgressBarView: PWProgrammaticUIView {
             progressForegroundLayerView.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor),
             progressForegroundLayerView.topAnchor.constraint(equalTo: progressBackgroundLayerView.topAnchor),
             progressForegroundLayerView.bottomAnchor.constraint(equalTo: progressBackgroundLayerView.bottomAnchor),
+            progressForegroundLayerView.widthAnchor.constraint(equalTo: progressBackgroundLayerView.widthAnchor, multiplier: CGFloat((viewModel?.trainingDay.progress)!)),
             
             
             progressTitleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
@@ -78,12 +80,8 @@ class PWProgressBarView: PWProgrammaticUIView {
 
 extension PWProgressBarView {
     
-    public func setContent(_ title: String, value: Float) {
+    public func setContent(_ title: String) {
         progressTitleLabel.text = title
-    
-        NSLayoutConstraint.activate([
-            progressForegroundLayerView.widthAnchor.constraint(equalTo: progressBackgroundLayerView.widthAnchor, multiplier: CGFloat(value)),
-        ])
     }
     
     

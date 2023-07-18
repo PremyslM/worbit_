@@ -55,8 +55,7 @@ final class PWMainPageViewController: UIViewController {
 private extension PWMainPageViewController {
     
     func setConfig() {
-        dailyProgressBarView.setContent(Constants.Title.dailyProgress, value: 0.4)
-        dailyProgressBarView.delegate = self
+        dailyProgressBarView.setContent(Constants.Title.dailyProgress)
         
         self.view.addConstrainedSubViews(dailyProgressBarView, quoteBlockView, timelineView)
     }
@@ -74,7 +73,6 @@ private extension PWMainPageViewController {
             timelineView.topAnchor.constraint(equalTo: quoteBlockView.bottomAnchor, constant: 20),
             timelineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             timelineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            //timelineView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
         ])
         
     }
@@ -82,12 +80,3 @@ private extension PWMainPageViewController {
     
 }
 
-
-extension PWMainPageViewController: PWProgressBarViewDataSource {
-    
-    func setProgressValue() -> Float {
-        return 0.5
-    }
-    
-    
-}

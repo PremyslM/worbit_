@@ -10,11 +10,8 @@ import Foundation
 
 class PWProgressBarViewModel {
     
-    public var progressValue: Float
-    
-    
-    init(progressValue: Float) {
-        self.progressValue = progressValue
+    public var trainingDay: TrainingDay {
+        return DataManager().getTrainingDayArray().randomElement()!
     }
     
     

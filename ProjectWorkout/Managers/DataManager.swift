@@ -108,7 +108,7 @@ class DataManager {
         var resultArray: [TrainingDay] = []
         
         for dayDate in dateManager.daysInWeek {
-            let newTrainingDay = TrainingDay(date: dayDate, training: trainingManager.randomTraining, progress: 0.5)
+            let newTrainingDay = TrainingDay(date: dayDate, training: trainingManager.randomTraining, progress: 0.2)
             resultArray.append(newTrainingDay)
         }
         
