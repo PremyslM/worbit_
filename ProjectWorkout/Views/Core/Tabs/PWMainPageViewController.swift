@@ -55,7 +55,8 @@ final class PWMainPageViewController: UIViewController {
 private extension PWMainPageViewController {
     
     func setConfig() {
-        dailyProgressBarView.setContent(Constants.Title.dailyProgress)
+        dailyProgressBarView.setContent(Constants.Title.dailyProgress, value: 0.4)
+        dailyProgressBarView.delegate = self
         
         self.view.addConstrainedSubViews(dailyProgressBarView, quoteBlockView, timelineView)
     }
@@ -78,5 +79,15 @@ private extension PWMainPageViewController {
         
     }
             
+    
+}
+
+
+extension PWMainPageViewController: PWProgressBarViewDataSource {
+    
+    func setProgressValue() -> Float {
+        return 0.5
+    }
+    
     
 }
