@@ -19,6 +19,10 @@ struct TrainingDay: Codable {
         return (progress < 1) ? false : true 
     }
     
+    public var formatedProgressString: String {
+        return "\(Int(progress * 100))%"
+    }
+    
     public var formatedDate: String {
         return DateManager().formatDateToString(date: date)
     }
