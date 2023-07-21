@@ -29,9 +29,7 @@ struct Constants {
     }
     
     public static let daysInWeek: [String] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-    
     public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
-    
     public static let activitiesArray: [Activities: PWActivity] = [
         .running: PWActivity(name: "Běh", systemImage: "figure.run", accuracy: 0.89),
         .swiming: PWActivity(name: "Plavání", systemImage: "figure.pool.swim", accuracy: 0.76),
@@ -59,7 +57,7 @@ struct Constants {
     }
     
     enum Endpoints: String {
-        case exercises = "http://10.0.0.22:5000"
+        case exercises = "http://172.20.10.2:5000"
     }
     
     enum CellIndentifiers: String {
