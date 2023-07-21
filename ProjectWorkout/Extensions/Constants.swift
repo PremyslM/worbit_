@@ -56,8 +56,8 @@ struct Constants {
         case apiNinjas = "TgwU+c9ajNCNOn3fX6AqNw==pSiuFqEeVY4vMQ11"
     }
     
-    enum Endpoints: String {
-        case exercises = "http://172.20.10.2:5000"
+    struct Endpoints {
+        static let list: [String] = ["http://172.20.10.2:5000", "http://192.168.1.25:5000"]
     }
     
     enum CellIndentifiers: String {
