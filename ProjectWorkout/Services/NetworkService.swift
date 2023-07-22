@@ -50,7 +50,7 @@ class NetworkService<T: Codable> {
            if error != nil {
                // An error occurred during the fetch operation
                completion(false, nil)
-               print("Failed to load api")
+               print("Failed to load -> RESPONSE: \(response)")
                return
            }
 
@@ -67,7 +67,7 @@ class NetworkService<T: Codable> {
                completion(true, exercises)
            } catch {
                completion(false, nil)
-               print("Error decoding JSON: \(error)")
+               print("Error decoding JSON -> ERROR: \(error.localizedDescription)")
            }
 
        })
