@@ -13,8 +13,6 @@ class WOTimelineView: PWProgrammaticUIView {
     private let viewModel: WOTimelineViewModel = WOTimelineViewModel()
     
     // MARK: - Views
-    
-    //let trainingTimeLabel: UILabel = UILabel()
  
     private lazy var vLineView: UIView = {
         let _vLineView = UIView()
@@ -56,10 +54,16 @@ class WOTimelineView: PWProgrammaticUIView {
     private func setTimeLine() {
         viewModel.unwrappedExercises.enumerated().forEach { index, exercise in
             let trainingLabel: UILabel = UILabel()
-            let hLineView: UIView = UIView()
-            hLineView.backgroundColor = .theme.gray
             trainingLabel.text = exercise.title
             trainingLabel.textColor = .theme.accent
+            
+            let timeLabel: UILabel = UILabel()
+            timeLabel.textColor = .theme.darkGray
+            timeLabel.text = "07:24"
+            
+            let hLineView: UIView = UIView()
+            hLineView.backgroundColor = .theme.gray
+            
             
             if index != 0 {
                 trainingLabel.alpha = 0.35
@@ -67,7 +71,7 @@ class WOTimelineView: PWProgrammaticUIView {
             }
             
             if index < 3 {
-                self.addConstrainedSubViews(trainingLabel, hLineView)
+                self.addConstrainedSubViews(trainingLabel, hLineView, timeLabel)
                 
                 NSLayoutConstraint.activate([
                     hLineView.topAnchor.constraint(equalTo: vLineView.topAnchor, constant: CGFloat(Double((index * 55)) + 27.5)),
@@ -77,6 +81,9 @@ class WOTimelineView: PWProgrammaticUIView {
                     
                     trainingLabel.bottomAnchor.constraint(equalTo: hLineView.topAnchor),
                     trainingLabel.leadingAnchor.constraint(equalTo: vLineView.trailingAnchor, constant: 10),
+                    
+                    timeLabel.trailingAnchor.constraint(equalTo: vLineView.leadingAnchor, constant: -5),
+                    timeLabel.bottomAnchor.constraint(equalTo: hLineView.topAnchor, constant: -5),
                 ])
             } else {
                 trainingLabel.text = "..."
