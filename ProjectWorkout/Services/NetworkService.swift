@@ -34,7 +34,7 @@ class NetworkService<T: Codable> {
      }
      ```
      */
-    func fetchData(apiString: String, headers: [String: String],completion: @escaping (_ success: Bool, _ result: [T]?) -> ()) {
+    func fetchData(apiString: String, headers: [String: String], completion: @escaping (_ success: Bool, _ result: [T]?) -> ()) {
        // Set the X-Api-Key header
 
        // Create a mutable URL request with the exercise API endpoint

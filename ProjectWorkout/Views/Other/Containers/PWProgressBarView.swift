@@ -17,8 +17,7 @@ class PWProgressBarView: PWProgrammaticUIView {
     var delegate: PWProgressBarViewDataSource?
     
     private var viewModel: PWProgressBarViewModel?
-    
-    
+        
     private lazy var progressTitleLabel: UILabel = {
         let _progressTitleLabel: UILabel = UILabel()
                 
@@ -61,6 +60,7 @@ class PWProgressBarView: PWProgrammaticUIView {
         let _heartIconImage = UIImageView()
         
         _heartIconImage.image = UIImage(systemName: "arrow.up.heart.fill")
+        _heartIconImage.tintColor = .theme.darkGray
         
         return _heartIconImage
     }()
@@ -92,9 +92,10 @@ class PWProgressBarView: PWProgrammaticUIView {
             progressValueLabel.bottomAnchor.constraint(equalTo: progressForegroundLayerView.bottomAnchor),
             progressValueLabel.centerXAnchor.constraint(equalTo: progressForegroundLayerView.centerXAnchor),
             
-            heartIconImage.topAnchor.constraint(equalTo: progressBackgroundLayerView.topAnchor),
-            heartIconImage.bottomAnchor.constraint(equalTo: progressBackgroundLayerView.bottomAnchor),
-            heartIconImage.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor,  constant: -20),
+            heartIconImage.centerYAnchor.constraint(equalTo: progressBackgroundLayerView.centerYAnchor),
+            heartIconImage.trailingAnchor.constraint(equalTo: progressBackgroundLayerView.trailingAnchor,  constant: -25),
+            heartIconImage.heightAnchor.constraint(equalToConstant: 50),
+            heartIconImage.widthAnchor.constraint(equalToConstant: 50),
         ])
         
     }

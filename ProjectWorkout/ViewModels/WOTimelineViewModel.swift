@@ -36,10 +36,8 @@ class WOTimelineViewModel {
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
-            self.exercises = self.exerciseManager.exerciseArray
-            delegate?.reloadInputViews()
-            print("Timeline ViewModel Load Exercies: \(unwrappedExercises.count > 0 ? "Success" : "Failed")")
+        exerciseManager.getData { responseData in
+            self.exercises = responseData
         }
     }
     
