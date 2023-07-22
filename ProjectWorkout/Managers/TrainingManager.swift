@@ -20,8 +20,7 @@ class TrainingManager {
         return trainingArray!.randomElement()!
     }
     
-    private func fetchData() {
-        trainingArray = TestData.trainings
+    private func fetchData() {        
     }
     
     
