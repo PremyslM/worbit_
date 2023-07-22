@@ -39,8 +39,8 @@ class PWExerciseViewViewModel {
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.exercises = self.exerciseManager.exerciseArray
+        exerciseManager.getData { responseData in
+            self.exercises = responseData
         }
     }
     
