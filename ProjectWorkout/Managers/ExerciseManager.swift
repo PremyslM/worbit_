@@ -19,7 +19,6 @@ import Foundation
  - SeeAlso: Exercise.
  **/
 class ExerciseManager {
-    
     /// An array of Exercise objects representing the fetched exercise data.
     public var exerciseArray: [Exercise]?
     
@@ -32,6 +31,12 @@ class ExerciseManager {
         fetchData()
     }
     
+    public func getData(completion: @escaping ([Exercise]?) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            completion(self.exerciseArray)
+        }
+    }
+    
     /**
      Fetches exercise data from the local API using the NetworkService.
      
@@ -41,6 +46,7 @@ class ExerciseManager {
      */
     private func fetchData() {
         let networkService = NetworkService<Exercise>()
+        
         var isConnected: Bool = false
         
         for endpoint in Constants.Endpoints.list {
