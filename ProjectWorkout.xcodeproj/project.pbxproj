@@ -287,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				78626B9F2A1E9781003102D3 /* PWPrimaryContainerView.swift */,
-				78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -306,6 +305,7 @@
 		78626BA32A1E9AF6003102D3 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */,
 				78E8F4692A2E499200FDE24A /* Cells */,
 				78E8F4682A2E48F900FDE24A /* CollectionView */,
 				78626B9E2A1E973D003102D3 /* Containers */,

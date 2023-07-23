@@ -43,6 +43,11 @@ class PWProgressBarView: PWProgrammaticUIView {
         _progressForegroundLayerView.backgroundColor = .theme.accent
         _progressForegroundLayerView.layer.cornerRadius = 8
         
+        _progressForegroundLayerView.layer.shadowColor = UIColor.black.cgColor
+        _progressForegroundLayerView.layer.shadowRadius = 10
+        _progressForegroundLayerView.layer.shadowOpacity = 0.5
+        _progressForegroundLayerView.layer.shadowOffset = CGSize(width: 4, height: 0)
+        
         return _progressForegroundLayerView
     }()
     
@@ -50,7 +55,7 @@ class PWProgressBarView: PWProgrammaticUIView {
         let _progressValueLabel = UILabel()
         
         _progressValueLabel.textColor = .theme.lightGray
-        _progressValueLabel.font = .systemFont(ofSize: 20)
+        _progressValueLabel.font = .systemFont(ofSize: 22, weight: .semibold)
         _progressValueLabel.text = viewModel?.trainingDay.formatedProgressString
         
         return _progressValueLabel
@@ -61,6 +66,10 @@ class PWProgressBarView: PWProgrammaticUIView {
         
         _heartIconImage.image = UIImage(systemName: "arrow.up.heart.fill")
         _heartIconImage.tintColor = .theme.darkGray
+        
+        _heartIconImage.layer.shadowColor = UIColor.black.cgColor
+        _heartIconImage.layer.shadowRadius = 10
+        _heartIconImage.layer.shadowOpacity = 0.5
         
         return _heartIconImage
     }()
@@ -75,7 +84,7 @@ class PWProgressBarView: PWProgrammaticUIView {
         NSLayoutConstraint.activate([
             progressBackgroundLayerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             progressBackgroundLayerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            progressBackgroundLayerView.topAnchor.constraint(equalTo: progressTitleLabel.bottomAnchor),
+            progressBackgroundLayerView.topAnchor.constraint(equalTo: progressTitleLabel.bottomAnchor, constant: 5),
             progressBackgroundLayerView.heightAnchor.constraint(equalToConstant: 100),
             
             progressForegroundLayerView.leadingAnchor.constraint(equalTo: progressBackgroundLayerView.leadingAnchor),
