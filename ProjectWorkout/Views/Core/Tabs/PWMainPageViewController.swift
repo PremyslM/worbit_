@@ -66,11 +66,11 @@ private extension PWMainPageViewController {
             dailyProgressBarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             dailyProgressBarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
             
-            quoteBlockView.topAnchor.constraint(equalTo: dailyProgressBarView.bottomAnchor, constant: 200), // TODO: Issue #45
+            quoteBlockView.topAnchor.constraint(equalTo: dailyProgressBarView.bottomAnchor, constant: 200),
             quoteBlockView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             quoteBlockView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
             
-            timelineView.topAnchor.constraint(equalTo: quoteBlockView.bottomAnchor, constant: 20),
+            timelineView.topAnchor.constraint(equalTo: quoteBlockView.bottomAnchor, constant: 40),
             timelineView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             timelineView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
         ])
