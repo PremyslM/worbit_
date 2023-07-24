@@ -16,7 +16,7 @@ class PWDetailViewController: UIViewController {
         let _activityContainer = PWPrimaryContainerView()
         _activityContainer.layer.cornerRadius = 16
         _activityContainer.setActivity(activity: vm.activity!)
-        _activityContainer.backgroundColor = .theme.primaryBackground?.withAlphaComponent(0.5)
+        _activityContainer.backgroundColor = .theme.background?.withAlphaComponent(0.5)
         
         return _activityContainer
     }()
@@ -25,7 +25,7 @@ class PWDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.addConstrainedSubViews(activityContainer)
-        self.view.backgroundColor = .theme.primaryBackground
+        self.view.backgroundColor = .theme.background
         
         activityContainer.setActivity(activity: vm.activity!)
                 

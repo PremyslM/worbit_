@@ -10,10 +10,16 @@ import UIKit
 
 struct Constants {
     
+    struct Title {
+        static let dailyProgress = "DAILY\nPROGRESS"
+    }
+    
     struct PWTheme {
-        let primaryBackground = UIColor(named: "primaryBackground")
-        let primaryWhite = UIColor(named: "primaryWhite")
-        let secondaryWhite = UIColor(named: "secondaryWhite")
+        let background = UIColor(named: "primaryBackground")
+        let lightGray = UIColor(named: "lightGray")
+        let gray = UIColor(named: "gray")
+        let darkGray = UIColor(named: "darkGray")
+        let accent = UIColor(named: "accent")
         
         struct ActivityTheme {
             let acYellow = UIColor.systemYellow
@@ -22,9 +28,21 @@ struct Constants {
         }
     }
     
-    public static let daysInWeek: [String] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    public static let daysInWeek: [String] = [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+    ]
     
-    public static let activityStrings: [String] = ["figure.run", "figure.badminton", "figure.outdoor.cycle"]
+    public static let activityStrings: [String] = [
+        "figure.run",
+        "figure.badminton",
+        "figure.outdoor.cycle"
+    ]
     
     public static let activitiesArray: [Activities: PWActivity] = [
         .running: PWActivity(name: "Běh", systemImage: "figure.run", accuracy: 0.89),
@@ -52,8 +70,14 @@ struct Constants {
         case apiNinjas = "TgwU+c9ajNCNOn3fX6AqNw==pSiuFqEeVY4vMQ11"
     }
     
-    enum Endpoints: String {
-        case exercises = "https://api.api-ninjas.com/v1/exercises?muscle=lats"
+    struct Endpoints {
+        static let list: [String] = [
+            "http://172.20.10.2:5000",
+            "http://192.168.1.25:5000",
+            "http://192.168.2.194:5000",
+            "http://192.168.1.37:5000",
+            "http://172.20.10.13:5000",
+            ]
     }
     
     enum CellIndentifiers: String {

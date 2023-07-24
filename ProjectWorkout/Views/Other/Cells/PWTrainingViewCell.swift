@@ -30,7 +30,7 @@ class PWTrainingViewCell: PWProgrammaticUIView {
     
     
     override func setConfig() {
-        self.backgroundColor = .theme.secondaryWhite
+        self.backgroundColor = .theme.gray
         
         self.addConstrainedSubViews(titleLabel, timeTitleLabel)
     }

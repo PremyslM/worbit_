@@ -58,7 +58,7 @@ extension PWPrimaryCollectionViewCell {
         titleLabel.numberOfLines = 0
         titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
         
-        iconImage.tintColor = .theme.primaryBackground
+        iconImage.tintColor = .theme.background
         
         descriptionLabel.textColor = .black
         descriptionLabel.font = .systemFont(ofSize: 12, weight: .light)
@@ -66,7 +66,7 @@ extension PWPrimaryCollectionViewCell {
         descriptionLabel.textAlignment = .left
         
         self.layer.cornerRadius = 8
-        self.backgroundColor = .theme.secondaryWhite
+        self.backgroundColor = .theme.gray
     }
     
     private func setupConstraints() {

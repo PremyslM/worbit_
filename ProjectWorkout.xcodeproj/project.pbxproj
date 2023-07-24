@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785E4A662A6655FB00B2148B /* PWProgressBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785E4A652A6655FB00B2148B /* PWProgressBarViewModel.swift */; };
 		78626B742A1E7633003102D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B732A1E7633003102D3 /* AppDelegate.swift */; };
 		78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626B752A1E7633003102D3 /* SceneDelegate.swift */; };
 		78626B7D2A1E7634003102D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78626B7C2A1E7634003102D3 /* Assets.xcassets */; };
@@ -53,6 +54,11 @@
 		78CE8B122A52074F00940328 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B112A52074F00940328 /* TestData.swift */; };
 		78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */; };
 		78E3ACCE2A5AF989003445E7 /* ExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */; };
+		78E3ACD02A5D4344003445E7 /* PWProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */; };
+		78E3ACD22A5D4BF4003445E7 /* PWLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACD12A5D4BF4003445E7 /* PWLineView.swift */; };
+		78E3ACD42A5D4CEF003445E7 /* PWQuoteBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACD32A5D4CEE003445E7 /* PWQuoteBlockView.swift */; };
+		78E3ACDA2A5F3E7E003445E7 /* WOTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACD92A5F3E7E003445E7 /* WOTimelineView.swift */; };
+		78E3ACDE2A612B79003445E7 /* WOTimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACDD2A612B79003445E7 /* WOTimelineViewModel.swift */; };
 		78E8F46B2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */; };
 		78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DAE2A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld */; };
 		78FA1DBF2A261AF0008FCAF3 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */; };
@@ -68,6 +74,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		785E4A652A6655FB00B2148B /* PWProgressBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarViewModel.swift; sourceTree = "<group>"; };
 		78626B702A1E7633003102D3 /* ProjectWorkout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectWorkout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78626B732A1E7633003102D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78626B752A1E7633003102D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +123,11 @@
 		78CE8B112A52074F00940328 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailDataSource.swift; sourceTree = "<group>"; };
 		78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseManager.swift; sourceTree = "<group>"; };
+		78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarView.swift; sourceTree = "<group>"; };
+		78E3ACD12A5D4BF4003445E7 /* PWLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWLineView.swift; sourceTree = "<group>"; };
+		78E3ACD32A5D4CEE003445E7 /* PWQuoteBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWQuoteBlockView.swift; sourceTree = "<group>"; };
+		78E3ACD92A5F3E7E003445E7 /* WOTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTimelineView.swift; sourceTree = "<group>"; };
+		78E3ACDD2A612B79003445E7 /* WOTimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOTimelineViewModel.swift; sourceTree = "<group>"; };
 		78E8F46A2A2E49B200FDE24A /* PWPrimaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWPrimaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		78FA1DAF2A261999008FCAF3 /* ProjectWorkrout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectWorkrout.xcdatamodel; sourceTree = "<group>"; };
 		78FA1DBB2A261AF0008FCAF3 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -179,6 +191,9 @@
 				78626B902A1E7A42003102D3 /* Core */,
 				78626BA32A1E9AF6003102D3 /* Other */,
 				787F6B612A55B5B000C75255 /* PWTrainingInfoCardView.swift */,
+				78E3ACD12A5D4BF4003445E7 /* PWLineView.swift */,
+				78E3ACD32A5D4CEE003445E7 /* PWQuoteBlockView.swift */,
+				78E3ACD92A5F3E7E003445E7 /* WOTimelineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +211,8 @@
 				78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */,
 				787F6B672A55E27A00C75255 /* PWTrainingStackViewModel.swift */,
 				787F6B692A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift */,
+				78E3ACDD2A612B79003445E7 /* WOTimelineViewModel.swift */,
+				785E4A652A6655FB00B2148B /* PWProgressBarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -270,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				78626B9F2A1E9781003102D3 /* PWPrimaryContainerView.swift */,
+				78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -462,12 +480,16 @@
 				78626BDC2A23B149003102D3 /* PWActivityViewViewModel.swift in Sources */,
 				78FA1DD52A2BE40D008FCAF3 /* PWActivityProgressBarViewModel.swift in Sources */,
 				787F6B622A55B5B000C75255 /* PWTrainingInfoCardView.swift in Sources */,
+				78E3ACD02A5D4344003445E7 /* PWProgressBarView.swift in Sources */,
 				78FA1DC82A275E83008FCAF3 /* PWActivity.swift in Sources */,
+				78E3ACDA2A5F3E7E003445E7 /* WOTimelineView.swift in Sources */,
 				78626B982A1E9447003102D3 /* UIView+addConstrainedSubViews.swift in Sources */,
 				78A1BA832A35B03500B29316 /* PWProgressBarStackView.swift in Sources */,
 				78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */,
+				78E3ACD42A5D4CEF003445E7 /* PWQuoteBlockView.swift in Sources */,
 				787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
+				785E4A662A6655FB00B2148B /* PWProgressBarViewModel.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
 				78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */,
@@ -477,6 +499,8 @@
 				787F6B5E2A5573F000C75255 /* PWTrainingViewCell.swift in Sources */,
 				78626BCE2A229D28003102D3 /* UserProfile.swift in Sources */,
 				78FA1DB02A261999008FCAF3 /* ProjectWorkrout.xcdatamodeld in Sources */,
+				78E3ACDE2A612B79003445E7 /* WOTimelineViewModel.swift in Sources */,
+				78E3ACD22A5D4BF4003445E7 /* PWLineView.swift in Sources */,
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
 				78FA1DC22A261C15008FCAF3 /* DataManager.swift in Sources */,
 				78626BD02A23712B003102D3 /* NetworkService.swift in Sources */,

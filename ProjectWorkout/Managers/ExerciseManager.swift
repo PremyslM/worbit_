@@ -19,7 +19,6 @@ import Foundation
  - SeeAlso: Exercise.
  **/
 class ExerciseManager {
-    
     /// An array of Exercise objects representing the fetched exercise data.
     public var exerciseArray: [Exercise]?
     
@@ -29,7 +28,14 @@ class ExerciseManager {
      Fetching is done asynchronously, and the exerciseArray property will be populated with the fetched data.
      */
     init() {
+        //fetchData()
+    }
+    
+    public func getData(completion: @escaping ([Exercise]?) -> Void) {
         fetchData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            completion(self.exerciseArray)
+        }
     }
     
     /**
@@ -41,17 +47,25 @@ class ExerciseManager {
      */
     private func fetchData() {
         let networkService = NetworkService<Exercise>()
+        var isConnected: Bool = false
         
-        networkService.fetchData(apiString: "http://10.0.0.22:5000", headers: [:]) { success, result in
-            print("NUM: \(result?.count ?? 0)")
-            if success {
-                self.exerciseArray = result!
-            } else {
-                self.exerciseArray = []
-                print("Failed to load data from the API")
+        for endpoint in Constants.Endpoints.list {
+            networkService.fetchData(apiString: endpoint, headers: [:]) { success, result in
+                if success {
+                    self.exerciseArray = result!
+                    isConnected = true
+                    print("\(endpoint): ✅\nExercise array count: \((result?.count) ?? 0)\n*-----------------*")
+                } else {
+                    self.exerciseArray = []
+                    print("\(endpoint): ❌")
+                }
+            }
+            
+            if isConnected {
+                break
             }
         }
-                
+        
     }
     
     

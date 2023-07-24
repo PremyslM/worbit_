@@ -20,7 +20,7 @@ class PWPrimaryCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: layout)
         
         self.collectionViewLayout = self.layout // Overwriting the "layout" as attribute of this class
-        self.backgroundColor = .theme.primaryBackground
+        self.backgroundColor = .theme.background
         self.showsVerticalScrollIndicator = false
         
     }

@@ -1,19 +1,20 @@
 //
-//  PWExerciseViewViewModel.swift
+//  WOTimelineView.swift
 //  ProjectWorkout
 //
-//  Created by Přemysl Mikulenka on 28.05.2023.
+//  Created by Přemysl Mikulenka on 14.07.2023.
 //
 
 import UIKit
 
-class PWExerciseViewViewModel {
-    
-    var delegate: UICollectionView?
+
+class WOTimelineViewModel {
     
     private let exerciseManager = ExerciseManager()
     
     // MARK: - Public
+    
+    public var delegate: UIViewController?
     
     /// Return save / Unwrapped array of exercises
     public var unwrappedExercises: [Exercise] {
@@ -27,14 +28,10 @@ class PWExerciseViewViewModel {
     private let networkService = NetworkService<Exercise>()
     
     /// Array of all exercises
-    private var exercises: [Exercise]? {
-        didSet {
-            self.delegate?.reloadData()
-        }
-    }
+    private var exercises: [Exercise]?
     
     init() {
-        fetchData()        
+        fetchData()
     }
     
     /// Loads all exercise data from our network service

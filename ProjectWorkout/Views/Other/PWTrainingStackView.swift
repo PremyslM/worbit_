@@ -64,8 +64,7 @@ class PWTrainingStackView: PWProgrammaticUIView {
                 daysStackView.addArrangedSubview(newDay)
             }
                         
-            if trainingDay.date == vm.currentDay {
-                print("\(trainingDay.date) / \(vm.currentDay)")
+            if trainingDay.date == vm.currentDay {                
                 newDay.setInInfoCard(stackView: daysStackView, training: trainingDay.training)
             }
             
