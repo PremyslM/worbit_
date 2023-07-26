@@ -12,10 +12,12 @@ class TrainingManager {
     
     public var trainingArray: [Training]? {
         get {
-            ExerciseManager().getData { exerciseArray in
-                self.exercises = exerciseArray ?? []
+            var result: [Training] = []            
+            for tIndex in 0..<5 {
+                let newTraining: Training = Training(name: "Test Trainig \(tIndex)", type: "Body Weight", duration: 45, difficulty: "Beginner \(exercises?.count)", focusAreas: ["Uppder Chest", "Core", "Lower Chest"], description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?", exercises: exercises ?? [], restDays: 4)
+                result.append(newTraining)
             }
-            return getTrainingArray()
+            return result
         }
     }
     
@@ -23,19 +25,6 @@ class TrainingManager {
         
     public var randomTraining: Training {
         return trainingArray!.randomElement()!
-    }
-    
-    
-    private func getTrainingArray() -> [Training] {
-        
-        var result: [Training] = []
-        
-        for tIndex in 0..<5 {
-            let newTraining: Training = Training(name: "Test Trainig \(tIndex)", type: "Body Weight", duration: 45, difficulty: "Beginner \(exercises?.count)", focusAreas: ["Uppder Chest", "Core", "Lower Chest"], description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?", exercises: exercises ?? [], restDays: 4)
-            result.append(newTraining)
-        }
-        return result
-        
     }
     
     
