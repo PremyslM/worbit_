@@ -10,11 +10,7 @@ import UIKit
 
 class WOTimelineViewModel {
     
-    private let exerciseManager = ExerciseManager()
-    
     // MARK: - Public
-    
-    public var delegate: UIViewController?
     
     /// Return save / Unwrapped array of exercises
     public var unwrappedExercises: [Exercise] {
@@ -23,6 +19,8 @@ class WOTimelineViewModel {
     
     
     // MARK: - Private
+    
+    private let exerciseManager = ExerciseManager()
     
     /// Instance of NetworkService
     private let networkService = NetworkService<Exercise>()

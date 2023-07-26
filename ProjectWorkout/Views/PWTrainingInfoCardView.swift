@@ -62,8 +62,8 @@ class PWTrainingInfoCardView: PWProgrammaticUIView {
     public func setContent(difficulty: Int) {
         var exerciseListString: String = ""
         
-        for exercise in vm.unwrappedTraining.exercises {
-            exerciseListString += "\(exercise.title)\n"
+        for (index, exercise) in vm.unwrappedTraining.exercises.enumerated() {
+            exerciseListString += "\(index + 1). \(exercise.title)\n"
         }
         
         exercisesListLabel.text = "\(exerciseListString)"

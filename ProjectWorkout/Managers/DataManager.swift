@@ -60,7 +60,7 @@ class DataManager {
     public static let exercises: [Exercise] = {
         var result: [Exercise] = []
         
-        for training in TrainingManager().trainingArray! {
+        for training in TrainingManager().trainingArray {
             for exercise in training.exercises {
                 if !(result.contains(where: { exercise.title == $0.title })) {
                     result.append(exercise)
