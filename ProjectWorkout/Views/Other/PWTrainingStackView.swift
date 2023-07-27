@@ -25,7 +25,10 @@ class PWTrainingStackView: PWProgrammaticUIView {
     
     override func setConfig() {
         self.addConstrainedSubViews(daysStackView)
-        self.setTrainingCells()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.setTrainingCells()
+        }
     }
     
     override func setConstraints() {

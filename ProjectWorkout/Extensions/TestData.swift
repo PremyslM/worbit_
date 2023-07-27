@@ -31,7 +31,7 @@ class TestData {
     /// >   - This is our test user.
     /// >   - Just for testing purpuses !    
     
-    public static let trainingDay: TrainingDay = (DataManager().getTrainingDayArray().randomElement())!
+    public static let trainingDay: TrainingDay = (DataManager().getTrainingDayArray().randomElement())!        
     
     
 }

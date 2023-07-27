@@ -33,7 +33,7 @@ class ExerciseManager {
     
     public func getData(completion: @escaping ([Exercise]?) -> Void) {
         fetchData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             completion(self.exerciseArray)
         }
     }
