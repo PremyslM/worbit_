@@ -39,7 +39,7 @@ class PWExerciseViewViewModel {
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        exerciseManager.getData { responseData in
+        exerciseManager.getData(amount: 3) { responseData in
             self.exercises = responseData
         }
     }
