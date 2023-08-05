@@ -19,6 +19,8 @@ struct Exercise: Codable {
     let title: String
     let type: String
     
+    let avgTime: Int = Int.random(in: 0...10) // in s
+    
     enum CodingKeys: String, CodingKey {
         case id = ""
         case bodyPart = "BodyPart"
