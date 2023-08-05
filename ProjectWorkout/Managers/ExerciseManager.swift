@@ -52,8 +52,14 @@ class ExerciseManager {
         for endpoint in Constants.Endpoints.list {
             networkService.fetchData(apiString: endpoint, headers: [:]) { success, result in
                 if success {
-                    for exerciseIndex in 0..<amount {
-                        self.exerciseArray?.append(result![exerciseIndex])
+                    if amount != 0 {
+                        for exerciseIndex in 0..<amount {
+                            self.exerciseArray?.append(result![exerciseIndex])
+                        }
+                    } else {
+                        for exerciseIndex in 0..<result!.count {
+                            self.exerciseArray?.append(result![exerciseIndex])
+                        }
                     }
                     isConnected = true
                     print("\(endpoint): ✅\nExercise array count: \((result?.count) ?? 0)\n*-----------------*")
