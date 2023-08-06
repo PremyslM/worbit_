@@ -34,7 +34,7 @@ class WOTimelineViewModel {
     
     /// Loads all exercise data from our network service
     private func fetchData() {
-        exerciseManager.getData { responseData in
+        exerciseManager.getData(amount: 2) { responseData in
             self.exercises = responseData
         }
     }

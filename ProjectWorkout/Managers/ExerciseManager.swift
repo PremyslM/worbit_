@@ -31,8 +31,8 @@ class ExerciseManager {
         //fetchData()
     }
     
-    public func getData(completion: @escaping ([Exercise]?) -> Void) {
-        fetchData()
+    public func getData(amount: Int, completion: @escaping ([Exercise]?) -> Void) {
+        fetchData(amount: amount)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             completion(self.exerciseArray)
         }
@@ -45,14 +45,22 @@ class ExerciseManager {
      
      - Important: Ensure that the local API is accessible and returns exercise data in the expected format.
      */
-    private func fetchData() {
+    private func fetchData(amount: Int) {
         let networkService = NetworkService<Exercise>()
         var isConnected: Bool = false
         
         for endpoint in Constants.Endpoints.list {
             networkService.fetchData(apiString: endpoint, headers: [:]) { success, result in
                 if success {
-                    self.exerciseArray = result!
+                    if amount != 0 {
+                        for exerciseIndex in 0..<amount {
+                            self.exerciseArray?.append(result![exerciseIndex])
+                        }
+                    } else {
+                        for exerciseIndex in 0..<result!.count {
+                            self.exerciseArray?.append(result![exerciseIndex])
+                        }
+                    }
                     isConnected = true
                     print("\(endpoint): ✅\nExercise array count: \((result?.count) ?? 0)\n*-----------------*")
                 } else {

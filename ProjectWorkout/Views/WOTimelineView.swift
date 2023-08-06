@@ -83,7 +83,7 @@ class WOTimelineView: PWProgrammaticUIView {
             // Create a UILabel for displaying the exercise time.
             let timeLabel: UILabel = UILabel()
             timeLabel.textColor = .theme.darkGray
-            timeLabel.text = "07:24" // TODO: Don't use hardcoded data, instead use schedule data for the current training day schedule.
+            timeLabel.text = "\(exercise.avgTime):00" // TODO: Don't use hardcoded data, instead use schedule data for the current training day schedule.
             
             // Create a horizontal line view to separate exercise entries.
             let hLineView: UIView = UIView()

@@ -9,11 +9,8 @@ import Foundation
 
 
 struct ActivityStats {
-    
     let caloriesBurned: Double
     let performance: Double
     let averageSpeed: Double
     let maxHeartRate: Int
-    
-    
 }
