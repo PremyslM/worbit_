@@ -25,7 +25,7 @@ class TrainingManager {
     }
     
     init() {
-        ExerciseManager().getData(amount: 1) { result in
+        ExerciseManager().getData(amount: 15) { result in
             self.exercises = result
         }
     }
