@@ -19,6 +19,8 @@ import Foundation
  - SeeAlso: Exercise.
  **/
 class ExerciseManager {
+    let service = APIService()
+    
     /// An array of Exercise objects representing the fetched exercise data.
     public var exerciseArray: [Exercise]?
     
@@ -27,9 +29,6 @@ class ExerciseManager {
      
      Fetching is done asynchronously, and the exerciseArray property will be populated with the fetched data.
      */
-    init() {
-        //fetchData()
-    }
     
     public func getData(amount: Int, completion: @escaping ([Exercise]?) -> Void) {
         fetchData(amount: amount)
@@ -46,34 +45,19 @@ class ExerciseManager {
      - Important: Ensure that the local API is accessible and returns exercise data in the expected format.
      */
     private func fetchData(amount: Int) {
-        let networkService = NetworkService<Exercise>()
-        var isConnected: Bool = false
-        
         for endpoint in Constants.Endpoints.list {
-            networkService.fetchData(apiString: endpoint, headers: [:]) { success, result in
-                if success {
-                    if amount != 0 {
-                        for exerciseIndex in 0..<amount {
-                            self.exerciseArray?.append(result![exerciseIndex])
-                        }
-                    } else {
-                        for exerciseIndex in 0..<result!.count {
-                            self.exerciseArray?.append(result![exerciseIndex])
-                        }
-                    }
-                    isConnected = true
-                    print("\(endpoint): ✅\nExercise array count: \((result?.count) ?? 0)\n*-----------------*")
-                } else {
-                    self.exerciseArray = []
-                    print("\(endpoint): ❌")
-                }
-            }
+            let url = URL(string: endpoint)
             
-            if isConnected {
-                break
+            let request = URLRequest(url: url!)
+            
+            service.makeRequest(with: request) { (posts: [Exercise]?, error) in
+                if let error = error {
+                    print("DEBUG PRINT: \(error)")
+                    return
+                }
+                self.exerciseArray = posts
             }
-        }
-        
+        }        
     }
     
     

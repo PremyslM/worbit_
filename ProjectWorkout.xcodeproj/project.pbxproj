@@ -53,6 +53,8 @@
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
 		78CE8B122A52074F00940328 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B112A52074F00940328 /* TestData.swift */; };
 		78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */; };
+		78D060842A839BFE00D473A4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D060832A839BFE00D473A4 /* Post.swift */; };
+		78D0A32B2A83970E00A41511 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D0A32A2A83970E00A41511 /* APIService.swift */; };
 		78E3ACCE2A5AF989003445E7 /* ExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */; };
 		78E3ACD02A5D4344003445E7 /* PWProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */; };
 		78E3ACD22A5D4BF4003445E7 /* PWLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACD12A5D4BF4003445E7 /* PWLineView.swift */; };
@@ -122,6 +124,8 @@
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
 		78CE8B112A52074F00940328 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailDataSource.swift; sourceTree = "<group>"; };
+		78D060832A839BFE00D473A4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		78D0A32A2A83970E00A41511 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseManager.swift; sourceTree = "<group>"; };
 		78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarView.swift; sourceTree = "<group>"; };
 		78E3ACD12A5D4BF4003445E7 /* PWLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWLineView.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		78626B8D2A1E7A26003102D3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				78D0A3292A8396FF00A41511 /* API */,
 				78626BCF2A23712B003102D3 /* NetworkService.swift */,
 			);
 			path = Services;
@@ -330,6 +335,15 @@
 				78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		78D0A3292A8396FF00A41511 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				78D0A32A2A83970E00A41511 /* APIService.swift */,
+				78D060832A839BFE00D473A4 /* Post.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		78E8F4682A2E48F900FDE24A /* CollectionView */ = {
@@ -458,6 +472,7 @@
 				78626BCA2A229A54003102D3 /* PWExcerciesCollectionView.swift in Sources */,
 				78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */,
 				78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */,
+				78D060842A839BFE00D473A4 /* Post.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78FA1DE52A2CADB3008FCAF3 /* PWMainPageViewModel.swift in Sources */,
 				787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */,
@@ -490,6 +505,7 @@
 				787F6B682A55E27A00C75255 /* PWTrainingStackViewModel.swift in Sources */,
 				78626BC62A2295A5003102D3 /* PWExercisesViewController.swift in Sources */,
 				785E4A662A6655FB00B2148B /* PWProgressBarViewModel.swift in Sources */,
+				78D0A32B2A83970E00A41511 /* APIService.swift in Sources */,
 				78626BAA2A1FC35C003102D3 /* PWActivityProgressBarView.swift in Sources */,
 				78CE8B122A52074F00940328 /* TestData.swift in Sources */,
 				78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */,
