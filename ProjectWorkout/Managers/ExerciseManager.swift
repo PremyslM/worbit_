@@ -52,7 +52,7 @@ class ExerciseManager {
             
             service.makeRequest(with: request) { (posts: [Exercise]?, error) in
                 if let error = error {
-                    print("DEBUG PRINT: \(error)")
+                    print("DEBUG PRINT: \(error.rawValue)")
                     return
                 }
                 self.exerciseArray = posts

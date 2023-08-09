@@ -24,7 +24,6 @@ class PWExerciseViewViewModel {
     // MARK: - Private
     
     /// Instance of NetworkService
-    private let networkService = NetworkService<Exercise>()
     
     /// Array of all exercises
     private var exercises: [Exercise]? {

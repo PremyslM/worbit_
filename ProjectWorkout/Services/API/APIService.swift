@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum APIError {
+enum APIError: String {
     case urlSessionError
-    case serverError
-    case invalidResponse
-    case decodingError
+    case serverError = "Invalid API Key."
+    case invalidResponse = "Invalid response from server."
+    case decodingError = "Error parsing server response."
 }
 
 protocol Service {

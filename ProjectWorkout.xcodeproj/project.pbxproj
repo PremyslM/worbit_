@@ -31,7 +31,6 @@
 		78626BCA2A229A54003102D3 /* PWExcerciesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BC92A229A54003102D3 /* PWExcerciesCollectionView.swift */; };
 		78626BCC2A229D1F003102D3 /* ExerciseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BCB2A229D1F003102D3 /* ExerciseItem.swift */; };
 		78626BCE2A229D28003102D3 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BCD2A229D28003102D3 /* UserProfile.swift */; };
-		78626BD02A23712B003102D3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BCF2A23712B003102D3 /* NetworkService.swift */; };
 		78626BD22A23794A003102D3 /* PWExerciseViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BD12A23794A003102D3 /* PWExerciseViewViewModel.swift */; };
 		78626BD42A239368003102D3 /* UserProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BD32A239368003102D3 /* UserProfileManager.swift */; };
 		78626BD62A239546003102D3 /* PWUserProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */; };
@@ -53,7 +52,6 @@
 		78CE8B102A51BBE200940328 /* PWActivityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */; };
 		78CE8B122A52074F00940328 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B112A52074F00940328 /* TestData.swift */; };
 		78CE8B142A52B8E900940328 /* PWActivityDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */; };
-		78D060842A839BFE00D473A4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D060832A839BFE00D473A4 /* Post.swift */; };
 		78D0A32B2A83970E00A41511 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D0A32A2A83970E00A41511 /* APIService.swift */; };
 		78E3ACCE2A5AF989003445E7 /* ExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */; };
 		78E3ACD02A5D4344003445E7 /* PWProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */; };
@@ -102,7 +100,6 @@
 		78626BC92A229A54003102D3 /* PWExcerciesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWExcerciesCollectionView.swift; sourceTree = "<group>"; };
 		78626BCB2A229D1F003102D3 /* ExerciseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseItem.swift; sourceTree = "<group>"; };
 		78626BCD2A229D28003102D3 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		78626BCF2A23712B003102D3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		78626BD12A23794A003102D3 /* PWExerciseViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWExerciseViewViewModel.swift; sourceTree = "<group>"; };
 		78626BD32A239368003102D3 /* UserProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileManager.swift; sourceTree = "<group>"; };
 		78626BD52A239546003102D3 /* PWUserProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWUserProfileViewViewModel.swift; sourceTree = "<group>"; };
@@ -124,7 +121,6 @@
 		78CE8B0F2A51BBE200940328 /* PWActivityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailViewModel.swift; sourceTree = "<group>"; };
 		78CE8B112A52074F00940328 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		78CE8B132A52B8E900940328 /* PWActivityDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWActivityDetailDataSource.swift; sourceTree = "<group>"; };
-		78D060832A839BFE00D473A4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		78D0A32A2A83970E00A41511 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		78E3ACCD2A5AF988003445E7 /* ExerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseManager.swift; sourceTree = "<group>"; };
 		78E3ACCF2A5D4344003445E7 /* PWProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWProgressBarView.swift; sourceTree = "<group>"; };
@@ -235,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				78D0A3292A8396FF00A41511 /* API */,
-				78626BCF2A23712B003102D3 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -341,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				78D0A32A2A83970E00A41511 /* APIService.swift */,
-				78D060832A839BFE00D473A4 /* Post.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -472,7 +466,6 @@
 				78626BCA2A229A54003102D3 /* PWExcerciesCollectionView.swift in Sources */,
 				78626BBE2A20EB84003102D3 /* ActivityManager.swift in Sources */,
 				78626BC82A229607003102D3 /* TabView+addNewItem.swift in Sources */,
-				78D060842A839BFE00D473A4 /* Post.swift in Sources */,
 				78626BA82A1F37FC003102D3 /* PWTabBarController.swift in Sources */,
 				78FA1DE52A2CADB3008FCAF3 /* PWMainPageViewModel.swift in Sources */,
 				787F6B6A2A55EFB700C75255 /* PWTrainingInfoCardViewModel.swift in Sources */,
@@ -519,7 +512,6 @@
 				78E3ACD22A5D4BF4003445E7 /* PWLineView.swift in Sources */,
 				78626B762A1E7633003102D3 /* SceneDelegate.swift in Sources */,
 				78FA1DC22A261C15008FCAF3 /* DataManager.swift in Sources */,
-				78626BD02A23712B003102D3 /* NetworkService.swift in Sources */,
 				78A021442A56DEB90030A533 /* Exercise.swift in Sources */,
 				787F6B602A5575F900C75255 /* PWTrainingStackView.swift in Sources */,
 				78626BD42A239368003102D3 /* UserProfileManager.swift in Sources */,
