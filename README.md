@@ -18,7 +18,7 @@ To get started with Project Workout, follow these steps:
 
 1.	Clone the repository to your local machine:
 ```
-git clone https://github.com/your-username/Project-Workout.git
+git clone https://github.com/PremyslM/Project-Workout.git
 ```
 
 2.	Install the required dependencies by running the following command:
@@ -65,6 +65,6 @@ git push origin my-feature
 
 Your feedback and suggestions are highly appreciated! If you encounter any issues or have ideas for improvement, please open an issue on the GitHub repository. We will do our best to address them in a timely manner.
 
-For additional support or questions, feel free to contact our team at workout@example.com.
+For additional support or questions, feel free to contact me at premysl.mikulenka@icloud.com
 
 Let’s embark on a journey towards a healthier and fitter lifestyle with Project Workout!
